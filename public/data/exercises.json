@@ -1,0 +1,1869 @@
+{
+  "exercises": [
+    {
+      "id": "ankle-rocks",
+      "name": {
+        "fr": "Bascules de cheville (genou-mur dynamique)",
+        "en": "Knee-to-wall ankle rocks"
+      },
+      "targets": [
+        "ankle-dorsiflexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 15,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "En fente face au mur, pied avant à 5-8 cm, orteils pointés droit vers le mur.",
+          "Poussez lentement le genou vers le mur, au-dessus du milieu du pied, sans décoller le talon.",
+          "Revenez, puis recommencez en cherchant à chaque répétition un peu plus d'amplitude.",
+          "Quand le genou touche facilement, reculez le pied d'un centimètre."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le talon décoller (toute la répétition ne compte plus).",
+          "Laisser le genou partir vers l'intérieur au lieu de suivre l'axe du pied."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Un pincement à l'avant de la cheville (et non un étirement du mollet) doit rester léger ; s'il est vif, réduisez l'amplitude."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement dans le bas du mollet et le tendon d'Achille, sensation de butée douce à l'avant de la cheville."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "knee to wall ankle dorsiflexion mobilization drill"
+    },
+    {
+      "id": "calf-stretch-wall",
+      "name": {
+        "fr": "Étirement du mollet au mur (jambe tendue)",
+        "en": "Wall calf stretch (gastrocnemius)"
+      },
+      "targets": [
+        "ankle-dorsiflexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 40,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Mains au mur, une jambe en arrière tendue, talon au sol, pied pointé droit devant.",
+          "Avancez le bassin vers le mur jusqu'à sentir l'étirement dans le mollet arrière.",
+          "Respirez calmement en maintenant le talon plaqué au sol.",
+          "Relâchez, puis changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pied arrière ouvert vers l'extérieur, ce qui réduit l'étirement.",
+          "Rebondir au lieu de tenir la position."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "L'étirement doit être net mais jamais douloureux."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement dans la partie haute et charnue du mollet."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall calf stretch gastrocnemius straight knee",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Stretch_Hands_Against_Wall/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Stretch_Hands_Against_Wall/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "soleus-stretch",
+      "name": {
+        "fr": "Étirement du soléaire (genou fléchi)",
+        "en": "Soleus stretch (bent knee)"
+      },
+      "targets": [
+        "ankle-dorsiflexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 40,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Même position que l'étirement du mollet au mur, mais rapprochez le pied arrière.",
+          "Pliez le genou arrière en gardant le talon au sol, comme pour vous asseoir vers ce talon.",
+          "L'étirement descend alors plus bas, vers le tendon d'Achille : c'est le soléaire, muscle clé du squat profond.",
+          "Tenez, respirez, changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Garder le genou tendu par habitude : on retombe sur l'exercice précédent.",
+          "Décoller le talon pour plier davantage le genou."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Amplitude progressive : ce muscle est souvent très raide chez les sédentaires."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement bas dans le mollet, proche du tendon d'Achille — différent de la version jambe tendue."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "soleus stretch bent knee ankle mobility squat",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Soleus_And_Achilles_Stretch/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Soleus_And_Achilles_Stretch/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "assisted-squat-hold",
+      "name": {
+        "fr": "Squat tenu avec support",
+        "en": "Assisted deep squat hold"
+      },
+      "targets": [
+        "balance-control",
+        "hip-flexion",
+        "ankle-dorsiflexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 3,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Une poignée de porte, un poteau ou un meuble lourd"
+      },
+      "instructions": {
+        "fr": [
+          "Tenez fermement un support stable à deux mains, pieds largeur d'épaules, pointes légèrement ouvertes.",
+          "Descendez en squat complet en vous laissant tirer légèrement en arrière par le support : il neutralise le problème d'équilibre.",
+          "Une fois en bas, cherchez à poser les talons et à relâcher le dos.",
+          "Bougez doucement dans la position : transferts de poids d'un pied à l'autre, petites rotations du buste."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Rester crispé en apnée : la position doit tendre vers le repos.",
+          "S'accrocher au support avec les bras au lieu de simplement s'équilibrer."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Vérifiez que le support est réellement stable avant de vous y suspendre.",
+          "Genoux sensibles : réduisez le temps de tenue et remontez souvent.",
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement global chevilles-hanches-dos, effort d'équilibre quasi nul grâce au support."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "assisted deep squat hold door frame beginner",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      }
+    },
+    {
+      "id": "elevated-heel-squat",
+      "name": {
+        "fr": "Squat talons surélevés (pratique)",
+        "en": "Heel-elevated squat practice"
+      },
+      "targets": [
+        "hip-flexion",
+        "balance-control"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "assisted-squat-hold",
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 3,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un livre épais ou une planche (2-4 cm)"
+      },
+      "instructions": {
+        "fr": [
+          "Talons posés sur un livre ou une planche, pieds largeur d'épaules.",
+          "Descendez en squat complet, bras tendus devant vous en contrepoids.",
+          "Installez-vous : dos relâché, respiration calme, regard devant.",
+          "Semaine après semaine, réduisez l'épaisseur sous les talons — c'est votre curseur de progression."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Surélévation trop haute qui ne fait plus rien travailler : restez à l'épaisseur minimale qui rend la position tenable.",
+          "Genoux qui rentrent vers l'intérieur."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Gardez un support à portée de main les premières fois.",
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Position exigeante mais tenable, étirement des hanches, cuisses qui travaillent légèrement."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "heel elevated deep squat hold progression",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      }
+    },
+    {
+      "id": "free-squat-hold",
+      "name": {
+        "fr": "Squat libre tenu (accumulation)",
+        "en": "Free deep squat hold"
+      },
+      "targets": [
+        "balance-control",
+        "ankle-dorsiflexion",
+        "hip-flexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "elevated-heel-squat",
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 4,
+        "perSide": false,
+        "note": {
+          "fr": "Objectif : accumuler 2 à 5 minutes par jour, en autant de fois que nécessaire."
+        }
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "Pieds largeur d'épaules, pointes légèrement ouvertes, descendez en squat complet talons au sol.",
+          "Bras tendus devant ou coudes posés à l'intérieur des genoux, qui poussent doucement les genoux vers l'extérieur.",
+          "Cherchez le relâchement : c'est une position de repos, pas un exercice de force.",
+          "Accumulez du temps dans la journée : pendant le téléphone, en attendant le café, etc."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Tout le poids sur les orteils : ancrez les talons.",
+          "Forcer la durée d'un bloc : mieux vaut 10 fois 30 secondes qu'une fois 3 minutes en souffrant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Fourmillements dans les jambes : relevez-vous, secouez, reprenez plus tard.",
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Au début un étirement intense global ; avec la pratique, une position de plus en plus neutre."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "daily deep squat practice accumulate time resting squat",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      }
+    },
+    {
+      "id": "goblet-squat-pause",
+      "name": {
+        "fr": "Squat goblet avec pause (contrepoids)",
+        "en": "Goblet squat with pause"
+      },
+      "targets": [
+        "balance-control",
+        "hip-flexion",
+        "glute-strength"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "free-squat-hold",
+      "dosage": {
+        "reps": 8,
+        "sets": 3,
+        "perSide": false,
+        "note": {
+          "fr": "Pause de 3 secondes en bas de chaque répétition."
+        }
+      },
+      "equipment": {
+        "fr": "Un sac à dos lesté (livres, bouteilles) ou un haltère léger, 3-6 kg"
+      },
+      "instructions": {
+        "fr": [
+          "Tenez le poids contre la poitrine, coudes vers le bas.",
+          "Descendez lentement en squat complet : le poids devant sert de contrepoids et rend la profondeur accessible.",
+          "Marquez 3 secondes en bas, talons ancrés, buste relevé.",
+          "Remontez en poussant le sol, sans laisser les genoux rentrer."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Prendre trop lourd : le poids sert d'équilibre, pas de charge.",
+          "Remonter en déportant les hanches vers l'arrière en premier (le buste plonge)."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Dos douloureux pendant l'exercice (au-delà d'un effort musculaire normal) : revenez au squat tenu sans charge.",
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Cuisses et fessiers qui travaillent, profondeur plus facile qu'à vide — c'est normal et recherché."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "goblet squat pause bottom position beginner counterweight",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      },
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "knee-hug-supine",
+      "name": {
+        "fr": "Genou-poitrine allongé",
+        "en": "Supine knee hug"
+      },
+      "targets": [
+        "hip-flexion"
+      ],
+      "goals": [
+        "deep-squat",
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis ou un lit ferme"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, ramenez un genou vers la poitrine avec les mains.",
+          "L'autre jambe reste tendue au sol, activement, sans se plier.",
+          "Tirez doucement le genou un peu plus près à chaque expiration.",
+          "Changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser la jambe opposée se plier ou décoller : on perd la moitié de l'exercice (elle étire aussi le psoas opposé).",
+          "Tirer sur le genou en bloquant la respiration."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Étirement derrière (fesse) : normal, continuez. Pincement devant dans le pli de l'aine : orientez le genou vers l'épaule du même côté et restez juste en dessous du point de pincement — ne poussez jamais dedans de façon répétée."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement de la fesse du côté plié et de l'avant de la hanche du côté tendu."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "supine single knee to chest stretch",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Knee_To_Chest/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Knee_To_Chest/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "squat-to-stand",
+      "name": {
+        "fr": "Penché-squat (squat to stand)",
+        "en": "Squat to stand"
+      },
+      "targets": [
+        "hamstrings",
+        "hip-flexion",
+        "ankle-dorsiflexion"
+      ],
+      "goals": [
+        "deep-squat",
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, pieds largeur d'épaules, penchez-vous et attrapez vos pointes de pieds (genoux fléchis autant que nécessaire).",
+          "Sans lâcher les pieds, pliez les genoux et descendez les hanches en position de squat, poitrine relevée.",
+          "Puis tendez les jambes en gardant les mains sur les pieds : retour à la position penchée.",
+          "Alternez lentement entre les deux positions."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Lâcher les pieds pendant la transition.",
+          "Aller vite : c'est la lenteur qui fait travailler."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Sensation de tête qui tourne en remontant : faites une pause, remontez plus lentement."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement alterné : ischio-jambiers jambes tendues, hanches et chevilles en position basse."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "squat to stand mobility drill toes grab"
+    },
+    {
+      "id": "figure-4-supine",
+      "name": {
+        "fr": "Figure 4 allongé (rotateurs de hanche)",
+        "en": "Supine figure-4 stretch"
+      },
+      "targets": [
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, posez la cheville droite sur le genou gauche (jambes en 4).",
+          "Attrapez l'arrière de la cuisse gauche à deux mains et ramenez-la doucement vers vous.",
+          "Gardez le pied droit fléchi et le genou droit ouvert vers l'extérieur.",
+          "Respirez, laissez la fesse se relâcher, puis changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Décoller la tête et les épaules en tirant : posez la tête, au besoin sur un coussin.",
+          "Laisser le genou du dessus se refermer vers vous au lieu de rester ouvert."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur au genou de la jambe croisée : rapprochez la cheville du genou opposé et réduisez la traction."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement profond dans la fesse et l'extérieur de la hanche de la jambe croisée. C'est LA version accessible du pigeon pour débutants."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "supine figure 4 piriformis stretch beginner",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "butterfly-wall",
+      "name": {
+        "fr": "Papillon dos au mur",
+        "en": "Wall-supported butterfly"
+      },
+      "targets": [
+        "adductors",
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 5,
+          "phases": [
+            {
+              "label": {
+                "fr": "Ouverture active (contractez pour ouvrir les genoux)"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchement complet (laissez la gravité agir)"
+              },
+              "seconds": 20
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un mur, éventuellement des coussins sous les genoux"
+      },
+      "instructions": {
+        "fr": [
+          "Assis dos contre un mur, plantes de pieds jointes, talons à distance confortable (30-40 cm du bassin).",
+          "Le mur maintient votre dos droit : c'est tout son intérêt pour un débutant.",
+          "Phase passive : laissez les genoux descendre sous l'effet de la pesanteur, sans les pousser avec les mains, en expirant lentement.",
+          "Phase active (le vrai moteur de progression) : contractez pour ouvrir les genoux vers le sol pendant 5 secondes, puis relâchez tout — les genoux redescendent souvent un cran plus bas. Répétez ce cycle 4-5 fois.",
+          "Si la position reste intense, glissez un coussin sous chaque genou : soutenus, les adducteurs se relâchent mieux."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pousser les genoux vers le bas avec les mains : le réflexe de protection contracte les adducteurs et annule l'étirement.",
+          "Confondre les phases : la contraction active se fait avec les muscles des hanches (on sent l'extérieur des fesses travailler), jamais en poussant avec les mains.",
+          "Talons trop proches du bassin, ce qui déplace la contrainte sur les genoux."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur à l'intérieur du genou : éloignez les talons du bassin."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement doux de l'intérieur des cuisses, dos soutenu sans effort."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "butterfly stretch against wall cushions beginner"
+    },
+    {
+      "id": "butterfly-lean",
+      "name": {
+        "fr": "Papillon avec inclinaison avant",
+        "en": "Butterfly forward lean"
+      },
+      "targets": [
+        "adductors",
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "butterfly-wall",
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "Assis sans mur, plantes de pieds jointes, dos aussi droit que possible.",
+          "Basculez le bassin vers l'avant (imaginez pointer le nombril entre vos pieds) — cette bascule est l'essentiel du mouvement.",
+          "Inclinez le buste vers l'avant en gardant le dos long, mains au sol devant vous.",
+          "Avancez uniquement tant que le dos reste long ; sinon revenez d'un cran."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "S'enrouler dos rond vers l'avant : on a l'impression de descendre plus bas, mais les hanches ne travaillent plus.",
+          "Chercher à plaquer la tête vers les pieds au lieu d'amener la poitrine vers l'avant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Progression lente : les adducteurs n'aiment pas être brusqués."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement net de l'intérieur des cuisses et de l'arrière des hanches."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "butterfly stretch forward lean flat back hip hinge"
+    },
+    {
+      "id": "seated-90-90-transitions",
+      "name": {
+        "fr": "Transitions 90/90",
+        "en": "90/90 hip switches"
+      },
+      "targets": [
+        "hip-external-rotation",
+        "hip-internal-rotation",
+        "balance-control"
+      ],
+      "goals": [
+        "cross-legged",
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Une répétition = un aller-retour gauche/droite."
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au sol, jambes pliées à 90/90 : un tibia devant vous, un tibia sur le côté.",
+          "Mains posées derrière vous au début, faites pivoter les deux genoux ensemble de l'autre côté pour inverser la position.",
+          "Alternez lentement, en essayant progressivement de moins vous appuyer sur les mains.",
+          "Version avancée : transitions buste droit, mains sur la poitrine."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Aller vite en balançant le buste : la lenteur est le but.",
+          "Bloquer la respiration pendant la rotation."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Pincement dans la hanche pendant la rotation : réduisez l'amplitude, gardez les mains au sol."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Travail actif des rotateurs de hanche dans les deux sens, chaleur dans les hanches après quelques allers-retours."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "90 90 hip switches mobility drill beginner"
+    },
+    {
+      "id": "90-90-lean",
+      "name": {
+        "fr": "90/90 inclinaison avant",
+        "en": "90/90 forward lean"
+      },
+      "targets": [
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "figure-4-supine",
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Position 90/90 : tibia avant parallèle aux épaules, tibia arrière sur le côté.",
+          "Buste droit, basculez le bassin vers l'avant puis inclinez la poitrine au-dessus du tibia avant, dos long.",
+          "Descendez sur les avant-bras si l'amplitude le permet.",
+          "Tenez en respirant, remontez, changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "S'affaisser dos rond dès le départ, sans bascule de bassin.",
+          "Laisser la fesse arrière décoller complètement du sol."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur au genou avant : glissez un coussin sous ce genou ou revenez au figure 4 allongé."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement profond et localisé dans la fesse de la jambe avant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "90 90 stretch forward lean glute hip external rotation"
+    },
+    {
+      "id": "hamstring-towel-stretch",
+      "name": {
+        "fr": "Étirement des ischio-jambiers à la serviette",
+        "en": "Supine hamstring stretch with towel"
+      },
+      "targets": [
+        "hamstrings"
+      ],
+      "goals": [
+        "cross-legged",
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une serviette ou une ceinture"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, passez une serviette sous la plante d'un pied.",
+          "Tendez cette jambe vers le plafond, l'autre restant pliée pied au sol (ou tendue au sol si c'est facile).",
+          "Tirez doucement la serviette pour rapprocher la jambe de vous, genou tendu mais non verrouillé.",
+          "À chaque expiration, gagnez un centimètre. Changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Plier le genou pour amener la jambe plus près : l'angle est plus flatteur mais l'étirement disparaît.",
+          "Décoller les fesses ou tourner le bassin."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Sensation électrique derrière la jambe (nerf) : réduisez immédiatement l'amplitude et pliez légèrement le genou."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement franc derrière la cuisse, jamais dans le creux du genou."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "supine hamstring stretch towel strap beginner",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hamstring_Stretch/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hamstring_Stretch/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "cat-cow",
+      "name": {
+        "fr": "Chat-vache (bascules du bassin à quatre pattes)",
+        "en": "Cat-cow"
+      },
+      "targets": [
+        "pelvic-control"
+      ],
+      "goals": [
+        "cross-legged",
+        "long-standing"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "À quatre pattes, mains sous les épaules, genoux sous les hanches.",
+          "Inspirez : creusez le dos, basculez le bassin vers l'avant, regard qui monte (vache).",
+          "Expirez : arrondissez le dos vertèbre par vertèbre, rétroversion du bassin, tête relâchée (chat).",
+          "Enchaînez lentement en initiant chaque mouvement par le bassin, pas par la tête."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Ne bouger que la tête et les épaules, bassin figé — or c'est le bassin qu'on cherche à réveiller.",
+          "Aller vite : comptez 3-4 secondes par phase."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Amplitude confortable uniquement ; ce mouvement doit faire du bien."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Mobilisation agréable de toute la colonne, conscience de la bascule du bassin — la compétence clé pour s'asseoir droit."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "cat cow pelvic tilt awareness spine mobility",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "seated-pelvic-tilts",
+      "name": {
+        "fr": "Bascules du bassin assis en tailleur surélevé",
+        "en": "Seated pelvic tilts (elevated cross-legged)"
+      },
+      "targets": [
+        "pelvic-control",
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un gros coussin, un traversin ou 2-3 livres empilés"
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous en tailleur sur un coussin ferme : le bassin surélevé au-dessus des genoux rend la position immédiatement plus facile.",
+          "Mains sur les genoux, arrondissez le bas du dos (bascule arrière) puis cambrez-le doucement (bascule avant).",
+          "Alternez lentement, puis arrêtez-vous au milieu : c'est votre position neutre, dos droit sans effort excessif.",
+          "Terminez par 30 secondes immobile dans cette position neutre."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Coussin trop mou ou trop bas : le bassin doit être clairement plus haut que les genoux.",
+          "Bouger les épaules au lieu du bassin."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Fourmillements dans les jambes : décroisez, secouez, recommencez plus tard."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Découverte concrète de la différence entre dos rond subi et dos droit choisi. C'est l'exercice-passerelle vers le tailleur au sol."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "seated pelvic tilt cross legged cushion posture"
+    },
+    {
+      "id": "cross-legged-practice",
+      "name": {
+        "fr": "Pratique du tailleur (exposition progressive)",
+        "en": "Progressive cross-legged sitting practice"
+      },
+      "targets": [
+        "hip-external-rotation",
+        "pelvic-control",
+        "adductors"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "seated-pelvic-tilts",
+      "dosage": {
+        "holdSeconds": 120,
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Alternez le croisement des jambes à chaque bloc. Objectif : accumuler 10 minutes par jour, hauteur du coussin décroissante."
+        }
+      },
+      "equipment": {
+        "fr": "Un coussin dont on réduit la hauteur au fil des semaines"
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous en tailleur sur votre coussin, dos droit, pendant une activité passive (série, lecture, repas).",
+          "Dès que le dos s'arrondit malgré vous, c'est fini pour ce bloc : levez-vous ou adossez-vous. Rester avachi n'entraîne rien.",
+          "Alternez systématiquement quelle jambe est devant : tout le monde a un côté préféré et ça crée des asymétries.",
+          "Toutes les 1-2 semaines, si les blocs deviennent faciles, réduisez la hauteur du coussin."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Vouloir passer au sol trop vite : la hauteur du coussin est un curseur, pas une honte.",
+          "Toujours croiser la même jambe devant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Genoux douloureux : coussins sous les genoux, ou revenez au papillon au mur quelque temps."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort postural léger et diffus, hanches qui s'ouvrent doucement au fil des semaines. C'est l'exercice principal de l'objectif : la position EST l'entraînement."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "how to sit cross legged comfortably cushion height progression"
+    },
+    {
+      "id": "toe-touch-progression",
+      "name": {
+        "fr": "Descente vers les pieds, genoux fléchis",
+        "en": "Bent-knee toe touch progression"
+      },
+      "targets": [
+        "hamstrings",
+        "pelvic-control"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "hamstring-towel-stretch",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, genoux nettement fléchis, penchez-vous et posez les doigts sur vos pieds (accessible à quasiment tout le monde grâce à la flexion).",
+          "Sans lâcher les pieds, tendez lentement les jambes jusqu'à la première vraie tension derrière les cuisses.",
+          "Tenez 2 secondes, refléchissez les genoux, recommencez.",
+          "Au fil des séances, la tension arrive avec des jambes de plus en plus tendues."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Tendre les jambes au-delà de la tension raisonnable pour « réussir » la répétition.",
+          "Arrondir le cou pour regarder devant soi."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Antécédents de douleur lombaire aiguë en flexion : préférez la version allongée à la serviette."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Tension derrière les cuisses qui se déplace au fil des répétitions, sensation de déroulé contrôlé du dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "bent knee toe touch hamstring progression drill"
+    },
+    {
+      "id": "kneeling-hip-flexor-stretch",
+      "name": {
+        "fr": "Étirement du psoas à genoux (fente basse)",
+        "en": "Kneeling hip flexor stretch"
+      },
+      "targets": [
+        "hip-flexors"
+      ],
+      "goals": [
+        "long-standing",
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis ou un coussin sous le genou"
+      },
+      "instructions": {
+        "fr": [
+          "En fente, genou arrière posé au sol sur un coussin, pied avant à plat.",
+          "Serrez la fesse de la jambe arrière et basculez le bassin en rétroversion (comme pour rentrer le coccyx) : l'étirement doit apparaître AVANT même d'avancer.",
+          "Avancez ensuite légèrement le bassin, buste droit, sans cambrer le bas du dos.",
+          "Tenez, respirez, changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Avancer loin en cambrant le dos : la sensation vient des lombaires, pas du psoas. La bascule du bassin est non négociable.",
+          "Buste penché en avant, ce qui détend précisément le muscle visé."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "C'est l'exercice n°1 contre le mal de dos en station debout chez les sédentaires : régularité avant intensité."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement net à l'avant de la hanche arrière, dans le pli de l'aine, éventuellement jusqu'au ventre."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "kneeling hip flexor stretch posterior pelvic tilt glute squeeze",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Hip_Flexor/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Hip_Flexor/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "couch-stretch",
+      "name": {
+        "fr": "Étirement du psoas au canapé (couch stretch)",
+        "en": "Couch stretch"
+      },
+      "targets": [
+        "hip-flexors"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "stretch",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "kneeling-hip-flexor-stretch",
+      "dosage": {
+        "holdSeconds": 60,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un canapé ou un mur, un coussin sous le genou"
+      },
+      "instructions": {
+        "fr": [
+          "Genou arrière au sol contre la base du canapé, tibia remonté contre l'assise (ou le mur), pied avant à plat devant vous.",
+          "Même consigne clé que la fente basse : fesse arrière serrée, bassin en rétroversion.",
+          "Redressez le buste progressivement, en vous aidant du canapé ou d'une chaise.",
+          "L'étirement gagne le quadriceps en plus du psoas : version nettement plus intense."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Passer à cette version avant de maîtriser la fente basse : on compense en cambrant.",
+          "Genou arrière loin du canapé, ce qui annule l'étirement du quadriceps."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur au genou posé : plus de rembourrage, ou restez sur la fente basse.",
+          "Crampe du quadriceps possible au début : sortez de la position, secouez, reprenez plus doucement."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement intense de tout l'avant de la cuisse et de la hanche arrière."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "couch stretch hip flexor quad tutorial beginner"
+    },
+    {
+      "id": "standing-hip-flexor-stretch",
+      "name": {
+        "fr": "Étirement du psoas debout (version festival)",
+        "en": "Standing hip flexor stretch"
+      },
+      "targets": [
+        "hip-flexors"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 1,
+        "perSide": true,
+        "note": {
+          "fr": "À répéter toutes les 45-60 minutes en station debout prolongée."
+        }
+      },
+      "equipment": {
+        "fr": "Aucun — faisable en public, discrètement"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, reculez un pied d'un grand pas, talon arrière décollé.",
+          "Serrez la fesse arrière, rentrez le coccyx, et laissez le bassin avancer légèrement.",
+          "Buste droit, épaules relâchées : de l'extérieur, on dirait juste que vous attendez.",
+          "30 secondes par côté, à refaire régulièrement dans la journée debout."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Cambrer au lieu de basculer le bassin (le réflexe de toute la famille des étirements du psoas).",
+          "Attendre d'avoir mal pour le faire : c'est un entretien préventif, pas un traitement d'urgence."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Aucune précaution particulière : c'est votre micro-pause active de festival."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement léger de l'avant de la hanche et relâchement quasi immédiat des lombaires."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "standing hip flexor stretch discreet posture reset",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Hip_Flexors/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Hip_Flexors/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "glute-bridge",
+      "name": {
+        "fr": "Pont fessier",
+        "en": "Glute bridge"
+      },
+      "targets": [
+        "glute-strength",
+        "pelvic-control"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 12,
+        "sets": 3,
+        "perSide": false,
+        "note": {
+          "fr": "2 secondes de pause serrée en haut de chaque répétition."
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, pieds au sol proches des fesses, bras le long du corps.",
+          "Basculez d'abord légèrement le bassin (bas du dos qui s'aplatit au sol), puis décollez le bassin en serrant les fessiers.",
+          "Montez jusqu'à l'alignement épaules-bassin-genoux, sans cambrer au-delà.",
+          "Pause de 2 secondes fesses serrées, redescendez lentement."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pousser avec les lombaires et sentir l'arrière des cuisses ou le dos plutôt que les fesses : rapprochez les pieds et refaites la bascule de bassin avant de monter.",
+          "Monter trop haut en cambrant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Crampe des ischio-jambiers : pieds plus proches des fesses, amplitude réduite."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort franc et localisé dans les fessiers — le muscle qui doit soulager vos lombaires en festival."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "glute bridge proper form feel glutes not hamstrings",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "single-leg-glute-bridge",
+      "name": {
+        "fr": "Pont fessier à une jambe",
+        "en": "Single-leg glute bridge"
+      },
+      "targets": [
+        "glute-strength",
+        "core-endurance"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "glute-bridge",
+      "dosage": {
+        "reps": 8,
+        "sets": 3,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Position de pont fessier, puis tendez une jambe dans le prolongement des cuisses.",
+          "Montez le bassin avec la jambe d'appui, en le gardant parfaitement horizontal.",
+          "Pause en haut, descente lente, toutes les répétitions d'un côté puis changez.",
+          "Le bassin qui penche = répétition ratée : mieux vaut moins de répétitions propres."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Bassin qui bascule côté jambe levée.",
+          "S'aider en poussant avec les bras au sol."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Trop dur ? Version intermédiaire : pont à deux jambes, montée normale, puis descente sur une seule jambe."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort intense dans la fesse d'appui, gainage du tronc pour garder le bassin droit."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "single leg glute bridge form level pelvis",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "clamshell",
+      "name": {
+        "fr": "Huître (clamshell)",
+        "en": "Clamshell"
+      },
+      "targets": [
+        "glute-strength",
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "long-standing",
+        "cross-legged"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 15,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté, genoux pliés à 90°, talons alignés avec le dos, tête posée sur le bras.",
+          "Pieds collés l'un à l'autre, ouvrez le genou du dessus vers le plafond, comme une coquille qui s'ouvre.",
+          "Le bassin ne doit pas rouler en arrière : seul le genou bouge.",
+          "Fermez lentement, recommencez, puis changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Rouler tout le bassin en arrière pour ouvrir plus grand : l'amplitude est fausse et le moyen fessier ne travaille plus.",
+          "Aller vite : montée 2 secondes, descente 2 secondes."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice très sûr ; la brûlure sur le côté de la fesse est le signe que c'est réussi."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Brûlure ciblée sur le côté de la fesse (moyen fessier), le stabilisateur qui vous évite de « pendre » sur une hanche quand vous restez debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "clamshell exercise glute medius form"
+    },
+    {
+      "id": "plank-knees",
+      "name": {
+        "fr": "Planche sur les genoux",
+        "en": "Knee plank"
+      },
+      "targets": [
+        "core-endurance"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": "plank",
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 3,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "En appui sur les avant-bras et les genoux, coudes sous les épaules.",
+          "Avancez légèrement les épaules et alignez épaules-bassin-genoux.",
+          "Serrez fessiers et abdominaux : le bas du dos ne doit ni se creuser ni s'arrondir.",
+          "Tenez en respirant normalement ; arrêtez dès que l'alignement se perd."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Fesses trop hautes, ce qui supprime le travail.",
+          "Retenir sa respiration."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "La qualité prime : 3 fois 20 secondes parfaites valent mieux qu'une minute affaissée."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Tension diffuse dans le ventre, chaleur qui monte après 20 secondes."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "knee plank beginner form alignment"
+    },
+    {
+      "id": "plank",
+      "name": {
+        "fr": "Planche",
+        "en": "Forearm plank"
+      },
+      "targets": [
+        "core-endurance"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "plank-knees",
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 3,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "En appui sur les avant-bras et les orteils, coudes sous les épaules.",
+          "Serrez les fessiers, basculez légèrement le bassin pour aplatir le bas du dos.",
+          "Corps rectiligne de la tête aux talons, regard vers les mains.",
+          "Tenez tant que la position reste parfaite, pas une seconde de plus."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Bassin qui s'affaisse et bas du dos qui se creuse : c'est précisément ce qu'on veut apprendre à empêcher, aussi en position debout.",
+          "Épaules remontées vers les oreilles."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur lombaire pendant la tenue : revenez à la planche sur les genoux, le gainage n'est pas encore suffisant."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort abdominal profond, fessiers engagés, aucune douleur lombaire."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "forearm plank posterior pelvic tilt glutes squeezed form",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "side-plank-knees",
+      "name": {
+        "fr": "Planche latérale sur les genoux",
+        "en": "Side plank from knees"
+      },
+      "targets": [
+        "core-endurance",
+        "glute-strength"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "plank-knees",
+      "dosage": {
+        "holdSeconds": 20,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté, appui sur l'avant-bras (coude sous l'épaule), genoux pliés derrière vous.",
+          "Décollez le bassin pour aligner tête-épaules-bassin-genoux.",
+          "Ne laissez pas le bassin plonger vers le sol ni les épaules rouler vers l'avant.",
+          "Tenez, redescendez lentement, changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Bassin qui reste au sol ou qui pique du nez.",
+          "Tout le poids sur l'épaule, cou crispé."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Épaule fragile : réduisez la durée, montez moins haut."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Travail sur le flanc et le côté de la fesse — les muscles qui stabilisent le bassin à chaque heure passée debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "side plank knees beginner obliques glute medius"
+    },
+    {
+      "id": "bird-dog",
+      "name": {
+        "fr": "Chien d'arrêt (bird dog)",
+        "en": "Bird dog"
+      },
+      "targets": [
+        "core-endurance",
+        "pelvic-control",
+        "glute-strength"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true,
+        "note": {
+          "fr": "Tenue de 3 secondes bras et jambe tendus."
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "À quatre pattes, dos neutre (ni creusé ni arrondi), regard vers le sol.",
+          "Tendez lentement le bras droit devant et la jambe gauche derrière, à l'horizontale.",
+          "Le défi est là : rien d'autre ne bouge. Ni le bassin qui tourne, ni le dos qui se creuse.",
+          "Tenez 3 secondes, revenez sans poser bruyamment, changez de diagonale."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Lever la jambe trop haut en cambrant : l'horizontale suffit.",
+          "Se dépêcher : c'est un exercice de contrôle, pas de cardio."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Un des exercices les plus recommandés pour un dos qui manque d'endurance : sûr et efficace."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Concentration, léger tremblement du tronc qui stabilise, effort dans la fesse de la jambe levée."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "bird dog exercise neutral spine form cues"
+    },
+    {
+      "id": "dead-bug",
+      "name": {
+        "fr": "Insecte mort (dead bug)",
+        "en": "Dead bug"
+      },
+      "targets": [
+        "core-endurance",
+        "pelvic-control"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, bras tendus vers le plafond, hanches et genoux pliés à 90° (tibias horizontaux).",
+          "Plaquez le bas du dos au sol en basculant le bassin : il devra y rester TOUT l'exercice.",
+          "Descendez lentement le bras droit derrière la tête et allongez la jambe gauche vers le sol, sans les poser.",
+          "Revenez, changez de diagonale. Si le bas du dos décolle, réduisez l'amplitude."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Bas du dos qui se décolle dès que la jambe descend : c'est le signal de fin d'amplitude, pas un détail.",
+          "Respiration bloquée ; expirez pendant la descente des membres."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice de référence, sans danger, pour apprendre à verrouiller le bassin pendant que les jambes bougent — exactement ce qui se passe quand on piétine debout des heures."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort abdominal profond et continu, sensation de « ceinture » qui maintient le bas du dos plaqué."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "dead bug exercise low back flat form beginner",
+      "remoteImages": [
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/0.jpg",
+        "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/1.jpg"
+      ],
+      "imageAttribution": {
+        "text": "Images : free-exercise-db (domaine public)",
+        "url": "https://github.com/yuhonas/free-exercise-db",
+        "license": "Unlicense (domaine public)"
+      }
+    },
+    {
+      "id": "wall-sit",
+      "name": {
+        "fr": "Chaise au mur",
+        "en": "Wall sit"
+      },
+      "targets": [
+        "glute-strength",
+        "core-endurance"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 3,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Dos plaqué contre un mur, descendez jusqu'à ce que les cuisses approchent l'horizontale, pieds avancés sous les genoux.",
+          "Tout le dos reste en contact avec le mur, poids réparti sur les talons.",
+          "Respirez normalement, bras relâchés ou croisés.",
+          "Tenez, puis remontez en poussant dans les talons."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pieds trop proches du mur : les genoux dépassent largement les orteils et prennent tout.",
+          "Mains posées sur les cuisses pour tricher."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur derrière la rotule : descendez moins bas, cuisses au-dessus de l'horizontale."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Brûlure progressive des cuisses et des fessiers — de l'endurance directement utile pour les journées debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall sit correct form heels quads endurance"
+    },
+    {
+      "id": "seated-active-hip-flexion",
+      "name": {
+        "fr": "Flexion de hanche active assis (levé de genou)",
+        "en": "Seated active hip flexion"
+      },
+      "targets": [
+        "hip-flexion",
+        "core-endurance"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true,
+        "note": {
+          "fr": "Tenue de 5 secondes en haut de chaque répétition."
+        }
+      },
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord d'une chaise, dos droit, pieds au sol.",
+          "Sans vous pencher en arrière et sans les mains, levez un genou vers le plafond, aussi haut que possible SANS déclencher le pincement.",
+          "Tenez 5 secondes en gardant le buste parfaitement droit, reposez lentement.",
+          "Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "S'affaisser en arrière ou arrondir le dos pour lever plus haut : la hauteur ne compte que buste droit.",
+          "Monter d'un coup en cherchant le pincement : on s'arrête juste en dessous, systématiquement."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice clé si votre flexion de hanche bute devant : il construit la force et le contrôle dans l'amplitude disponible, sous la butée. L'objectif des semaines : que votre amplitude active (sans les mains) rejoigne votre amplitude passive (avec les mains)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort profond et inhabituel dans le pli de la hanche et le bas du ventre — les fléchisseurs profonds travaillent rarement activement chez les sédentaires."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "seated active hip flexion knee raise psoas strengthening"
+    },
+    {
+      "id": "hip-windshield-wipers",
+      "name": {
+        "fr": "Essuie-glaces de hanches (allongé)",
+        "en": "Supine hip windshield wipers"
+      },
+      "targets": [
+        "hip-internal-rotation",
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged",
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": "seated-90-90-transitions",
+      "progressionOf": null,
+      "dosage": {
+        "reps": 12,
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Une répétition = un aller-retour gauche/droite, lent."
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, pieds au sol écartés plus larges que les hanches, bras en croix.",
+          "Laissez tomber lentement les deux genoux ensemble d'un côté, jusqu'à la limite confortable, épaules qui restent au sol.",
+          "Revenez au centre, puis de l'autre côté, comme des essuie-glaces au ralenti.",
+          "Le genou qui s'ouvre travaille sa rotation externe, celui qui se referme sa rotation interne — les deux hanches travaillent à chaque passage."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser une épaule décoller pour aller plus loin.",
+          "Balancer avec l'élan au lieu de contrôler la descente."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Version la plus douce du travail de rotation : idéale si la position 90/90 assise est encore inconfortable, ou en échauffement."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Mobilisation douce et symétrique des hanches ; on sent vite quel côté et quel sens de rotation sont les plus raides."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "supine windshield wipers hip rotation mobility feet on floor"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "factors": [
+    {
+      "id": "ankle-dorsiflexion",
+      "name": {
+        "fr": "Mobilité de cheville (dorsiflexion)"
+      },
+      "description": {
+        "fr": "Capacité du genou à avancer au-delà des orteils, talon au sol. Facteur limitant n°1 du squat profond."
+      }
+    },
+    {
+      "id": "hip-flexion",
+      "name": {
+        "fr": "Flexion de hanche"
+      },
+      "description": {
+        "fr": "Capacité à ramener la cuisse vers le buste. Nécessaire pour le squat profond et la position assise au sol."
+      }
+    },
+    {
+      "id": "hip-external-rotation",
+      "name": {
+        "fr": "Rotation externe de hanche"
+      },
+      "description": {
+        "fr": "Capacité à ouvrir le genou vers l'extérieur. Facteur clé de la position en tailleur."
+      }
+    },
+    {
+      "id": "hip-internal-rotation",
+      "name": {
+        "fr": "Rotation interne de hanche"
+      },
+      "description": {
+        "fr": "Capacité de la cuisse à tourner vers l'intérieur (c'est elle qui permet à la fesse arrière de rester au sol en position 90/90). Souvent limitée chez les sédentaires ; peu bloquante pour le tailleur, mais utile au squat et révélatrice d'asymétries."
+      }
+    },
+    {
+      "id": "adductors",
+      "name": {
+        "fr": "Souplesse des adducteurs"
+      },
+      "description": {
+        "fr": "Muscles de l'intérieur des cuisses. Tendus, ils empêchent les genoux de descendre en tailleur."
+      }
+    },
+    {
+      "id": "hamstrings",
+      "name": {
+        "fr": "Souplesse des ischio-jambiers"
+      },
+      "description": {
+        "fr": "Arrière des cuisses. Tendus, ils tirent le bassin en rétroversion : on « tombe en arrière » en tailleur et le bas du dos s'arrondit."
+      }
+    },
+    {
+      "id": "hip-flexors",
+      "name": {
+        "fr": "Souplesse des fléchisseurs de hanche (psoas)"
+      },
+      "description": {
+        "fr": "Raccourcis par la position assise prolongée, ils tirent le bassin en avant et fatiguent les lombaires en position debout."
+      }
+    },
+    {
+      "id": "pelvic-control",
+      "name": {
+        "fr": "Contrôle du bassin"
+      },
+      "description": {
+        "fr": "Capacité à basculer volontairement le bassin (antéversion/rétroversion) pour trouver une position neutre, assis comme debout."
+      }
+    },
+    {
+      "id": "core-endurance",
+      "name": {
+        "fr": "Endurance du gainage"
+      },
+      "description": {
+        "fr": "Capacité des abdominaux profonds et des lombaires à stabiliser le tronc dans la durée. Déterminant pour tenir debout longtemps sans douleur."
+      }
+    },
+    {
+      "id": "glute-strength",
+      "name": {
+        "fr": "Force et endurance des fessiers"
+      },
+      "description": {
+        "fr": "Des fessiers endurants soulagent les lombaires en position debout prolongée et stabilisent le squat."
+      }
+    },
+    {
+      "id": "balance-control",
+      "name": {
+        "fr": "Équilibre et contrôle moteur"
+      },
+      "description": {
+        "fr": "Capacité à rester stable dans les positions basses. Se travaille par la pratique, indépendamment de la souplesse."
+      }
+    }
+  ]
+}

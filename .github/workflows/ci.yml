@@ -1,0 +1,68 @@
+name: CI & Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Valider les données (schéma + intégrité référentielle)
+        run: npm run validate-data
+
+      - name: Vérifier la logique (scoring, profil, générateur)
+        run: npm run verify-logic
+
+      - name: Vérifier la persistance (IndexedDB, export/import)
+        run: npm run verify-db
+
+      - name: Vérifier le rendu (premier lancement + rechargement)
+        run: npm run verify-render
+
+      - name: Vérifier les types
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+        env:
+          # GitHub Pages serves the site from /<repo>/ — adjust or remove for a custom domain.
+          BASE_PATH: /${{ github.event.repository.name }}/
+
+      - name: Upload artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,772 @@
+{
+  "tests": [
+    {
+      "id": "wall-cross-legged",
+      "name": {
+        "fr": "Tailleur dos au mur"
+      },
+      "factor": "hamstrings",
+      "secondaryFactors": [
+        "pelvic-control",
+        "hip-external-rotation"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Sans mur, impossible de tenir en tailleur sans poser les mains au sol derrière moi"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Je tiens sans les mains, mais contre le mur mon bas du dos reste rond : impossible de l'amener au contact"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Bas du dos au contact du mur, mais au prix d'un effort constant"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Dos droit sans effort, avec ou sans mur"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Première étape, SANS mur : asseyez-vous au sol en tailleur, au milieu de la pièce, et observez une dizaine de secondes. Devez-vous poser les mains au sol derrière vous pour ne pas basculer en arrière ?",
+          "Si vous tenez sans les mains : venez maintenant vous asseoir en tailleur, fesses collées contre un mur.",
+          "Essayez d'amener le bas du dos au contact du mur en redressant le buste, et tenez la position 30 secondes.",
+          "Choisissez le palier correspondant à ce que vous avez observé sur l'ensemble des deux étapes."
+        ]
+      },
+      "interpretation": {
+        "fr": "Si vous « tombez en arrière », le problème vient surtout de la bascule du bassin, bloquée par des ischio-jambiers tendus — pas seulement des hanches. Ce test est votre référence principale pour l'objectif tailleur : refaites-le toutes les 3-4 semaines."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "why you fall backwards sitting cross legged pelvic tilt hamstrings"
+    },
+    {
+      "id": "test-90-90",
+      "name": {
+        "fr": "Test 90/90 (rotation de hanche)"
+      },
+      "factor": "hip-external-rotation",
+      "secondaryFactors": [
+        "hip-internal-rotation"
+      ],
+      "perSide": true,
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Impossible de tenir la position, même avec les mains au sol"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Position tenue uniquement avec les mains posées au sol"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Buste droit sans les mains"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Buste droit et je peux m'incliner vers l'avant au-dessus du tibia avant"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous au sol, jambe avant pliée à 90° devant vous (tibia parallèle à votre buste), jambe arrière pliée à 90° sur le côté.",
+          "Note importante : chez la plupart des débutants, la fesse de la jambe ARRIÈRE décolle du sol — c'est attendu, ne forcez pas pour la plaquer. Installez-vous au mieux.",
+          "Les paliers ci-dessous évaluent la jambe AVANT uniquement : tentez de redresser le buste à la verticale sans poser les mains, puis de vous incliner au-dessus du tibia avant.",
+          "Notez le palier, répondez à la question sur la fesse arrière, puis inversez les jambes et testez l'autre côté."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test mesure deux choses distinctes. La jambe AVANT (les paliers) évalue la rotation externe : c'est elle qui compte pour le tailleur. La fesse ARRIÈRE (la question complémentaire) évalue la rotation interne : une fesse arrière qui reste en l'air est très fréquente chez les sédentaires et n'empêche pas de s'asseoir en tailleur — mais elle se note, car elle limite certaines positions de squat et révèle les asymétries. Profil courant : bons paliers devant, fesse arrière en l'air = rotation externe correcte, rotation interne limitée. Les transitions 90/90 et les essuie-glaces travaillent précisément ce déficit. Comparez toujours les deux côtés."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "90 90 hip mobility test assessment",
+      "followUp": {
+        "prompt": {
+          "fr": "Et la fesse de la jambe arrière, pendant ce temps ?"
+        },
+        "options": [
+          {
+            "id": "rear-down",
+            "label": {
+              "fr": "Au sol ou presque, sans effort particulier"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "hip-internal-rotation",
+              "score": 3
+            }
+          },
+          {
+            "id": "rear-effort",
+            "label": {
+              "fr": "Elle touche, mais en forçant / en me penchant"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "hip-internal-rotation",
+              "score": 2
+            }
+          },
+          {
+            "id": "rear-up",
+            "label": {
+              "fr": "Elle reste en l'air, impossible de la poser"
+            },
+            "flag": "limited-hip-internal-rotation",
+            "factorScoreOverride": {
+              "factor": "hip-internal-rotation",
+              "score": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "butterfly-knee-height",
+      "name": {
+        "fr": "Papillon (hauteur des genoux)"
+      },
+      "factor": "adductors",
+      "secondaryFactors": [
+        "hip-external-rotation"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Genoux nettement plus hauts que les hanches, position pénible"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Genoux à peu près à hauteur des hanches"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Genoux à mi-chemin entre les hanches et le sol"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Genoux proches du sol sans forcer"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous au sol, plantes de pieds jointes, talons à distance confortable du bassin (30-40 cm).",
+          "Redressez le buste au mieux, mains posées sur les chevilles.",
+          "Mesure de référence = position RELÂCHÉE : ne poussez ni avec les mains, ni avec les muscles des jambes. Laissez uniquement la gravité agir, expirez lentement, et observez où vos genoux se stabilisent après 3-4 respirations.",
+          "Notez le palier, puis répondez à la question complémentaire : contractez activement pour ouvrir les genoux vers le sol (toujours sans les mains) et comparez."
+        ]
+      },
+      "interpretation": {
+        "fr": "Le palier mesure l'amplitude passive (relâchée) : c'est la référence reproductible pour suivre la progression. La question complémentaire mesure l'écart actif/passif : descendre nettement plus bas en contractant est un bon signe — la longueur des tissus n'est pas le vrai plafond, c'est le réflexe de protection qui freine, et il répond bien aux méthodes actives (ouvertures actives, contracté-relâché) qu'on privilégiera alors sur les étirements passifs longs. Si en plus le dos s'arrondit fortement pendant le test, les ischio-jambiers participent au blocage (voir le test tailleur au mur)."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "butterfly stretch hip assessment knees height",
+      "followUp": {
+        "prompt": {
+          "fr": "En ouvrant activement les genoux avec vos muscles (sans les mains), que se passe-t-il ?"
+        },
+        "options": [
+          {
+            "id": "active-much-lower",
+            "label": {
+              "fr": "Je descends nettement plus bas (un palier ou plus)"
+            },
+            "flag": "responds-to-active-work"
+          },
+          {
+            "id": "active-bit-lower",
+            "label": {
+              "fr": "Un peu plus bas, sans plus"
+            },
+            "flag": null
+          },
+          {
+            "id": "active-same",
+            "label": {
+              "fr": "Quasiment pareil"
+            },
+            "flag": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "toe-touch-standing",
+      "name": {
+        "fr": "Toucher ses pieds debout"
+      },
+      "factor": "hamstrings",
+      "secondaryFactors": [
+        "pelvic-control"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Mes doigts n'atteignent pas la mi-tibia"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "J'atteins la mi-tibia"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "J'atteins les chevilles"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Je touche mes orteils ou le sol"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Debout, pieds joints, jambes tendues sans verrouiller brutalement les genoux.",
+          "Expirez et penchez-vous lentement vers l'avant, bras relâchés vers le sol.",
+          "Descendez jusqu'à la limite confortable, sans à-coups, et notez le point atteint par vos doigts.",
+          "Remontez en déroulant lentement, genoux légèrement fléchis."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test alimente le diagnostic du tailleur : des ischio-jambiers courts empêchent le bassin de basculer vers l'avant en position assise au sol. Astuce de diagnostic : si fléchir légèrement les genoux change tout, ce sont bien les ischio-jambiers qui limitent. Ce test alimente aussi le diagnostic du squat profond : des ischio-jambiers courts tirent le bassin en rétroversion en position basse et arrondissent le dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "standing toe touch test hamstring flexibility"
+    },
+    {
+      "id": "thomas-test",
+      "name": {
+        "fr": "Test du psoas (Thomas modifié)"
+      },
+      "factor": "hip-flexors",
+      "secondaryFactors": [],
+      "perSide": true,
+      "equipment": {
+        "fr": "Un lit ou une table solide"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "La cuisse libre remonte nettement au-dessus de l'horizontale et le genou se tend"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "La cuisse libre remonte un peu au-dessus de l'horizontale"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "La cuisse reste à l'horizontale, genou moyennement plié"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Cuisse horizontale ou plus basse, genou plié à environ 90°"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous tout au bord d'un lit, puis allongez-vous sur le dos en ramenant les deux genoux vers la poitrine.",
+          "Gardez un genou serré contre la poitrine avec les mains (le bas du dos reste plaqué).",
+          "Laissez l'autre jambe descendre, détendue, dans le vide au bord du lit.",
+          "Observez la position de la cuisse libre et du genou, puis changez de côté."
+        ]
+      },
+      "interpretation": {
+        "fr": "Une cuisse qui reste en l'air révèle un psoas raccourci ; un genou qui se tend révèle un droit fémoral raide. C'est le suspect n°1 du mal de dos en position debout prolongée chez les personnes assises toute la journée : le programme y consacrera du volume."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "modified thomas test hip flexor tightness self test"
+    },
+    {
+      "id": "plank-hold",
+      "name": {
+        "fr": "Planche (endurance de gainage)"
+      },
+      "factor": "core-endurance",
+      "secondaryFactors": [],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un sol, éventuellement un tapis"
+      },
+      "measure": {
+        "kind": "seconds",
+        "prompt": {
+          "fr": "Temps tenu avec une position correcte (secondes)"
+        }
+      },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 20,
+          "score": 0
+        },
+        {
+          "min": 20,
+          "max": 45,
+          "score": 1
+        },
+        {
+          "min": 45,
+          "max": 90,
+          "score": 2
+        },
+        {
+          "min": 90,
+          "score": 3
+        }
+      ],
+      "instructions": {
+        "fr": [
+          "En appui sur les avant-bras et les orteils, coudes sous les épaules.",
+          "Corps aligné : ni fesses en l'air, ni bassin qui s'affaisse. Serrez fessiers et abdominaux.",
+          "Chronométrez le temps pendant lequel la position reste correcte.",
+          "Arrêtez dès que le bassin s'affaisse ou que le bas du dos se creuse : le test s'arrête là."
+        ]
+      },
+      "interpretation": {
+        "fr": "On mesure l'endurance à position correcte, pas le record en tremblant. Sous 45 secondes, le gainage sera une priorité du programme anti-mal de dos debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "forearm plank correct form beginners"
+    },
+    {
+      "id": "single-leg-bridge-hold",
+      "name": {
+        "fr": "Pont fessier à une jambe (tenue)"
+      },
+      "factor": "glute-strength",
+      "secondaryFactors": [
+        "core-endurance"
+      ],
+      "perSide": true,
+      "equipment": {
+        "fr": "Un sol, éventuellement un tapis"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Moins de 10 secondes, ou crampe immédiate derrière la cuisse"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "10 à 20 secondes, bassin qui penche"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "20 à 30 secondes, bassin stable"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Plus de 30 secondes, bassin stable et effort senti dans la fesse"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, pieds au sol proches des fesses.",
+          "Montez le bassin en serrant les fessiers, puis tendez une jambe dans le prolongement du corps.",
+          "Tenez sans laisser le bassin pencher d'un côté, puis changez de jambe.",
+          "Notez le palier pour chaque côté."
+        ]
+      },
+      "interpretation": {
+        "fr": "Une crampe derrière la cuisse signale des ischio-jambiers qui compensent des fessiers peu actifs — un schéma classique chez les sédentaires, directement lié aux lombaires qui saturent debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "single leg glute bridge test hamstring cramp glutes"
+    },
+    {
+      "id": "deep-squat-baseline",
+      "name": {
+        "fr": "Squat profond (état des lieux)"
+      },
+      "factor": "balance-control",
+      "secondaryFactors": [
+        "ankle-dorsiflexion",
+        "hip-flexion"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un support solide à portée de main (table, poignée de porte)"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Impossible : je tombe en arrière même en me tenant"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Possible uniquement en me tenant à un support"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Possible sans me tenir, mais talons décollés ou dos très arrondi"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Squat complet, talons au sol, tenu 30 secondes"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Pieds écartés largeur d'épaules, pointes légèrement ouvertes (10-20°). Si vous savez que vos hanches pincent devant : partez d'emblée plus large, pointes ouvertes à 20-30°.",
+          "Descendez aussi bas que possible, comme pour vous asseoir sur vos talons, un support à portée de main par sécurité.",
+          "Observez : les talons décollent-ils ? Tombez-vous en arrière ? Le dos s'arrondit-il fortement ? Ça pince-t-il dans le pli de l'aine ?",
+          "Choisissez le palier correspondant. En cas de pincement d'aine, refaites un essai pieds plus larges et notez si ça change."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test donne le point de départ ; les deux tests suivants (genou-mur et talons surélevés) déterminent si la limite vient des chevilles, des hanches ou de l'équilibre."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "deep squat assessment what limits your squat"
+    },
+    {
+      "id": "knee-to-wall",
+      "name": {
+        "fr": "Genou-mur (mobilité de cheville)"
+      },
+      "factor": "ankle-dorsiflexion",
+      "secondaryFactors": [],
+      "perSide": true,
+      "equipment": {
+        "fr": "Un mur et un mètre ou une règle"
+      },
+      "measure": {
+        "kind": "cm",
+        "prompt": {
+          "fr": "Distance maximale gros orteil → mur avec genou au contact (cm)"
+        }
+      },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 4,
+          "score": 0
+        },
+        {
+          "min": 4,
+          "max": 8,
+          "score": 1
+        },
+        {
+          "min": 8,
+          "max": 11,
+          "score": 2
+        },
+        {
+          "min": 11,
+          "score": 3
+        }
+      ],
+      "instructions": {
+        "fr": [
+          "Pieds nus, face à un mur, un pied avancé pointé droit vers le mur, orteils à quelques centimètres.",
+          "En fente, poussez le genou avant vers le mur sans que le talon décolle.",
+          "Si le genou touche facilement, reculez le pied de 1 cm et recommencez.",
+          "Notez la distance maximale orteil-mur à laquelle le genou touche encore, talon au sol. Testez les deux côtés."
+        ]
+      },
+      "interpretation": {
+        "fr": "Le repère classique de mobilité fonctionnelle est d'environ 10-12 cm. En dessous de 8 cm, vos chevilles limitent très probablement votre squat, et le programme priorisera leur mobilité. Une différence droite/gauche de plus de 2 cm mérite aussi un travail asymétrique."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "knee to wall test ankle dorsiflexion how to measure"
+    },
+    {
+      "id": "heel-elevated-squat",
+      "name": {
+        "fr": "Squat talons surélevés (test discriminant)"
+      },
+      "factor": "hip-flexion",
+      "secondaryFactors": [
+        "ankle-dorsiflexion"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un livre épais ou une planche (2-4 cm)"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Toujours impossible, même talons surélevés"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Possible mais instable ou inconfortable"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Nettement plus facile que talons au sol"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Confortable, je pourrais y rester une minute"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Placez vos talons sur un livre épais ou une planche de 2 à 4 cm.",
+          "Refaites le même squat profond que dans le test précédent.",
+          "Comparez honnêtement la sensation avec le squat talons au sol.",
+          "Choisissez le palier correspondant."
+        ]
+      },
+      "interpretation": {
+        "fr": "Lecture croisée : si le squat devient nettement plus facile talons surélevés, la limite est bien dans les chevilles. S'il reste aussi difficile, cherchez du côté des hanches et du contrôle — c'est ce que vérifie le test suivant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "heel elevated squat ankle mobility test"
+    },
+    {
+      "id": "knee-hug-supine-test",
+      "name": {
+        "fr": "Genou-poitrine allongé (flexion de hanche isolée)"
+      },
+      "factor": "hip-flexion",
+      "secondaryFactors": [],
+      "perSide": true,
+      "equipment": {
+        "fr": "Un sol ou un lit ferme"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Le genou s'arrête loin de la poitrine (angle cuisse-buste de 45° ou plus)"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Le genou approche la poitrine, avec une gêne ou un blocage net"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Le genou touche presque la poitrine, l'autre jambe reste au sol"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Genou contre la poitrine sans effort, jambe opposée à plat"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, jambes tendues.",
+          "Ramenez un genou vers la poitrine avec les mains (attrapez l'arrière de la cuisse, pas le tibia), l'autre jambe restant au sol.",
+          "Identifiez OÙ ça bloque : un étirement derrière (fesse, arrière de la hanche) ou un pincement devant, dans le pli de l'aine ?",
+          "Si ça pince devant : refaites l'essai en dirigeant le genou vers l'épaule du même côté, légèrement ouvert vers l'extérieur. Notez si l'amplitude s'améliore. Testez les deux côtés."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test isole la hanche sans faire intervenir la cheville ni l'équilibre. Deux profils très différents : un étirement DERRIÈRE est une raideur des tissus mous, très entraînable par les étirements du programme ; un pincement DEVANT (butée non douloureuse dans l'aine) évoque une butée mécanique de l'articulation, qui ne s'étire pas. Règle dans ce cas : le pincement est un mur, pas une porte — on travaille toujours juste en dessous, jamais en poussant dedans, et on adapte le squat (pieds plus écartés, pointes ouvertes à 20-30°, talons surélevés plus longtemps). Si le pincement devient douloureux, apparaît dans la vie courante, ou ne s'améliore pas après 3 mois de travail adapté : avis kiné/médecin du sport."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "supine knee to chest hip flexion test",
+      "followUp": {
+        "prompt": {
+          "fr": "Où avez-vous senti le blocage principal ?"
+        },
+        "options": [
+          {
+            "id": "stretch-back",
+            "label": {
+              "fr": "Un étirement derrière (fesse / arrière de la hanche)"
+            },
+            "flag": null
+          },
+          {
+            "id": "pinch-front",
+            "label": {
+              "fr": "Un pincement devant, dans le pli de l'aine, non douloureux"
+            },
+            "flag": "anterior-hip-impingement"
+          },
+          {
+            "id": "pain-front",
+            "label": {
+              "fr": "Une douleur franche devant"
+            },
+            "flag": "seek-professional-advice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "standing-pelvic-tilt-control",
+      "name": {
+        "fr": "Bascule du bassin debout (contrôle moteur)"
+      },
+      "factor": "pelvic-control",
+      "secondaryFactors": [],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un miroir de profil (ou la caméra du téléphone)"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Je ne perçois pas le mouvement demandé, ou rien ne bouge malgré mes efforts"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "J'y arrive dans un sens seulement, ou par à-coups, en bougeant tout le buste"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Les deux sens, mais lentement et en me concentrant fort"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Bascule fluide dans les deux sens, buste immobile, et je sais m'arrêter au milieu"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Debout de profil devant un miroir, mains sur les crêtes du bassin, genoux souples (ni verrouillés ni fléchis).",
+          "Bascule avant : cambrez le bas du dos en pointant le coccyx vers l'arrière, comme pour sortir les fesses.",
+          "Bascule arrière : rentrez le coccyx en serrant fessiers et bas du ventre, le bas du dos s'aplatit.",
+          "Alternez 5-6 fois lentement, buste et épaules immobiles : seul le bassin roule. Terminez en cherchant la position intermédiaire, neutre."
+        ]
+      },
+      "interpretation": {
+        "fr": "Tenir debout longtemps sans douleur suppose de savoir sortir de la position cambrée par défaut (celle qu'impose un psoas court) pour revenir au neutre — impossible si la bascule n'est pas un geste conscient et disponible. Un score bas ne signale pas une faiblesse musculaire mais un manque de contrôle moteur : le chat-vache, le dead bug et le pont fessier (qui commencent tous par une bascule) l'apprennent rapidement. C'est souvent le score qui progresse le plus vite de toute la batterie."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "standing pelvic tilt anterior posterior control drill"
+    }
+  ]
+}

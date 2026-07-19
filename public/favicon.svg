@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#3f7d63"/>
+  <!-- stylised person in a squat / mobility pose -->
+  <circle cx="32" cy="17" r="6" fill="#faf9f6"/>
+  <path d="M20 30 q12 -8 24 0 l-4 8 q-8 5 -16 0 z" fill="#faf9f6"/>
+  <path d="M22 40 l-6 12 M42 40 l6 12" stroke="#faf9f6" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>

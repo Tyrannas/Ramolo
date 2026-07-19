@@ -1,0 +1,42 @@
+{
+  "name": "mobilite-souplesse",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "PWA de mobilité et souplesse pour vrais débutants",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "tsc -b --noEmit",
+    "validate-data": "node scripts/validate-data.mjs",
+    "verify-logic": "esbuild scripts/verify-logic.ts --bundle --platform=node --format=esm --outfile=node_modules/.verify-logic.mjs --log-level=error && node node_modules/.verify-logic.mjs",
+    "verify-db": "esbuild scripts/verify-db.ts --bundle --platform=node --format=esm --outfile=node_modules/.verify-db.mjs --log-level=error && node node_modules/.verify-db.mjs",
+    "verify-render": "esbuild scripts/verify-render.tsx --bundle --platform=node --format=esm --outfile=node_modules/.verify-render.mjs --external:jsdom --external:fake-indexeddb --jsx=automatic --define:import.meta.env={\\\"BASE_URL\\\":\\\"/\\\",\\\"MODE\\\":\\\"test\\\",\\\"DEV\\\":false,\\\"PROD\\\":true,\\\"SSR\\\":false} --log-level=error && node node_modules/.verify-render.mjs && node node_modules/.verify-render.mjs --seeded",
+    "test": "npm run validate-data && npm run verify-logic && npm run verify-db && npm run verify-render"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@fontsource/inter": "^5.1.0",
+    "@mui/icons-material": "^6.3.0",
+    "@mui/material": "^6.3.0",
+    "@mui/x-charts": "^7.23.2",
+    "dexie": "^4.0.10",
+    "dexie-react-hooks": "^1.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.24.2",
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^29.1.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}

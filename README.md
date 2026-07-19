@@ -1,0 +1,123 @@
+# Mobilité & Souplesse — PWA pour vrais débutants
+
+Application web installable (PWA) qui aide les personnes sédentaires à atteindre des **objectifs de
+mouvement concrets** — s'asseoir en tailleur, tenir un squat profond, tenir debout sans mal de dos —
+plutôt que de proposer des séances d'étirement génériques.
+
+Le différenciateur : un **module de diagnostic** qui identifie *quel* facteur limite chaque objectif
+(chevilles ? hanches ? ischio-jambiers ?), puis génère un programme ciblé avec des re-tests
+périodiques pour objectiver la progression.
+
+**Aucun compte, aucun serveur.** Toutes les données restent dans l'IndexedDB de l'appareil.
+
+## Démarrer
+
+```bash
+npm install
+npm run dev          # serveur de développement
+npm run build        # build de production (dist/)
+npm run preview      # prévisualiser le build
+```
+
+## Qualité
+
+```bash
+npm test               # les quatre suites ci-dessous
+npm run validate-data  # schéma, intégrité référentielle, matrice facteur × objectif
+npm run verify-logic   # scoring, profil, flags, générateur de séances
+npm run verify-db      # persistance IndexedDB, export/import, sauvegardes v1
+npm run verify-render  # rendu réel dans jsdom : premier lancement et rechargement
+npm run lint           # typage TypeScript
+```
+
+La CI (`.github/workflows/ci.yml`) exécute les quatre suites, puis déploie sur GitHub Pages depuis `main`.
+
+## Architecture
+
+```
+public/data/            Contenu statique — SOURCE DE VÉRITÉ du contenu
+  factors.json          11 facteurs limitants (taxonomie commune)
+  goals.json            3 objectifs, pondération des facteurs, jalons
+  tests.json            12 tests d'auto-évaluation, paliers, scoring 0-3
+                        et questions `followUp` qualitatives
+  exercises.json        33 fiches exercices en français
+
+src/
+  types.ts              Modèle de domaine (miroir des JSON)
+  db.ts                 Dexie/IndexedDB + export/import JSON
+  data/content.ts       Chargement et indexation du contenu
+  logic/
+    scoring.ts          Valeur brute (cm, s, palier) → score 0-3
+    profile.ts          Assessments → profil par facteur + synthèse
+    generator.ts        Génération déterministe des séances
+    schedule.ts         Re-tests dus, séries, jours d'entraînement
+  hooks/                useTodaySession (état agrégé), useWakeLock
+  pages/                Onboarding, Today, Diagnostic(+Wizard), Player,
+                        Progress, Library, Settings
+  components/           Layout, jauges, calendrier, fiches exercices
+```
+
+### Décisions notables
+
+**Le contenu pilote le code.** Ajouter un objectif, un test ou un exercice = éditer un JSON. Aucun
+identifiant n'est codé en dur côté application ; `validate-data` garantit l'intégrité référentielle
+et refuse par exemple un objectif dont un facteur pondéré n'est mesuré par aucun de ses tests.
+
+**Deux sources de score, pas trois.** Seuls le `factor` principal d'un test et les
+`factorScoreOverride` des réponses `followUp` produisent un score. `secondaryFactors` est purement
+informatif : un squat raté ne dit rien de précis sur *chacun* des facteurs qu'il touche, et le faire
+compter brouillerait la discrimination qui fait l'intérêt de l'app (« tes chevilles vont bien — ce
+sont tes hanches »). Voir `computeFactorScores`.
+
+**« Non évalué » n'est pas « bon ».** Un facteur qu'aucun test n'a noté s'affiche explicitement
+comme non évalué, jauge vide et grisée — jamais pleine par défaut. C'est une règle d'*affichage*,
+distincte de la règle de *validation* : un facteur pondéré dans un objectif sans aucune source de
+score casse le build (`validate-data`), parce que le diagnostic mentirait.
+
+**Questions de suivi et flags.** Certains tests posent une question qualitative après la mesure.
+Une réponse peut noter un autre facteur (`factorScoreOverride` — la fesse arrière du 90/90 est la
+seule source pour la rotation interne) et/ou lever un `flag` qui pilote le programme : essuie-glaces
+sur rotation interne limitée, flexion de hanche assise et consignes de stance adaptées sur pincement
+antérieur, préférence pour les cycles actifs quand la personne répond mieux au travail actif, et
+bandeau invitant à consulter sur douleur franche.
+
+**Trois types de dosage exclusifs.** `holdSeconds` (chrono descendant), `reps` (compteur) et
+`cycles` (timer d'intervalles : `count` × phases, chaque changement de phase annoncé par un bip et
+son label). Tout timing vit dans le dosage structuré, jamais seulement dans une note en texte libre
+— une note contredisant le champ structuré a déjà produit un chrono faux et un budget de séance
+sous-évalué de 3×.
+
+**Générateur déterministe, pas d'IA.** Chaque facteur reçoit un volume proportionnel à
+`poids_objectif × (3 − score)` : les plus faibles passent en premier. La sélection respecte le budget
+temps, impose au moins un exercice de renforcement (piège du « que du stretching ») et tourne
+légèrement d'une séance à l'autre via `rotation = nombre de séances faites` — ce qui rend la séance
+du jour reproductible entre l'écran d'accueil et le player sans état partagé.
+
+**Vidéos : recherches YouTube, pas d'embeds.** Les fiches portent un champ `videoQuery` plutôt qu'une
+URL inventée ; l'app ouvre une recherche ciblée. Aucun lien mort, aucune question de droits. Passer à
+de vrais embeds = remplir `videoUrl` (tâche de contenu, sans changement de code).
+
+**Sécurité codée en dur.** Signaler une douleur propose la régression ; deux signalements sur les six
+dernières séances masquent automatiquement l'exercice (réversible dans les réglages) et l'app invite
+à consulter.
+
+### Hors-ligne
+
+`vite-plugin-pwa` (Workbox) précache l'app shell *et* les JSON de contenu : l'application est
+pleinement utilisable hors connexion, à l'exception des démonstrations vidéo (externes par nature).
+
+## Déploiement
+
+Le build est 100 % statique. Pour GitHub Pages, la CI passe `BASE_PATH=/<repo>/`. Pour un domaine
+racine (Netlify, Cloudflare Pages), aucune variable n'est nécessaire.
+
+## État par rapport au plan
+
+Phases 0 à 4 implémentées et vérifiées. Reste la phase 5 (contenu) :
+
+- passer de 33 à 60-80 exercices, et de 3 à 6 objectifs (`toe-touch`, `pancake`, `posture` — la
+  taxonomie de facteurs devra alors gagner `thoracic-extension` et `shoulder-mobility`) ;
+- curation des vidéos (`videoQuery` → `videoUrl`) ; télécharger les `remoteImages` dans
+  `/public/images/` au build, pour que les 13 illustrations existantes marchent hors-ligne ;
+- audit Lighthouse PWA et vérification hors-ligne sur appareil réel ;
+- rappels programmés (aujourd'hui : notifications locales seulement quand l'app est ouverte).

@@ -1,0 +1,108 @@
+{
+  "goals": [
+    {
+      "id": "cross-legged",
+      "priority": 1,
+      "name": {
+        "fr": "M'asseoir en tailleur confortablement"
+      },
+      "tagline": {
+        "fr": "Dos droit, sans tomber en arrière, sans douleur — au sol, en festival, partout."
+      },
+      "description": {
+        "fr": "S'asseoir en tailleur demande trois choses : des hanches qui tournent vers l'extérieur, des adducteurs qui laissent descendre les genoux, et surtout des ischio-jambiers assez souples pour que le bassin puisse basculer vers l'avant. Chez les personnes qui passent la journée assises sur une chaise, c'est presque toujours ce dernier point qui manque : le bassin part en arrière, le dos s'arrondit, et tenir la position devient épuisant."
+      },
+      "tests": [
+        "wall-cross-legged",
+        "test-90-90",
+        "butterfly-knee-height",
+        "toe-touch-standing",
+        "standing-pelvic-tilt-control"
+      ],
+      "factors": {
+        "hip-external-rotation": 0.3,
+        "hamstrings": 0.3,
+        "adductors": 0.2,
+        "pelvic-control": 0.2
+      },
+      "milestones": {
+        "fr": [
+          "Tenir 1 minute assis en tailleur sur un gros coussin, dos droit",
+          "Tenir 5 minutes sur un coussin fin ou un livre",
+          "Tenir 10 minutes au sol, dos droit, sans appui derrière",
+          "M'asseoir en tailleur et me relever sans poser les mains"
+        ]
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "long-standing",
+      "priority": 2,
+      "name": {
+        "fr": "Tenir debout longtemps sans mal de dos"
+      },
+      "tagline": {
+        "fr": "Concerts, files d'attente, festivals : finir la journée sans lombaires en feu."
+      },
+      "description": {
+        "fr": "La douleur lombaire en position debout prolongée vient rarement d'un dos « fragile ». Chez les sédentaires, elle vient surtout de fléchisseurs de hanche raccourcis qui tirent le bassin vers l'avant, de fessiers et d'abdominaux qui ne font pas leur travail de soutien, et d'un manque d'endurance musculaire : les lombaires compensent tout, et finissent par saturer. La solution est double : rallonger l'avant des hanches, renforcer ce qui soutient."
+      },
+      "tests": [
+        "thomas-test",
+        "plank-hold",
+        "single-leg-bridge-hold",
+        "standing-pelvic-tilt-control"
+      ],
+      "factors": {
+        "hip-flexors": 0.3,
+        "core-endurance": 0.3,
+        "glute-strength": 0.3,
+        "pelvic-control": 0.1
+      },
+      "milestones": {
+        "fr": [
+          "Tenir 30 minutes debout sans gêne notable",
+          "Tenir 2 heures avec quelques micro-pauses actives",
+          "Une journée complète de festival avec une gêne légère au plus",
+          "Enchaîner 3 jours de festival sans douleur invalidante"
+        ]
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "deep-squat",
+      "priority": 3,
+      "name": {
+        "fr": "Tenir un squat profond (asian squat)"
+      },
+      "tagline": {
+        "fr": "Talons au sol, position de repos naturelle, utilisable partout où il n'y a pas de chaise."
+      },
+      "description": {
+        "fr": "Le squat profond talons au sol combine une forte dorsiflexion de cheville, une flexion de hanche complète et un bon équilibre. Le facteur limitant varie beaucoup d'une personne à l'autre : c'est exactement ce que le diagnostic départage. Bonne nouvelle : c'est un objectif très entraînable, et la position elle-même est le meilleur exercice une fois les régressions maîtrisées."
+      },
+      "tests": [
+        "deep-squat-baseline",
+        "knee-to-wall",
+        "heel-elevated-squat",
+        "knee-hug-supine-test",
+        "toe-touch-standing"
+      ],
+      "factors": {
+        "ankle-dorsiflexion": 0.4,
+        "hip-flexion": 0.25,
+        "balance-control": 0.2,
+        "hamstrings": 0.15
+      },
+      "milestones": {
+        "fr": [
+          "Tenir 30 secondes en squat talons surélevés (livre sous les talons)",
+          "Tenir 30 secondes en squat libre en me tenant à un support",
+          "Tenir 30 secondes en squat libre, talons au sol",
+          "Tenir 2 minutes, position de repos détendue"
+        ]
+      },
+      "prerequisites": []
+    }
+  ]
+}
