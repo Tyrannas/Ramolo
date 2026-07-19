@@ -8,16 +8,15 @@ import '@fontsource/inter/700.css';
 import App from './App';
 import { theme } from './theme';
 import { ContentProvider } from './ContentContext';
+import { routerBasename } from './basename';
 import './index.css';
-
-const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <ContentProvider>
-        <BrowserRouter basename={basename || undefined}>
+        <BrowserRouter basename={routerBasename}>
           <App />
         </BrowserRouter>
       </ContentProvider>

@@ -27,10 +27,11 @@ npm run validate-data  # schéma, intégrité référentielle, matrice facteur �
 npm run verify-logic   # scoring, profil, flags, générateur de séances
 npm run verify-db      # persistance IndexedDB, export/import, sauvegardes v1
 npm run verify-render  # rendu réel dans jsdom : premier lancement et rechargement
+npm run verify-render-base  # idem, servi depuis /ramolo/ (routage GitHub Pages)
 npm run lint           # typage TypeScript
 ```
 
-La CI (`.github/workflows/ci.yml`) exécute les quatre suites, puis déploie sur GitHub Pages depuis `main`.
+La CI (`.github/workflows/ci.yml`) exécute toutes les suites, puis déploie sur GitHub Pages depuis `main`.
 
 ## Architecture
 
@@ -108,8 +109,25 @@ pleinement utilisable hors connexion, à l'exception des démonstrations vidéo 
 
 ## Déploiement
 
-Le build est 100 % statique. Pour GitHub Pages, la CI passe `BASE_PATH=/<repo>/`. Pour un domaine
-racine (Netlify, Cloudflare Pages), aucune variable n'est nécessaire.
+Publié sur **https://tyrannas.github.io/ramolo/** par `.github/workflows/ci.yml` : chaque push sur
+`main` rejoue les suites de tests puis déploie `dist/`. Les pull requests sont vérifiées sans être
+déployées.
+
+Réglage requis une seule fois : dans *Settings → Pages* du dépôt, choisir **GitHub Actions** comme
+source (et non « Deploy from a branch »).
+
+Trois détails rendent le sous-chemin `/ramolo/` fonctionnel, et chacun est vérifié en CI :
+
+- **`base`** vaut `/ramolo/` en build et `/` en dev (`vite.config.ts`). Un `BASE_PATH=/` en variable
+  d'environnement permet de builder pour un domaine racine sans toucher au code.
+- **`404.html`** est une copie de `index.html`, générée au build. GitHub Pages ne sait pas réécrire
+  les routes d'une SPA : sans ce fichier, ouvrir `/ramolo/diagnostic` directement, rafraîchir la page
+  ou partager un lien renverrait un vrai 404. `.nojekyll` est ajouté dans la foulée.
+- **`routerBasename`** (`src/basename.ts`) alimente le `basename` de React Router. Il vit dans son
+  propre module parce que le point d'entrée et les tests de rendu doivent en partager exactement la
+  valeur : un basename appliqué d'un côté seulement produit une page blanche en production alors que
+  tous les tests passent à la racine. `verify-render-base` rejoue donc le parcours complet servi
+  depuis `/ramolo/`.
 
 ## État par rapport au plan
 

@@ -9,46 +9,50 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   build:
+    name: Vérifier et construire
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - run: npm ci
 
-      - name: Valider les données (schéma + intégrité référentielle)
+      - name: Valider les données (schéma, références, matrice facteur × objectif)
         run: npm run validate-data
 
-      - name: Vérifier la logique (scoring, profil, générateur)
+      - name: Vérifier la logique (scoring, profil, flags, générateur)
         run: npm run verify-logic
 
       - name: Vérifier la persistance (IndexedDB, export/import)
         run: npm run verify-db
 
-      - name: Vérifier le rendu (premier lancement + rechargement)
+      - name: Vérifier le rendu à la racine (premier lancement + rechargement)
         run: npm run verify-render
+
+      - name: Vérifier le rendu sous /ramolo/ (routage GitHub Pages)
+        run: npm run verify-render-base
 
       - name: Vérifier les types
         run: npm run lint
 
+      # Base path comes from vite.config.ts (/ramolo/ → tyrannas.github.io/ramolo).
+      # Override with BASE_PATH here only for a custom domain.
       - name: Build
         run: npm run build
-        env:
-          # GitHub Pages serves the site from /<repo>/ — adjust or remove for a custom domain.
-          BASE_PATH: /${{ github.event.repository.name }}/
+
+      - name: Vérifier que le build cible bien la bonne base
+        run: |
+          grep -q '/ramolo/assets/' dist/index.html \
+            || { echo "::error::index.html ne référence pas /ramolo/ — base incorrecte"; exit 1; }
+          test -f dist/404.html || { echo "::error::404.html manquant (deep links cassés)"; exit 1; }
+          test -f dist/.nojekyll || { echo "::error::.nojekyll manquant"; exit 1; }
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
@@ -57,12 +61,21 @@ jobs:
           path: dist
 
   deploy:
+    name: Déployer sur GitHub Pages
     if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    # Never run two deployments at once, but let PR checks proceed freely.
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
     steps:
-      - id: deployment
+      - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4

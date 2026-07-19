@@ -8,9 +8,19 @@ import 'fake-indexeddb/auto';
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'node:fs';
 
+// The app is served from '/' in dev and '/ramolo/' on GitHub Pages. The whole
+// suite runs against both, because a mismatched router basename renders a
+// blank page in production while passing every test at the root.
+const BASE = import.meta.env.BASE_URL;
+const ORIGIN = 'http://localhost';
+const at = (path: string) => `${BASE}${path.replace(/^\//, '')}`;
+/** '/ramolo' and '/ramolo/' address the same page — compare them as equal. */
+const samePath = (a: string, b: string) =>
+  a.replace(/\/$/, '') === b.replace(/\/$/, '');
+
 // --- Environment must exist before React/Dexie are imported ---------------
 const dom = new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>', {
-  url: 'http://localhost/',
+  url: `${ORIGIN}${BASE}`,
   pretendToBeVisual: true,
 });
 const g = globalThis as unknown as Record<string, unknown>;
@@ -56,6 +66,7 @@ const { ThemeProvider } = await import('@mui/material');
 const { ContentProvider } = await import('../src/ContentContext');
 const { theme } = await import('../src/theme');
 const App = (await import('../src/App')).default;
+const { routerBasename } = await import('../src/basename');
 const { db, getPlan, savePlan } = await import('../src/db');
 
 let failures = 0;
@@ -102,7 +113,11 @@ const mount = async () => {
         React.createElement(
           ContentProvider,
           null,
-          React.createElement(BrowserRouter, null, React.createElement(App)),
+          React.createElement(
+            BrowserRouter,
+            { basename: routerBasename },
+            React.createElement(App),
+          ),
         ),
       ),
     );
@@ -138,7 +153,11 @@ async function seededRun() {
 
   await mount();
 
-  check('pas de redirection vers l’onboarding', dom.window.location.pathname === '/');
+  check(
+    'pas de redirection vers l’onboarding',
+    samePath(dom.window.location.pathname, at('')),
+    `(base ${BASE} ; reçu ${dom.window.location.pathname})`,
+  );
   check(
     'aucun indicateur de chargement bloqué',
     !document.querySelector('[role="progressbar"]'),
@@ -150,7 +169,7 @@ async function seededRun() {
   // --- The 90/90 follow-up drives the internal-rotation gauge -------------
   console.log('\n[R2] Jauge « non évalué » et followUp');
   const goToDiagnostic = async () => {
-    dom.window.history.pushState({}, '', '/diagnostic');
+    dom.window.history.pushState({}, '', at('diagnostic'));
     await act(async () => {
       dom.window.dispatchEvent(new dom.window.PopStateEvent('popstate'));
       await new Promise((r) => setTimeout(r, 120));
@@ -216,7 +235,11 @@ async function main() {
     /objectifs de mouvement concrets/i.test(text()),
     `(vu : « ${text().slice(0, 90)} »)`,
   );
-  check('l’URL a basculé sur /onboarding', dom.window.location.pathname === '/onboarding');
+  check(
+    'l’URL a basculé sur onboarding',
+    samePath(dom.window.location.pathname, at('onboarding')),
+    `(base ${BASE} ; reçu ${dom.window.location.pathname})`,
+  );
 
   // --- 2. Walk the onboarding ---------------------------------------------
   console.log('\n[2] Parcours d’onboarding');
@@ -253,7 +276,11 @@ async function main() {
   const plan = await getPlan();
   check('le plan est persisté', !!plan.onboardedAt, JSON.stringify(plan));
   check('l’objectif choisi est enregistré', plan.activeGoalIds.includes('cross-legged'), JSON.stringify(plan.activeGoalIds));
-  check('redirection vers l’accueil', dom.window.location.pathname === '/');
+  check(
+    'redirection vers l’accueil',
+    samePath(dom.window.location.pathname, at('')),
+    `(base ${BASE} ; reçu ${dom.window.location.pathname})`,
+  );
   check('l’accueil ne reste PAS bloqué sur un loader', !stuckOnLoader(), `(html: ${html().slice(0, 120)})`);
   check('l’accueil affiche la séance du jour', /Séance du jour/i.test(text()), `(vu : « ${text().slice(0, 140)} »)`);
   check(
