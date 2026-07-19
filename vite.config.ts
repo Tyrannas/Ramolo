@@ -4,13 +4,13 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { copyFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-// Deployed at https://tyrannas.github.io/ramolo/, so production assets live
-// under /ramolo/. Dev and preview stay at the root for convenience.
+// Deployed at https://tyrannas.github.io/Ramolo/, so production assets live
+// under /Ramolo/. Dev and preview stay at the root for convenience.
 // Override with BASE_PATH=/ at build time for a custom domain.
-const DEFAULT_PROD_BASE = '/ramolo/';
+const DEFAULT_PROD_BASE = '/Ramolo/';
 
 /**
- * GitHub Pages has no SPA rewrite: requesting /ramolo/diagnostic directly
+ * GitHub Pages has no SPA rewrite: requesting /Ramolo/diagnostic directly
  * returns a hard 404 instead of the app. Serving the same HTML as 404.html
  * makes deep links, refreshes and shared URLs work. `.nojekyll` stops Pages
  * from dropping files and folders that start with an underscore.

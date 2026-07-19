@@ -36,21 +36,21 @@ jobs:
       - name: Vérifier le rendu à la racine (premier lancement + rechargement)
         run: npm run verify-render
 
-      - name: Vérifier le rendu sous /ramolo/ (routage GitHub Pages)
+      - name: Vérifier le rendu sous /Ramolo/ (routage GitHub Pages)
         run: npm run verify-render-base
 
       - name: Vérifier les types
         run: npm run lint
 
-      # Base path comes from vite.config.ts (/ramolo/ → tyrannas.github.io/ramolo).
+      # Base path comes from vite.config.ts (/Ramolo/ → tyrannas.github.io/Ramolo).
       # Override with BASE_PATH here only for a custom domain.
       - name: Build
         run: npm run build
 
       - name: Vérifier que le build cible bien la bonne base
         run: |
-          grep -q '/ramolo/assets/' dist/index.html \
-            || { echo "::error::index.html ne référence pas /ramolo/ — base incorrecte"; exit 1; }
+          grep -q '/Ramolo/assets/' dist/index.html \
+            || { echo "::error::index.html ne référence pas /Ramolo/ — base incorrecte"; exit 1; }
           test -f dist/404.html || { echo "::error::404.html manquant (deep links cassés)"; exit 1; }
           test -f dist/.nojekyll || { echo "::error::.nojekyll manquant"; exit 1; }
 

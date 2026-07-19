@@ -8,13 +8,13 @@ import 'fake-indexeddb/auto';
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'node:fs';
 
-// The app is served from '/' in dev and '/ramolo/' on GitHub Pages. The whole
+// The app is served from '/' in dev and '/Ramolo/' on GitHub Pages. The whole
 // suite runs against both, because a mismatched router basename renders a
 // blank page in production while passing every test at the root.
 const BASE = import.meta.env.BASE_URL;
 const ORIGIN = 'http://localhost';
 const at = (path: string) => `${BASE}${path.replace(/^\//, '')}`;
-/** '/ramolo' and '/ramolo/' address the same page — compare them as equal. */
+/** '/Ramolo' and '/Ramolo/' address the same page — compare them as equal. */
 const samePath = (a: string, b: string) =>
   a.replace(/\/$/, '') === b.replace(/\/$/, '');
 
