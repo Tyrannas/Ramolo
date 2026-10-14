@@ -181,6 +181,38 @@
         ]
       },
       "prerequisites": []
+    },
+    {
+      "id": "toe-touch",
+      "priority": 6,
+      "name": {
+        "fr": "Toucher mes pieds jambes tendues"
+      },
+      "tagline": {
+        "fr": "Ramasser un objet, lacer ses chaussures, se pencher sans tirer derrière les jambes."
+      },
+      "description": {
+        "fr": "Toucher ses pieds jambes tendues demande trois choses : des ischio-jambiers assez longs, la capacité à basculer le bassin vers l'avant plutôt qu'à arrondir le dos, et un nerf sciatique qui glisse librement derrière la jambe. Chez les personnes assises toute la journée, les trois peuvent manquer, mais rarement dans les mêmes proportions : certaines ont surtout besoin d'apprendre la charnière de hanche, d'autres d'un nerf moins sensible plutôt que d'étirements plus forts. Le diagnostic départage, et l'objectif est très entraînable : quelques centimètres par mois sont courants."
+      },
+      "tests": [
+        "fingertip-floor-distance",
+        "hip-hinge-test",
+        "seated-slump-test"
+      ],
+      "factors": {
+        "hamstrings": 0.45,
+        "pelvic-control": 0.3,
+        "nerve-mobility": 0.25
+      },
+      "milestones": {
+        "fr": [
+          "Atteindre les chevilles jambes tendues, sans à-coup",
+          "Effleurer les orteils après 2-3 respirations",
+          "Poser le bout des doigts au sol, jambes tendues",
+          "Poser les paumes à plat au sol, même le matin à froid"
+        ]
+      },
+      "prerequisites": []
     }
   ]
 }

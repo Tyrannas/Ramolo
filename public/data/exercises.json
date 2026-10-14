@@ -825,7 +825,8 @@
       ],
       "goals": [
         "deep-squat",
-        "cross-legged"
+        "cross-legged",
+        "toe-touch"
       ],
       "type": "mobility-drill",
       "level": 1,
@@ -1628,7 +1629,8 @@
       ],
       "goals": [
         "cross-legged",
-        "deep-squat"
+        "deep-squat",
+        "toe-touch"
       ],
       "type": "stretch",
       "level": 0,
@@ -1688,7 +1690,8 @@
       ],
       "goals": [
         "cross-legged",
-        "deep-squat"
+        "deep-squat",
+        "toe-touch"
       ],
       "type": "stretch",
       "level": 1,
@@ -1758,7 +1761,8 @@
       ],
       "goals": [
         "cross-legged",
-        "deep-squat"
+        "deep-squat",
+        "toe-touch"
       ],
       "type": "stretch",
       "level": 2,
@@ -1811,7 +1815,8 @@
       ],
       "goals": [
         "cross-legged",
-        "deep-squat"
+        "deep-squat",
+        "toe-touch"
       ],
       "type": "stretch",
       "level": 3,
@@ -1864,7 +1869,8 @@
       "goals": [
         "cross-legged",
         "long-standing",
-        "posture"
+        "posture",
+        "toe-touch"
       ],
       "type": "mobility-drill",
       "level": 0,
@@ -2151,7 +2157,8 @@
         "pelvic-control"
       ],
       "goals": [
-        "cross-legged"
+        "cross-legged",
+        "toe-touch"
       ],
       "type": "mobility-drill",
       "level": 1,
@@ -2204,12 +2211,13 @@
       "goals": [
         "cross-legged",
         "long-standing",
-        "deep-squat"
+        "deep-squat",
+        "toe-touch"
       ],
       "type": "mobility-drill",
       "level": 1,
       "regressionOf": null,
-      "progressionOf": null,
+      "progressionOf": "hip-hinge-wall-tap",
       "dosage": {
         "reps": 10,
         "sets": 2,
@@ -2497,7 +2505,8 @@
       ],
       "goals": [
         "long-standing",
-        "resilient-knees"
+        "resilient-knees",
+        "toe-touch"
       ],
       "type": "strength",
       "level": 0,
@@ -5204,6 +5213,382 @@
       "images": [],
       "videoUrl": null,
       "videoQuery": "seated posture reset desk break exercise"
+    },
+    {
+      "id": "sciatic-nerve-slider",
+      "name": {
+        "fr": "Glissement du nerf sciatique assis",
+        "en": "Seated sciatic nerve slider"
+      },
+      "targets": [
+        "nerve-mobility"
+      ],
+      "goals": [
+        "toe-touch"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord d'une chaise, dos légèrement arrondi, mains sur les cuisses.",
+          "En même temps : tendez la jambe devant vous ET relevez la tête pour regarder le plafond.",
+          "Puis en même temps : repliez la jambe ET baissez le menton vers la poitrine.",
+          "Le nerf glisse d'un bout à l'autre sans jamais être mis en tension aux deux extrémités : le mouvement doit rester confortable, fluide, sans tenue."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Tendre la jambe tête baissée : on met le nerf en tension au lieu de le faire glisser.",
+          "Chercher l'étirement : ici, aucune sensation forte n'est recherchée."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Sensation électrique, brûlure ou fourmillements qui persistent après l'exercice, engourdissement ou faiblesse dans la jambe : arrêtez et consultez."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Légère tension mobile derrière la jambe, qui va et vient ; jamais de brûlure ni de fourmillement durable."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "sciatic nerve slider seated flossing"
+    },
+    {
+      "id": "sciatic-nerve-tensioner",
+      "name": {
+        "fr": "Mise en tension douce du nerf sciatique",
+        "en": "Gentle sciatic nerve tensioner"
+      },
+      "targets": [
+        "nerve-mobility",
+        "hamstrings"
+      ],
+      "goals": [
+        "toe-touch"
+      ],
+      "type": "mobility-drill",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "sciatic-nerve-slider",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord d'une chaise, dos arrondi, menton rentré vers la poitrine.",
+          "Tendez lentement la jambe, pointe du pied tirée vers vous, jusqu'à la première tension derrière la jambe.",
+          "Faites de petits allers-retours du genou autour de ce point (quelques centimètres), sans tenir la position.",
+          "À réserver quand le glissement est devenu facile et confortable."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Tenir la position comme un étirement : un nerf n'aime pas être maintenu en tension.",
+          "Aller au-delà de la première tension."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Revenez au glissement simple si la sensation dure plus de quelques minutes après l'exercice.",
+          "Sensation électrique, brûlure ou fourmillements qui persistent après l'exercice, engourdissement ou faiblesse dans la jambe : arrêtez et consultez."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Tiraillement léger et passager derrière la jambe, qui disparaît dès qu'on replie le genou."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "sciatic nerve tensioner slump gentle"
+    },
+    {
+      "id": "hip-hinge-wall-tap",
+      "name": {
+        "fr": "Charnière de hanche : fesses au mur",
+        "en": "Wall tap hip hinge"
+      },
+      "targets": [
+        "pelvic-control",
+        "hamstrings"
+      ],
+      "goals": [
+        "toe-touch",
+        "cross-legged",
+        "long-standing"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Debout dos à un mur, talons à une vingtaine de centimètres du mur, pieds largeur de hanches, genoux légèrement fléchis.",
+          "Poussez les fesses vers l'arrière pour venir toucher le mur, en inclinant le buste dos long, mains sur les hanches.",
+          "Touchez le mur avec les fesses, puis revenez debout en serrant les fessiers.",
+          "Quand c'est facile, avancez les talons de quelques centimètres : la charnière devient plus ample."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Plier les genoux pour aller chercher le mur : c'est le bassin qui recule, pas un squat.",
+          "Arrondir le dos en se penchant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice très sûr. Douleur lombaire : réduisez la distance au mur."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Tension derrière les cuisses quand les fesses reculent, dos qui reste calme : la sensation de la charnière."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall tap hip hinge drill beginner"
+    },
+    {
+      "id": "backpack-romanian-deadlift",
+      "name": {
+        "fr": "Soulevé de terre jambes tendues avec un sac à dos",
+        "en": "Backpack Romanian deadlift"
+      },
+      "targets": [
+        "hamstrings",
+        "pelvic-control"
+      ],
+      "goals": [
+        "toe-touch"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "hip-hinge-dowel",
+      "dosage": {
+        "sets": 3,
+        "perSide": false,
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Descendez lentement, fesses en arrière, dos long"
+              },
+              "seconds": 4
+            },
+            {
+              "label": {
+                "fr": "Remontez en serrant les fessiers"
+              },
+              "seconds": 2
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un sac à dos lesté (livres, bouteilles, 4 à 10 kg) tenu devant les cuisses"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, pieds largeur de hanches, genoux légèrement fléchis, le sac tenu à deux mains devant les cuisses.",
+          "Poussez les fesses en arrière et laissez le sac glisser le long des cuisses, dos long, jusqu'à la première vraie tension derrière les cuisses.",
+          "Remontez en poussant les hanches vers l'avant et en serrant les fessiers.",
+          "Le renforcement en amplitude améliore la souplesse aussi bien que l'étirement : les ischio-jambiers apprennent à travailler allongés."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Arrondir le dos pour descendre le sac plus bas : arrêtez-vous là où le dos reste long.",
+          "Plier fortement les genoux, ce qui transforme le mouvement en squat."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur lombaire pendant l'exercice : allégez le sac et réduisez l'amplitude ; maîtrisez d'abord la charnière au bâton."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement chargé et effort derrière les cuisses, fessiers qui travaillent à la remontée."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "romanian deadlift beginner at home backpack form"
+    },
+    {
+      "id": "single-leg-romanian-deadlift",
+      "name": {
+        "fr": "Soulevé de terre sur une jambe",
+        "en": "Single-leg Romanian deadlift"
+      },
+      "targets": [
+        "hamstrings",
+        "pelvic-control",
+        "balance-control"
+      ],
+      "goals": [
+        "toe-touch"
+      ],
+      "type": "strength",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "backpack-romanian-deadlift",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un mur ou une chaise pour un doigt d'appui au début"
+      },
+      "instructions": {
+        "fr": [
+          "Debout sur une jambe, genou d'appui légèrement fléchi, un doigt posé sur un mur si besoin.",
+          "Inclinez le buste vers l'avant en tendant l'autre jambe derrière vous, dans le prolongement du dos.",
+          "Descendez jusqu'à la première tension derrière la cuisse d'appui, bassin horizontal (le bassin ne s'ouvre pas vers le côté).",
+          "Remontez en serrant la fesse d'appui. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Ouvrir la hanche de la jambe levée vers le plafond : les deux crêtes du bassin restent face au sol.",
+          "Arrondir le dos pour descendre plus bas."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Gardez un appui à portée de main ; l'équilibre progresse vite."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement et effort intenses derrière la cuisse d'appui, équilibre sollicité."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "single leg romanian deadlift bodyweight form"
+    },
+    {
+      "id": "hamstring-slide-outs",
+      "name": {
+        "fr": "Pont : glissements de talons (ischio-jambiers en excentrique)",
+        "en": "Bridge hamstring slide-outs"
+      },
+      "targets": [
+        "hamstrings",
+        "glute-strength"
+      ],
+      "goals": [
+        "toe-touch"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "glute-bridge",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un sol lisse et des chaussettes, ou une serviette sous chaque talon"
+      },
+      "instructions": {
+        "fr": [
+          "Position de pont fessier, talons posés sur des serviettes (ou en chaussettes sur un sol lisse), bassin levé.",
+          "Glissez lentement les talons vers l'avant en gardant le bassin levé le plus longtemps possible.",
+          "Quand les jambes sont presque tendues, posez les fesses, ramenez les talons et remontez le bassin.",
+          "C'est la descente lente qui renforce les ischio-jambiers allongés."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser tomber le bassin dès le début du glissement.",
+          "Glisser vite : 3 à 4 secondes par descente."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Crampe derrière la cuisse : fréquente au début, réduisez l'amplitude du glissement."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort intense derrière les cuisses, qui s'accentue quand les jambes s'allongent."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "hamstring slide outs bridge towel eccentric"
+    },
+    {
+      "id": "toes-elevated-toe-touch",
+      "name": {
+        "fr": "Penché vers les pieds, orteils surélevés",
+        "en": "Toes-elevated toe touch"
+      },
+      "targets": [
+        "hamstrings",
+        "pelvic-control"
+      ],
+      "goals": [
+        "toe-touch"
+      ],
+      "type": "mobility-drill",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "toe-touch-progression",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un livre épais ou une planche (3-5 cm) sous l'avant des pieds"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, l'avant des pieds sur un livre, talons au sol, genoux tendus sans les verrouiller.",
+          "Penchez-vous vers les pieds en poussant les fesses en arrière, bras relâchés.",
+          "Tenez 2 respirations au point le plus bas, en laissant le poids aller vers l'avant des pieds, puis remontez en déroulant.",
+          "Les orteils surélevés obligent le bassin à basculer et ajoutent un étirement du mollet."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Rebondir pour gagner quelques centimètres.",
+          "Laisser le poids partir sur les talons : il doit rester sur l'avant des pieds."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Sensation électrique derrière la jambe : revenez au glissement du nerf sciatique."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement net derrière les cuisses et dans les mollets, bassin qui bascule vers l'avant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "toes elevated toe touch hamstring flexibility drill"
     }
   ]
 }

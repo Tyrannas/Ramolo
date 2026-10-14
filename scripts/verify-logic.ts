@@ -48,6 +48,11 @@ check('knee-to-wall borne 11cm → 3', scoreTest(kneeToWall, 11) === 3);
 const plank = content.testById.get('plank-hold')!;
 check('plank 10s → 0', scoreTest(plank, 10) === 0);
 check('plank 120s → 3', scoreTest(plank, 120) === 3);
+// Inverted scale: fewer centimetres between fingertips and floor is better.
+const fingertips = content.testById.get('fingertip-floor-distance')!;
+check('doigts-sol 0 cm (touche le sol) → 3', scoreTest(fingertips, 0) === 3);
+check('doigts-sol 12 cm → 1', scoreTest(fingertips, 12) === 1);
+check('doigts-sol 30 cm → 0', scoreTest(fingertips, 30) === 0);
 const levelTest = content.testById.get('wall-cross-legged')!;
 check('mesure "level": la valeur EST le score', scoreTest(levelTest, 2) === 2);
 

@@ -1,13 +1,13 @@
-# Données de contenu (objectifs : tailleur, dos debout, deep squat, genoux, posture)
+# Données de contenu (objectifs : tailleur, dos debout, deep squat, genoux, posture, toucher ses pieds)
 
 ## Contenu
 
 | Fichier | Contenu |
 |---|---|
-| `factors.json` | 20 facteurs limitants (taxonomie commune aux tests, objectifs et exercices) |
-| `goals.json` | 5 objectifs avec pondération des facteurs, tests associés et jalons |
-| `tests.json` | 21 tests d'auto-évaluation avec instructions, paliers/mesures, scoring 0-3, interprétation et questions `followUp` |
-| `exercises.json` | 86 fiches exercices complètes en français |
+| `factors.json` | 21 facteurs limitants (taxonomie commune aux tests, objectifs et exercices) |
+| `goals.json` | 6 objectifs avec pondération des facteurs, tests associés et jalons |
+| `tests.json` | 24 tests d'auto-évaluation avec instructions, paliers/mesures, scoring 0-3, interprétation et questions `followUp` |
+| `exercises.json` | 93 fiches exercices complètes en français |
 
 Pour ajouter du contenu, suivre le contrat de `AJOUT-CONTENU.md` (racine du dépôt) puis lancer `npm run validate-data`.
 
@@ -45,6 +45,8 @@ Pour ajouter du contenu, suivre le contrat de `AJOUT-CONTENU.md` (racine du dép
 - **Règle de douleur des exercices du genou** (`painMonitoring: true`) : signaler une douleur ouvre un choix « légère (≤ 3/10) et stable » — acceptable, aucun effet sur le masquage — ou « nette / qui augmente » — traitée comme une douleur ordinaire (régression, puis masquage si récurrent). Cette tolérance ne s'applique jamais aux douleurs de torsion du genou.
 
 - **Posture** : pas de « posture parfaite » — l’objectif est de pouvoir se redresser sans effort et de changer souvent de position. `wall-posture-test` (tête au mur sans lever le menton → mobilité du haut du dos), `wall-angel-test` (épaules), `prone-y-hold-test` (chronométré ; effort senti dans le cou ou le bas du dos → score de force du haut du dos revu à la baisse), `neck-flexor-test` (endurance des fléchisseurs profonds du cou), `standing-pelvic-tilt-control`. Pondération à 50 % sur la force (haut du dos, cou).
+
+- **Toucher ses pieds** : `fingertip-floor-distance` (cm, échelle inversée : 0 cm = 3 ; followUp genoux fléchis informatif) note les ischio-jambiers, `hip-hinge-test` (bâton, trois contacts) la charnière/bascule du bassin, `seated-slump-test` (par côté : la tension change-t-elle en relevant la tête ?) la mobilité du nerf sciatique. Un nerf qui freine se travaille par glissements (`sciatic-nerve-slider`), pas par des étirements plus forts. Le renforcement en amplitude (soulevés de terre jambes tendues, glissements de talons) complète les étirements.
 
 ## Sécurité
 

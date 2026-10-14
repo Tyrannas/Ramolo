@@ -179,6 +179,15 @@
       "description": {
         "fr": "Petits muscles à l'avant du cou qui tiennent la tête dans l'axe. Quand ils fatiguent, la tête avance devant les épaules et la nuque compense."
       }
+    },
+    {
+      "id": "nerve-mobility",
+      "name": {
+        "fr": "Mobilité du nerf sciatique"
+      },
+      "description": {
+        "fr": "Le nerf sciatique doit pouvoir glisser le long de l'arrière de la jambe quand on se penche. Sensibilisé, il freine la flexion bien avant les muscles : la tension change alors selon la position de la tête ou de la cheville, et ressemble plus à un tiraillement ou une brûlure qu'à un étirement. Dans ce cas, étirer plus fort n'aide pas ; le faire glisser, si."
+      }
     }
   ]
 }

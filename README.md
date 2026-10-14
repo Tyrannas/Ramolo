@@ -1,7 +1,7 @@
 # Mobilité & Souplesse — PWA pour vrais débutants
 
 Application web installable (PWA) qui aide les personnes sédentaires à atteindre des **objectifs de
-mouvement concrets** — s'asseoir en tailleur, tenir un squat profond, tenir debout sans mal de dos, courir et descendre sans mal aux genoux, se tenir droit sans effort —
+mouvement concrets** — s'asseoir en tailleur, tenir un squat profond, tenir debout sans mal de dos, courir et descendre sans mal aux genoux, se tenir droit sans effort, toucher ses pieds —
 plutôt que de proposer des séances d'étirement génériques.
 
 Le différenciateur : un **module de diagnostic** qui identifie *quel* facteur limite chaque objectif
@@ -37,11 +37,11 @@ La CI (`.github/workflows/ci.yml`) exécute toutes les suites, puis déploie sur
 
 ```
 public/data/            Contenu statique — SOURCE DE VÉRITÉ du contenu
-  factors.json          20 facteurs limitants (taxonomie commune)
-  goals.json            5 objectifs, pondération des facteurs, jalons
-  tests.json            21 tests d'auto-évaluation, paliers, scoring 0-3
+  factors.json          21 facteurs limitants (taxonomie commune)
+  goals.json            6 objectifs, pondération des facteurs, jalons
+  tests.json            24 tests d'auto-évaluation, paliers, scoring 0-3
                         et questions `followUp` qualitatives
-  exercises.json        86 fiches exercices en français
+  exercises.json        93 fiches exercices en français
 
 src/
   types.ts              Modèle de domaine (miroir des JSON)
@@ -139,7 +139,7 @@ Trois détails rendent le sous-chemin `/Ramolo/` fonctionnel, et chacun est vér
 
 Phases 0 à 4 implémentées et vérifiées. Reste la phase 5 (contenu) :
 
-- passer de 5 à 7 objectifs (`toe-touch` puis `pancake`, qui réutilisent surtout les facteurs
+- ajouter le 7e objectif, `pancake` (prérequis : `toe-touch` et `cross-legged` ; il réutilise surtout les facteurs
   existants : ischio-jambiers, adducteurs, bassin) ;
 - curation des vidéos (`videoQuery` → `videoUrl`) ; télécharger les `remoteImages` dans
   `/public/images/` au build, pour que les 13 illustrations existantes marchent hors-ligne ;

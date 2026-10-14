@@ -1568,6 +1568,197 @@
       "images": [],
       "videoUrl": null,
       "videoQuery": "deep neck flexor endurance test supine chin tuck"
+    },
+    {
+      "id": "fingertip-floor-distance",
+      "name": {
+        "fr": "Distance doigts-sol, jambes tendues"
+      },
+      "factor": "hamstrings",
+      "secondaryFactors": [
+        "pelvic-control",
+        "nerve-mobility"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un mètre ruban ou une règle (ou le téléphone pour vous filmer de profil)"
+      },
+      "measure": {
+        "kind": "cm",
+        "prompt": {
+          "fr": "Distance entre le bout des doigts et le sol (cm) — 0 si vous touchez le sol"
+        }
+      },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 1,
+          "score": 3
+        },
+        {
+          "min": 1,
+          "max": 10,
+          "score": 2
+        },
+        {
+          "min": 10,
+          "max": 20,
+          "score": 1
+        },
+        {
+          "min": 20,
+          "score": 0
+        }
+      ],
+      "instructions": {
+        "fr": [
+          "Pieds joints, jambes tendues sans verrouiller brutalement les genoux, un mètre ruban posé debout devant vos pieds (ou un téléphone qui filme de profil).",
+          "Expirez et penchez-vous lentement, bras et tête relâchés vers le sol. Restez 2-3 respirations au point le plus bas, sans rebondir.",
+          "Mesurez la distance entre le bout des doigts et le sol. Sans mètre : mi-tibia ≈ 25 cm, chevilles ≈ 10 cm.",
+          "Remontez en déroulant, genoux légèrement fléchis, puis répondez à la question en refaisant un essai genoux fléchis."
+        ]
+      },
+      "interpretation": {
+        "fr": "C'est la mesure directe de votre objectif, et une des plus faciles à suivre en centimètres. Elle combine trois choses que les deux tests suivants départagent : la souplesse des ischio-jambiers, la capacité à basculer le bassin (la charnière de hanche) et la mobilité du nerf sciatique. Indice rapide : si plier légèrement les genoux vous fait descendre nettement plus bas, ce sont surtout les ischio-jambiers qui limitent."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "fingertip to floor test hamstring flexibility measure",
+      "followUp": {
+        "prompt": {
+          "fr": "Genoux légèrement fléchis, vos doigts descendent-ils nettement plus bas ?"
+        },
+        "options": [
+          {
+            "id": "knees-much-lower",
+            "label": {
+              "fr": "Oui, nettement plus bas"
+            },
+            "flag": null
+          },
+          {
+            "id": "knees-bit-lower",
+            "label": {
+              "fr": "Un peu, ou pas du tout"
+            },
+            "flag": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "hip-hinge-test",
+      "name": {
+        "fr": "Charnière de hanche au bâton"
+      },
+      "factor": "pelvic-control",
+      "secondaryFactors": [
+        "hamstrings"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un manche à balai ou un bâton droit"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Je ne sens pas comment pousser les fesses en arrière : je plie le dos ou les genoux à la place"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Je fais la charnière, mais le bâton quitte le bas du dos avant que le buste soit à 45°"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Je garde les trois contacts jusqu'à environ 45°"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Je garde les trois contacts jusqu'à ce que le buste approche l'horizontale"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Debout, pieds largeur de hanches, genoux légèrement fléchis. Tenez un manche à balai dans le dos : il touche l'arrière de la tête, le haut du dos et le bas du dos (sacrum).",
+          "Poussez les fesses vers l'arrière en inclinant le buste, sans perdre aucun des trois contacts.",
+          "Arrêtez dès qu'un contact se perd (souvent le bas du dos, qui s'arrondit) et notez l'inclinaison du buste, au besoin en vous filmant de profil.",
+          "Choisissez le palier."
+        ]
+      },
+      "interpretation": {
+        "fr": "Toucher ses pieds, ce n'est pas plier le dos : c'est d'abord basculer le bassin vers l'avant, comme une charnière. Beaucoup de débutants arrondissent le dos dès le début du mouvement et plafonnent, quelle que soit leur souplesse. Un score bas ici est une bonne nouvelle : c'est un geste qui s'apprend en quelques semaines (charnière au mur puis au bâton, soulevé de terre jambes tendues)."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "hip hinge dowel test three points of contact"
+    },
+    {
+      "id": "seated-slump-test",
+      "name": {
+        "fr": "Test assis dos rond (mobilité du nerf sciatique)"
+      },
+      "factor": "nerve-mobility",
+      "secondaryFactors": [
+        "hamstrings"
+      ],
+      "perSide": true,
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Une sensation électrique, de brûlure ou des fourmillements apparaissent dans la jambe"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "La tension derrière la jambe diminue nettement quand je relève la tête"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Elle diminue un peu quand je relève la tête"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Relever la tête ne change rien : c'est un simple étirement musculaire"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord d'une chaise, mains croisées dans le dos : laissez le dos s'arrondir et rentrez le menton vers la poitrine.",
+          "Tendez lentement une jambe devant vous, pointe du pied tirée vers vous, jusqu'à la première tension nette derrière la jambe. Ne forcez pas.",
+          "Sans bouger la jambe, relevez la tête pour regarder droit devant : la tension change-t-elle ?",
+          "Choisissez le palier (si plusieurs correspondent, prenez le plus bas), puis testez l'autre jambe."
+        ]
+      },
+      "interpretation": {
+        "fr": "Relever la tête ne change rien pour un muscle, mais détend le nerf sciatique, qui court de la nuque jusqu'au pied. Si la tension diminue nettement, c'est le nerf qui freine votre flexion avant les ischio-jambiers : le programme ajoute alors des glissements nerveux, doux et sans tenue, et il vaut mieux éviter de tirer fort sur les étirements. Une sensation électrique ou des fourmillements pendant le test signalent un nerf sensibilisé : allez-y très progressivement. Si ces sensations persistent après le test, s'accompagnent d'un engourdissement ou d'une faiblesse, ou descendent sous le genou au quotidien : consultez."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "self slump test sciatic nerve tension seated"
     }
   ]
 }

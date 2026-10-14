@@ -31,7 +31,8 @@ export type FactorId =
   | 'thoracic-mobility'
   | 'shoulder-mobility'
   | 'upper-back-strength'
-  | 'neck-endurance';
+  | 'neck-endurance'
+  | 'nerve-mobility';
 
 export interface Factor {
   id: FactorId;
