@@ -22,7 +22,16 @@ export type FactorId =
   | 'pelvic-control'
   | 'core-endurance'
   | 'glute-strength'
-  | 'balance-control';
+  | 'lateral-hip-stability'
+  | 'standing-endurance'
+  | 'balance-control'
+  | 'quadriceps-strength'
+  | 'knee-control'
+  | 'knee-load-tolerance'
+  | 'thoracic-mobility'
+  | 'shoulder-mobility'
+  | 'upper-back-strength'
+  | 'neck-endurance';
 
 export interface Factor {
   id: FactorId;
@@ -69,7 +78,11 @@ export type TestFlag =
   | 'limited-hip-internal-rotation'
   | 'responds-to-active-work'
   | 'anterior-hip-impingement'
-  | 'seek-professional-advice';
+  | 'seek-professional-advice'
+  | 'habitual-lumbar-extension'
+  | 'knee-pain-in-rotation'
+  | 'patellofemoral-pain'
+  | 'lateral-knee-pain';
 
 export interface FollowUpOption {
   id: string;
@@ -173,6 +186,14 @@ export interface Exercise {
   imageAttribution?: { text: string; url: string; license: string };
   /** Alternative setup shown when the `anterior-hip-impingement` flag is on. */
   impingementFriendlySetup?: L10n;
+  /** Never generated while one of these flags is active (e.g. knee torque on a painful knee). */
+  avoidWithFlags?: TestFlag[];
+  /**
+   * Knee-loading work where mild pain (≤ 3/10, stable, settled by the next
+   * morning) is acceptable: the player asks how strong the pain is instead of
+   * treating any report as a stop signal.
+   */
+  painMonitoring?: boolean;
   videoUrl: string | null;
   videoQuery?: string;
   sourceAttribution?: { text: string; url: string; license: string };

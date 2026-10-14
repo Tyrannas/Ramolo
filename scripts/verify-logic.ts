@@ -148,6 +148,20 @@ for (const minutes of [10, 20, 30] as const) {
   );
 }
 
+// The strength guarantee must hold for every goal, even in the shortest session,
+// now that timed dosages (cycles) are budgeted at their real length.
+for (const goal of content.goals) {
+  const short = generateSession(
+    { goals: [goal], factorScores: new Map(), targetMinutes: 10, hiddenExerciseIds: new Set(), rotation: 0 },
+    content,
+  );
+  check(
+    `${goal.id} en 10 min : au moins un renforcement, dans le budget`,
+    short.exercises.some((e) => e.type === 'strength') && short.estimatedSeconds <= 600,
+    `(${short.exercises.map((e) => e.id).join(', ')} · ${(short.estimatedSeconds / 60).toFixed(1)} min)`,
+  );
+}
+
 // Weakest factor should receive attention.
 const s20 = generateSession(
   { goals: [squatGoal], factorScores: scoresA, targetMinutes: 20, hiddenExerciseIds: new Set(), rotation: 0 },
@@ -167,6 +181,48 @@ const rotations = [0, 1, 2].map((r) =>
   ).exercises.map((e) => e.id).join(','),
 );
 check('la rotation change la séance', new Set(rotations).size > 1, `(${new Set(rotations).size} variantes)`);
+
+// Variety: over twelve sessions, a goal must not loop through a handful of
+// identical sessions, and the imposed strength exercise must rotate as well.
+for (const goal of content.goals) {
+  const twelve = Array.from({ length: 12 }, (_, r) =>
+    generateSession(
+      { goals: [goal], factorScores: new Map(), targetMinutes: 20, hiddenExerciseIds: new Set(), rotation: r },
+      content,
+    ).exercises,
+  );
+  const distinct = new Set(twelve.map((s) => s.map((e) => e.id).sort().join(','))).size;
+  const strengths = new Set(twelve.flatMap((s) => s.filter((e) => e.type === 'strength').map((e) => e.id)));
+  check(`${goal.id} : au moins 4 séances différentes sur 12`, distinct >= 4, `(${distinct})`);
+  check(`${goal.id} : le renforcement varie d'une séance à l'autre`, strengths.size >= 2, `(${[...strengths].join(', ')})`);
+}
+
+// Level cap: a blocked factor must never receive advanced work, even through an
+// exercise selected for a strong factor that also loads the weak one.
+const adductorBlocked = computeFactorScores(
+  [
+    mk('wall-cross-legged', 'both', 3),
+    mk('toe-touch-standing', 'both', 3),
+    mk('test-90-90', 'left', 3),
+    mk('test-90-90', 'right', 3),
+    mk('butterfly-knee-height', 'both', 0),
+    mk('standing-pelvic-tilt-control', 'both', 3),
+  ],
+  content,
+);
+const tooHard = Array.from({ length: 12 }, (_, r) =>
+  generateSession(
+    { goals: [content.goalById.get('cross-legged')!], factorScores: adductorBlocked, targetMinutes: 30, hiddenExerciseIds: new Set(), rotation: r },
+    content,
+  ).exercises,
+)
+  .flat()
+  .filter((e) => e.targets.includes('adductors') && e.level > 1);
+check(
+  'adducteurs bloqués (score 0) → jamais d\'exercice d\'adducteurs au-delà du niveau 1',
+  tooHard.length === 0,
+  `(${[...new Set(tooHard.map((e) => `${e.id} L${e.level}`))].join(', ')})`,
+);
 
 // Hidden exercises must be excluded.
 const hiddenId = s20.exercises[0].id;
@@ -218,9 +274,12 @@ const plankEx = content.exerciseById.get('plank')!;
 const plankReg = findRegression(plankEx, content);
 check('planche → planche sur les genoux', plankReg?.id === 'plank-knees', `(reçu ${plankReg?.id})`);
 const couch = content.exerciseById.get('couch-stretch')!;
+const couchReg = findRegression(couch, content);
 check(
-  'couch stretch → fente basse',
-  findRegression(couch, content)?.id === 'kneeling-hip-flexor-stretch',
+  'couch stretch → psoas contracté-relâché → fente basse',
+  couchReg?.id === 'hip-flexor-contract-relax' &&
+    findRegression(couchReg, content)?.id === 'kneeling-hip-flexor-stretch',
+  `(reçu ${couchReg?.id})`,
 );
 check('un exercice de base n’a pas de régression', findRegression(content.exerciseById.get('cat-cow')!, content) === null);
 
@@ -436,12 +495,110 @@ check(
   cyclesIdx >= 0,
   `(séance : ${activeSession.exercises.map((e) => e.id).join(', ')})`,
 );
+// Real profile: good on every capacity test, yet barely an hour standing still,
+// with an arched default posture. The diagnosis must not call that "all fine".
+const standingGoal = content.goalById.get('long-standing')!;
+const staticLimited = computeFactorScores(
+  [
+    mk('standing-tolerance', 'both', 1),
+    mk('thomas-test', 'left', 3),
+    mk('thomas-test', 'right', 3),
+    mk('plank-hold', 'both', 100),
+    mk('single-leg-bridge-hold', 'left', 35),
+    mk('single-leg-bridge-hold', 'right', 35),
+    mk('side-lying-hip-abduction-test', 'left', 3),
+    mk('side-lying-hip-abduction-test', 'right', 3),
+    mk('standing-pelvic-tilt-control', 'both', 3),
+  ],
+  content,
+);
+const staticReadiness = computeGoalReadiness(standingGoal, staticLimited, content);
+console.log(`  synthèse: ${staticReadiness.synthesis}`);
+check(
+  'bons tests mais tolérance debout faible → la tolérance statique est le facteur limitant',
+  staticReadiness.factors[0].factor === 'standing-endurance',
+);
+const archedSession = generateSession(
+  {
+    ...baseOpts,
+    goals: [standingGoal],
+    factorScores: staticLimited,
+    flags: new Set<TestFlag>(['habitual-lumbar-extension']),
+  },
+  content,
+);
+check(
+  'flag cambrure par défaut → bascule au mur et reset debout inclus',
+  ['wall-posterior-tilt-hold', 'standing-reset'].every((id) => archedSession.exercises.some((e) => e.id === id)),
+  `(séance : ${archedSession.exercises.map((e) => e.id).join(', ')})`,
+);
+check(
+  'la séance reste majoritairement active/renfo, pas que des étirements',
+  archedSession.exercises.filter((e) => e.type === 'stretch').length <= archedSession.exercises.length / 3,
+);
+
+// Knee pain in cross-legged positions: knee-twisting floor positions must vanish,
+// and hip work must go on through knee-friendly exercises.
+const kneeSafeSession = generateSession(
+  { ...baseOpts, flags: new Set<TestFlag>(['knee-pain-in-rotation']) },
+  content,
+);
+check(
+  'flag genou en rotation → aucune position au sol qui tord le genou',
+  kneeSafeSession.exercises.length > 0 &&
+    !kneeSafeSession.exercises.some((e) => e.avoidWithFlags?.includes('knee-pain-in-rotation')),
+  `(séance : ${kneeSafeSession.exercises.map((e) => e.id).join(', ')})`,
+);
+check(
+  'flag genou en rotation → la rotation externe de hanche reste travaillée',
+  kneeSafeSession.exercises.some((e) => e.targets.includes('hip-external-rotation')),
+);
+for (const flag of ['limited-hip-internal-rotation', 'anterior-hip-impingement'] as TestFlag[]) {
+  const s = generateSession(
+    { ...baseOpts, goals: content.goals, flags: new Set<TestFlag>(['knee-pain-in-rotation', flag]) },
+    content,
+  );
+  check(
+    `un exercice imposé par [${flag}] ne contourne pas l'exclusion du genou`,
+    !s.exercises.some((e) => e.avoidWithFlags?.includes('knee-pain-in-rotation')),
+  );
+}
+
+// Real knee profile: front-of-kneecap pain on one side, outer-knee pain on the other.
+const kneeGoal = content.goalById.get('resilient-knees')!;
+const kneeSession = generateSession(
+  {
+    ...baseOpts,
+    goals: [kneeGoal],
+    flags: new Set<TestFlag>(['patellofemoral-pain', 'lateral-knee-pain']),
+  },
+  content,
+);
+check(
+  'rotulien + bandelette → isométriques et travail de hanche au programme',
+  ['straight-leg-raise', 'wall-sit', 'side-lying-hip-abduction'].every((id) =>
+    kneeSession.exercises.some((e) => e.id === id),
+  ),
+  `(séance : ${kneeSession.exercises.map((e) => e.id).join(', ')})`,
+);
+check(
+  'objectif genou : séance majoritairement en renforcement',
+  kneeSession.exercises.filter((e) => e.type === 'strength').length > kneeSession.exercises.length / 2,
+);
+check(
+  'tout renfo du quadriceps de l\'objectif genou suit la règle de douleur 0-10',
+  content.exercises
+    .filter((e) => e.goals.includes('resilient-knees') && e.targets.includes('quadriceps-strength'))
+    .every((e) => e.painMonitoring === true),
+);
+
 // Budget must still hold with flags forcing extra exercises in.
 for (const flagSet of [
   ['limited-hip-internal-rotation'],
   ['anterior-hip-impingement'],
   ['responds-to-active-work'],
-  ['limited-hip-internal-rotation', 'anterior-hip-impingement', 'responds-to-active-work'],
+  ['habitual-lumbar-extension'],
+  ['limited-hip-internal-rotation', 'anterior-hip-impingement', 'responds-to-active-work', 'habitual-lumbar-extension'],
 ] as TestFlag[][]) {
   const s = generateSession(
     { ...baseOpts, goals: content.goals, flags: new Set(flagSet) },

@@ -26,12 +26,21 @@ export interface GenerateOptions {
  * Exercises pulled in by a flag rather than by factor weighting. Without this,
  * they would never be selected: `hip-windshield-wipers` targets internal hip
  * rotation, which no goal weights, and `seated-active-hip-flexion` is the
- * impingement-safe way to train hip flexion.
+ * impingement-safe way to train hip flexion. A habitually arched standing
+ * posture calls for practising the way out of it, whatever the factor scores.
  */
 const FLAG_EXERCISES: Partial<Record<TestFlag, string[]>> = {
   'limited-hip-internal-rotation': ['hip-windshield-wipers'],
   'anterior-hip-impingement': ['seated-active-hip-flexion'],
+  'habitual-lumbar-extension': ['wall-posterior-tilt-hold', 'standing-reset'],
+  'patellofemoral-pain': ['straight-leg-raise', 'wall-sit'],
+  'lateral-knee-pain': ['side-lying-hip-abduction', 'standing-hip-hike'],
 };
+
+/** An exercise the content marks as unsafe while one of the user's flags is active. */
+function isAvoided(ex: Exercise, flags: Set<TestFlag>): boolean {
+  return (ex.avoidWithFlags ?? []).some((f) => flags.has(f));
+}
 
 export interface GeneratedSession {
   exercises: Exercise[];
@@ -75,6 +84,12 @@ export function computeFactorDemand(
   return demand;
 }
 
+/** Never prescribe more than one level above the factor score; easier is always allowed. */
+const MAX_LEVELS_ABOVE_SCORE = 1;
+
+/** How many near-equivalent candidates a factor rotates through. */
+const ROTATION_POOL_SIZE = 4;
+
 /**
  * Rank candidate exercises for a factor: closest level to the user's score,
  * belonging to an active goal, deprioritising already-picked ones.
@@ -86,12 +101,16 @@ function candidatesForFactor(
   targetLevel: number,
   hidden: Set<string>,
   flags: Set<TestFlag> = new Set(),
+  /** Highest level allowed for an exercise, given the scores of everything it works. */
+  levelCap: (ex: Exercise) => number = () => targetLevel + MAX_LEVELS_ABOVE_SCORE,
 ): Exercise[] {
   const prefersActive = flags.has('responds-to-active-work');
   return content.exercises
     .filter((ex) => ex.targets.includes(factor))
     .filter((ex) => !hidden.has(ex.id))
+    .filter((ex) => !isAvoided(ex, flags))
     .filter((ex) => ex.goals.some((g) => activeGoalIds.has(g)))
+    .filter((ex) => ex.level <= levelCap(ex))
     .sort((a, b) => {
       // When the user responds much better to active work, interval (cycle)
       // exercises outrank long passive holds regardless of level proximity.
@@ -106,6 +125,29 @@ function candidatesForFactor(
       // Prefer exercises that are the primary target (single-factor) for clarity.
       return a.targets.length - b.targets.length;
     });
+}
+
+/**
+ * The near-equivalent top of a ranked candidate list: within one level of the
+ * best match, and active (cycle) work only when the user responds to it.
+ */
+function rotationPool(ranked: Exercise[], targetLevel: number, flags: Set<TestFlag>): Exercise[] {
+  if (ranked.length === 0) return [];
+  let pool = ranked;
+  if (flags.has('responds-to-active-work') && pool.some((ex) => ex.dosage.cycles)) {
+    pool = pool.filter((ex) => ex.dosage.cycles);
+  }
+  const bestDistance = Math.min(...pool.map((ex) => Math.abs(ex.level - targetLevel)));
+  return pool
+    .filter((ex) => Math.abs(ex.level - targetLevel) <= bestDistance + 1)
+    .slice(0, ROTATION_POOL_SIZE);
+}
+
+/** Rotate a list by `offset`, so that each session starts from a different element. */
+function rotate<T>(list: T[], offset: number): T[] {
+  if (list.length === 0) return list;
+  const k = offset % list.length;
+  return [...list.slice(k), ...list.slice(0, k)];
 }
 
 export function generateSession(opts: GenerateOptions, content: Content): GeneratedSession {
@@ -138,61 +180,64 @@ export function generateSession(opts: GenerateOptions, content: Content): Genera
   for (const flag of flags) {
     for (const id of FLAG_EXERCISES[flag] ?? []) {
       const ex = content.exerciseById.get(id);
-      if (ex && !hiddenExerciseIds.has(ex.id)) tryAdd(ex);
+      if (ex && !hiddenExerciseIds.has(ex.id) && !isAvoided(ex, flags)) tryAdd(ex);
     }
   }
 
-  // Pass 1: one exercise per demanded factor, weakest first, with rotation.
-  for (const factor of sortedFactors) {
-    if (seconds >= budget) break;
-    const targetLevel = Math.round(factorScore(factorScores, factor));
-    const cands = candidatesForFactor(
-      factor,
+  const targetLevelOf = (f: FactorId) => Math.round(factorScore(factorScores, f));
+  // An exercise picked for a strong factor may also load a blocked one (a cross-legged
+  // forward fold stretches the adductors too): its weakest target sets the cap.
+  const levelCap = (ex: Exercise) =>
+    Math.min(...ex.targets.map(targetLevelOf)) + MAX_LEVELS_ABOVE_SCORE;
+  const rankedFor = (f: FactorId) =>
+    candidatesForFactor(
+      f,
       content,
       activeGoalIds,
-      targetLevel,
+      targetLevelOf(f),
       hiddenExerciseIds,
       flags,
+      levelCap,
     ).filter((ex) => !chosenIds.has(ex.id));
-    if (cands.length === 0) continue;
-    // Light rotation: offset into the equally-ranked top of the list.
-    const pick = cands[rotation % Math.min(cands.length, 3)];
-    tryAdd(pick);
-  }
 
-  // Guarantee at least one strength exercise (avoid the "all stretching" trap).
+  // Pass 1: one exercise per demanded factor, weakest first. Each factor rotates
+  // through its own pool, offset by its rank: factors do not all turn in step,
+  // so the combinations repeat far less often than the pools themselves.
+  sortedFactors.forEach((factor, rank) => {
+    if (seconds >= budget) return;
+    const pool = rotationPool(rankedFor(factor), targetLevelOf(factor), flags);
+    if (pool.length > 0) tryAdd(pool[(rotation + rank) % pool.length]);
+  });
+
+  // Guarantee at least one strength exercise (avoid the "all stretching" trap),
+  // itself rotating among the strength options of the most-demanded factors.
   if (!chosen.some((e) => e.type === 'strength')) {
-    const strengthByDemand = sortedFactors
-      .flatMap((f) =>
-        candidatesForFactor(f, content, activeGoalIds, 1, hiddenExerciseIds, flags).filter(
-          (ex) => ex.type === 'strength' && !chosenIds.has(ex.id),
-        ),
-      );
+    const strengthByDemand = [
+      ...new Map(
+        sortedFactors
+          .flatMap((f) => rankedFor(f).filter((ex) => ex.type === 'strength'))
+          .map((ex) => [ex.id, ex]),
+      ).values(),
+    ].slice(0, 3);
     if (strengthByDemand.length > 0) {
-      // Drop the least-demanded pick if we're at budget, to make room.
-      if (seconds + estimateExerciseSeconds(strengthByDemand[0]) > budget && chosen.length > 1) {
-        const removed = chosen.pop();
-        if (removed) {
-          chosenIds.delete(removed.id);
-          seconds -= estimateExerciseSeconds(removed);
-        }
+      const strength = strengthByDemand[rotation % strengthByDemand.length];
+      // Drop the least-demanded picks (chosen is in demand order) until it fits:
+      // one removal is not always enough once timed dosages are budgeted honestly.
+      const strengthCost = estimateExerciseSeconds(strength);
+      while (seconds + strengthCost > budget && chosen.length > 0) {
+        const removed = chosen.pop()!;
+        chosenIds.delete(removed.id);
+        seconds -= estimateExerciseSeconds(removed);
       }
-      tryAdd(strengthByDemand[0]);
+      tryAdd(strength);
     }
   }
 
-  // Pass 2: top up remaining time budget with the next-best options.
+  // Pass 2: top up remaining time budget, starting each session from a
+  // different candidate so the filler varies too.
   if (seconds < budget * 0.75) {
     for (const factor of sortedFactors) {
-      const cands = candidatesForFactor(
-        factor,
-        content,
-        activeGoalIds,
-        Math.round(factorScore(factorScores, factor)),
-        hiddenExerciseIds,
-        flags,
-      ).filter((ex) => !chosenIds.has(ex.id));
-      for (const c of cands) {
+      for (const c of rotate(rankedFor(factor), rotation)) {
         if (seconds >= budget * 0.95) break;
         tryAdd(c);
       }

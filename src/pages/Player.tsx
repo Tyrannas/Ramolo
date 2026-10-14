@@ -54,6 +54,9 @@ export default function Player() {
   const [regressed, setRegressed] = useState<Record<string, boolean>>({});
   const [skipped, setSkipped] = useState<Record<string, boolean>>({});
   const [painFlags, setPainFlags] = useState<string[]>([]);
+  // Mild pain on pain-monitored (knee-loading) exercises: acceptable, never hides the exercise.
+  const [mildPain, setMildPain] = useState<string[]>([]);
+  const [askPainLevel, setAskPainLevel] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feeling, setFeeling] = useState<number | null>(4);
   const startedAt = useRef<number>(Date.now());
@@ -74,6 +77,7 @@ export default function Player() {
   const current = queue[index];
   const isLast = index === queue.length - 1;
   const painFlagged = painFlags.includes(current.id);
+  const mildPainNoted = mildPain.includes(current.id) && !painFlagged;
 
   const swapToRegression = () => {
     const reg = findRegression(current, content);
@@ -84,6 +88,17 @@ export default function Player() {
 
   const flagPain = () => {
     setPainFlags((p) => (p.includes(current.id) ? p : [...p, current.id]));
+  };
+
+  const reportPain = () => {
+    if (current.painMonitoring) setAskPainLevel(true);
+    else flagPain();
+  };
+
+  const answerPainLevel = (mild: boolean) => {
+    setAskPainLevel(false);
+    if (mild) setMildPain((p) => (p.includes(current.id) ? p : [...p, current.id]));
+    else flagPain();
   };
 
   const skipExercise = () => {
@@ -164,6 +179,14 @@ export default function Player() {
         </Alert>
       )}
 
+      {mildPainNoted && (
+        <Alert severity="info" sx={{ mt: 2 }}>
+          Une gêne légère et stable est acceptable sur cet exercice : continue. Si elle augmente
+          pendant l’exercice, ou si elle est encore là demain matin, passe à la version plus facile
+          la prochaine fois.
+        </Alert>
+      )}
+
       <List dense sx={{ mt: 1 }}>
         {tList(current.instructions).map((ins, i) => (
           <ListItem key={i} alignItems="flex-start" sx={{ px: 0 }}>
@@ -206,7 +229,7 @@ export default function Player() {
           variant="outlined"
           color="error"
           startIcon={<HealingIcon />}
-          onClick={flagPain}
+          onClick={reportPain}
         >
           J’ai une douleur
         </Button>
@@ -223,6 +246,24 @@ export default function Player() {
           {isLast ? 'Terminer' : 'Exercice suivant'}
         </Button>
       </Stack>
+
+      <Dialog open={askPainLevel} onClose={() => setAskPainLevel(false)} fullWidth maxWidth="xs">
+        <DialogTitle>Comment est cette douleur ?</DialogTitle>
+        <DialogContent>
+          <Typography variant="body2" color="text.secondary">
+            Sur cet exercice du genou, une gêne légère est acceptable : jusqu’à 3 sur 10, stable
+            pendant l’exercice, et calmée le lendemain matin. Au-delà, on allège.
+          </Typography>
+        </DialogContent>
+        <DialogActions sx={{ flexDirection: 'column', alignItems: 'stretch', gap: 1, px: 3, pb: 2 }}>
+          <Button variant="outlined" onClick={() => answerPainLevel(true)}>
+            Légère (3/10 au plus) et stable
+          </Button>
+          <Button variant="contained" color="error" onClick={() => answerPainLevel(false)}>
+            Nette (plus de 3/10) ou qui augmente
+          </Button>
+        </DialogActions>
+      </Dialog>
 
       <Dialog open={showFeedback} fullWidth maxWidth="xs">
         <DialogTitle>Séance terminée 🎉</DialogTitle>

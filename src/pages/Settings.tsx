@@ -278,8 +278,8 @@ export default function Settings() {
             (Squat University, Tom Merrick, GMB Fitness…) : les droits restent à leurs auteurs.
           </Typography>
           <Typography variant="caption" color="text.secondary" display="block" sx={{ mt: 1 }}>
-            Les exercices importés de bases externes conservent leur attribution dans la fiche
-            (champ <code>sourceAttribution</code>). Voir{' '}
+            Les illustrations et contenus issus de bases libres sont crédités sur la fiche de
+            chaque exercice concerné. Voir{' '}
             <Link href="https://github.com/yuhonas/free-exercise-db" target="_blank" rel="noopener">
               free-exercise-db
             </Link>{' '}

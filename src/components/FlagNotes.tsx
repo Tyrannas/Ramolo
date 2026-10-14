@@ -7,12 +7,17 @@ import type { TestFlag } from '../types';
 const SEVERITY: Partial<Record<TestFlag, 'warning' | 'error' | 'info'>> = {
   'seek-professional-advice': 'error',
   'anterior-hip-impingement': 'warning',
+  'knee-pain-in-rotation': 'warning',
 };
 
 /** Most-serious first, so a red banner never hides below an informational one. */
 const ORDER: TestFlag[] = [
   'seek-professional-advice',
+  'knee-pain-in-rotation',
   'anterior-hip-impingement',
+  'patellofemoral-pain',
+  'lateral-knee-pain',
+  'habitual-lumbar-extension',
   'limited-hip-internal-rotation',
   'responds-to-active-work',
 ];

@@ -45,19 +45,23 @@
         "fr": "Concerts, files d'attente, festivals : finir la journée sans lombaires en feu."
       },
       "description": {
-        "fr": "La douleur lombaire en position debout prolongée vient rarement d'un dos « fragile ». Chez les sédentaires, elle vient surtout de fléchisseurs de hanche raccourcis qui tirent le bassin vers l'avant, de fessiers et d'abdominaux qui ne font pas leur travail de soutien, et d'un manque d'endurance musculaire : les lombaires compensent tout, et finissent par saturer. La solution est double : rallonger l'avant des hanches, renforcer ce qui soutient."
+        "fr": "La douleur lombaire en position debout prolongée vient rarement d'un dos « fragile ». Chez les sédentaires, elle vient surtout de fléchisseurs de hanche raccourcis qui tirent le bassin vers l'avant, de fessiers et d'abdominaux qui ne font pas leur travail de soutien, et d'un manque d'endurance musculaire : les lombaires compensent tout, et finissent par saturer. Et la position statique a ses propres règles : beaucoup de personnes marchent une journée entière sans douleur mais ne tiennent pas une heure debout immobiles, parce qu'elles restent figées dans une cambrure ou suspendues à une hanche. La solution est triple : rallonger l'avant des hanches, renforcer ce qui soutient, et apprendre à changer d'appui."
       },
       "tests": [
+        "standing-tolerance",
         "thomas-test",
         "plank-hold",
         "single-leg-bridge-hold",
+        "side-lying-hip-abduction-test",
         "standing-pelvic-tilt-control"
       ],
       "factors": {
-        "hip-flexors": 0.3,
-        "core-endurance": 0.3,
-        "glute-strength": 0.3,
-        "pelvic-control": 0.1
+        "hip-flexors": 0.2,
+        "core-endurance": 0.15,
+        "glute-strength": 0.15,
+        "lateral-hip-stability": 0.2,
+        "pelvic-control": 0.1,
+        "standing-endurance": 0.2
       },
       "milestones": {
         "fr": [
@@ -100,6 +104,80 @@
           "Tenir 30 secondes en squat libre en me tenant à un support",
           "Tenir 30 secondes en squat libre, talons au sol",
           "Tenir 2 minutes, position de repos détendue"
+        ]
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "resilient-knees",
+      "priority": 4,
+      "name": {
+        "fr": "Courir et descendre sans mal aux genoux"
+      },
+      "tagline": {
+        "fr": "Footing, randonnée, escaliers : des genoux qui encaissent les descentes."
+      },
+      "description": {
+        "fr": "En descente, chaque pas encaisse plusieurs fois le poids du corps, genou plié : ce sont les quadriceps qui freinent, en s'allongeant sous la charge. Quand ils fatiguent, ou quand la hanche laisse le genou rentrer vers l'intérieur, la charge se reporte sur la rotule (syndrome rotulien) ou sur l'extérieur du genou (bandelette ilio-tibiale). Ce ne sont presque jamais des lésions : ce sont des tissus qui ne tolèrent pas encore la charge demandée. La solution est la même dans les deux cas — renforcer les quadriceps et la hanche, et augmenter l'effort progressivement — et elle marche bien. En course, un levier simple s'y ajoute : raccourcir un peu ses pas."
+      },
+      "tests": [
+        "knee-load-tolerance-test",
+        "step-down-test",
+        "wall-sit-test",
+        "side-lying-hip-abduction-test",
+        "knee-to-wall",
+        "single-leg-bridge-hold"
+      ],
+      "factors": {
+        "quadriceps-strength": 0.25,
+        "knee-control": 0.2,
+        "lateral-hip-stability": 0.2,
+        "knee-load-tolerance": 0.15,
+        "ankle-dorsiflexion": 0.1,
+        "glute-strength": 0.1
+      },
+      "milestones": {
+        "fr": [
+          "Descendre deux étages d'escalier sans gêne sous la rotule",
+          "Courir 30 minutes sans douleur au genou, à cadence légèrement augmentée",
+          "Une randonnée avec 500 m de descente, gêne légère au plus",
+          "Courir une heure ou enchaîner une grosse descente sans douleur, et sans gêne le lendemain"
+        ]
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "posture",
+      "priority": 5,
+      "name": {
+        "fr": "Me tenir droit sans effort"
+      },
+      "tagline": {
+        "fr": "Moins voûté devant l'écran, la tête dans l'axe, un haut du dos qui ne fatigue plus."
+      },
+      "description": {
+        "fr": "Il n'existe pas de posture parfaite, et une position voûtée n'est pas dangereuse en soi : le vrai problème, c'est de ne plus pouvoir en sortir. Après des années devant un écran, le haut du dos se fige, les épaules s'enroulent, la tête avance, et les muscles qui pourraient redresser le buste n'ont plus l'endurance de le faire plus de quelques minutes. L'objectif n'est donc pas de tenir une posture « correcte » en permanence, mais de pouvoir se redresser facilement et confortablement, et de changer souvent de position. Cela passe surtout par du renforcement (haut du dos, cou), complété par de la mobilité."
+      },
+      "tests": [
+        "wall-posture-test",
+        "wall-angel-test",
+        "prone-y-hold-test",
+        "neck-flexor-test",
+        "standing-pelvic-tilt-control"
+      ],
+      "factors": {
+        "upper-back-strength": 0.3,
+        "thoracic-mobility": 0.25,
+        "neck-endurance": 0.2,
+        "shoulder-mobility": 0.15,
+        "pelvic-control": 0.1
+      },
+      "milestones": {
+        "fr": [
+          "Poser l'arrière de la tête au mur, menton horizontal, sans effort",
+          "Tenir 30 minutes redressé devant l'écran sans y penser, avec un reset par demi-heure",
+          "Glisser les bras en Y complet contre le mur sans décoller le dos",
+          "Finir une journée de bureau sans raideur du haut du dos ni de la nuque"
         ]
       },
       "prerequisites": []

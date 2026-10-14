@@ -56,7 +56,28 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "why you fall backwards sitting cross legged pelvic tilt hamstrings"
+      "videoQuery": "why you fall backwards sitting cross legged pelvic tilt hamstrings",
+      "followUp": {
+        "prompt": {
+          "fr": "Pendant le test, avez-vous senti une douleur DANS un genou (et non une tension dans la hanche ou l'aine) ?"
+        },
+        "options": [
+          {
+            "id": "knees-fine",
+            "label": {
+              "fr": "Non, aucune douleur dans les genoux"
+            },
+            "flag": null
+          },
+          {
+            "id": "knee-pain",
+            "label": {
+              "fr": "Oui, une douleur dans un genou, souvent à l'intérieur"
+            },
+            "flag": "knee-pain-in-rotation"
+          }
+        ]
+      }
     },
     {
       "id": "test-90-90",
@@ -306,7 +327,7 @@
       "secondaryFactors": [],
       "perSide": true,
       "equipment": {
-        "fr": "Un lit ou une table solide"
+        "fr": "Un lit ou une table solide (éventuellement la caméra du téléphone posée de profil)"
       },
       "measure": {
         "kind": "level",
@@ -314,25 +335,25 @@
           {
             "score": 0,
             "label": {
-              "fr": "La cuisse libre remonte nettement au-dessus de l'horizontale et le genou se tend"
+              "fr": "Le genou libre reste nettement plus haut que la hanche : la cuisse remonte franchement"
             }
           },
           {
             "score": 1,
             "label": {
-              "fr": "La cuisse libre remonte un peu au-dessus de l'horizontale"
+              "fr": "Le genou libre reste un peu plus haut que la hanche"
             }
           },
           {
             "score": 2,
             "label": {
-              "fr": "La cuisse reste à l'horizontale, genou moyennement plié"
+              "fr": "Le genou libre arrive à hauteur de la hanche : la cuisse est à l'horizontale"
             }
           },
           {
             "score": 3,
             "label": {
-              "fr": "Cuisse horizontale ou plus basse, genou plié à environ 90°"
+              "fr": "Le genou libre descend sous la hauteur de la hanche, sans effort"
             }
           }
         ]
@@ -341,16 +362,41 @@
         "fr": [
           "Asseyez-vous tout au bord d'un lit, puis allongez-vous sur le dos en ramenant les deux genoux vers la poitrine.",
           "Gardez un genou serré contre la poitrine avec les mains (le bas du dos reste plaqué).",
-          "Laissez l'autre jambe descendre, détendue, dans le vide au bord du lit.",
-          "Observez la position de la cuisse libre et du genou, puis changez de côté."
+          "Laissez l'autre jambe descendre, complètement détendue, dans le vide au bord du lit : ne la retenez pas et ne la poussez pas vers le bas.",
+          "Observez (ou filmez de profil) la hauteur du genou libre par rapport à la hanche, répondez à la question sur le genou, puis changez de côté."
         ]
       },
       "interpretation": {
-        "fr": "Une cuisse qui reste en l'air révèle un psoas raccourci ; un genou qui se tend révèle un droit fémoral raide. C'est le suspect n°1 du mal de dos en position debout prolongée chez les personnes assises toute la journée : le programme y consacrera du volume."
+        "fr": "Les paliers évaluent le psoas : une cuisse qui reste en l'air révèle des fléchisseurs de hanche raccourcis. La question complémentaire évalue le quadriceps (droit fémoral) : un genou qui se tend tout seul signale qu'il est raide lui aussi, ce qui abaisse le score — le couch stretch le travaille spécifiquement. C'est le suspect n°1 du mal de dos en position debout prolongée chez les personnes assises toute la journée : le programme y consacrera du volume."
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "modified thomas test hip flexor tightness self test"
+      "videoQuery": "modified thomas test hip flexor tightness self test",
+      "followUp": {
+        "prompt": {
+          "fr": "Et le genou de la jambe libre, pendant ce temps ?"
+        },
+        "options": [
+          {
+            "id": "knee-bent",
+            "label": {
+              "fr": "Il reste plié, le pied pend à peu près sous le genou"
+            },
+            "flag": null
+          },
+          {
+            "id": "knee-extends",
+            "label": {
+              "fr": "Il se tend tout seul : le pied part vers l'avant"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "hip-flexors",
+              "score": 1
+            }
+          }
+        ]
+      }
     },
     {
       "id": "plank-hold",
@@ -419,53 +465,87 @@
         "fr": "Un sol, éventuellement un tapis"
       },
       "measure": {
-        "kind": "level",
-        "levels": [
-          {
-            "score": 0,
-            "label": {
-              "fr": "Moins de 10 secondes, ou crampe immédiate derrière la cuisse"
-            }
-          },
-          {
-            "score": 1,
-            "label": {
-              "fr": "10 à 20 secondes, bassin qui penche"
-            }
-          },
-          {
-            "score": 2,
-            "label": {
-              "fr": "20 à 30 secondes, bassin stable"
-            }
-          },
-          {
-            "score": 3,
-            "label": {
-              "fr": "Plus de 30 secondes, bassin stable et effort senti dans la fesse"
-            }
-          }
-        ]
+        "kind": "seconds",
+        "prompt": {
+          "fr": "Temps tenu bassin horizontal (secondes)"
+        }
       },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 10,
+          "score": 0
+        },
+        {
+          "min": 10,
+          "max": 20,
+          "score": 1
+        },
+        {
+          "min": 20,
+          "max": 30,
+          "score": 2
+        },
+        {
+          "min": 30,
+          "score": 3
+        }
+      ],
       "instructions": {
         "fr": [
-          "Allongé sur le dos, genoux pliés, pieds au sol proches des fesses.",
-          "Montez le bassin en serrant les fessiers, puis tendez une jambe dans le prolongement du corps.",
-          "Tenez sans laisser le bassin pencher d'un côté, puis changez de jambe.",
-          "Notez le palier pour chaque côté."
+          "Allongé sur le dos, genoux pliés, pieds au sol proches des fesses, bras le long du corps.",
+          "Montez le bassin en serrant les fessiers, puis tendez une jambe dans le prolongement de la cuisse opposée et lancez le chrono.",
+          "Arrêtez le chrono dès que le bassin penche d'un côté, qu'il redescend, ou en cas de crampe : le test s'arrête là.",
+          "Notez le temps, répondez à la question sur l'effort ressenti, puis testez l'autre jambe."
         ]
       },
       "interpretation": {
-        "fr": "Une crampe derrière la cuisse signale des ischio-jambiers qui compensent des fessiers peu actifs — un schéma classique chez les sédentaires, directement lié aux lombaires qui saturent debout."
+        "fr": "On mesure l'endurance des fessiers à bassin horizontal, pas le record en compensant. Sous 20 secondes, les fessiers seront une priorité du programme anti-mal de dos debout. Si l'effort se ressent surtout derrière la cuisse (voire une crampe) ou dans le bas du dos, ce sont les ischio-jambiers ou les lombaires qui compensent des fessiers peu actifs — un schéma classique chez les sédentaires, directement lié aux lombaires qui saturent debout. Le score en tient compte."
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "single leg glute bridge test hamstring cramp glutes"
+      "videoQuery": "single leg glute bridge test hamstring cramp glutes",
+      "followUp": {
+        "prompt": {
+          "fr": "Où avez-vous senti l'effort principal ?"
+        },
+        "options": [
+          {
+            "id": "effort-glute",
+            "label": {
+              "fr": "Dans la fesse"
+            },
+            "flag": null
+          },
+          {
+            "id": "effort-hamstring",
+            "label": {
+              "fr": "Surtout derrière la cuisse, ou une crampe"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "glute-strength",
+              "score": 1
+            }
+          },
+          {
+            "id": "effort-low-back",
+            "label": {
+              "fr": "Surtout dans le bas du dos"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "glute-strength",
+              "score": 1
+            }
+          }
+        ]
+      }
     },
     {
       "id": "deep-squat-baseline",
       "name": {
-        "fr": "Squat profond (état des lieux)"
+        "fr": "Squat profond (état des lieux et équilibre)"
       },
       "factor": "balance-control",
       "secondaryFactors": [
@@ -482,43 +562,71 @@
           {
             "score": 0,
             "label": {
-              "fr": "Impossible : je tombe en arrière même en me tenant"
+              "fr": "Dès que je lâche le support, je bascule en arrière ou je dois remonter aussitôt"
             }
           },
           {
             "score": 1,
             "label": {
-              "fr": "Possible uniquement en me tenant à un support"
+              "fr": "Je tiens quelques secondes sans support, puis je bascule ou je me rattrape"
             }
           },
           {
             "score": 2,
             "label": {
-              "fr": "Possible sans me tenir, mais talons décollés ou dos très arrondi"
+              "fr": "Je tiens 30 secondes sans support, mais crispé ou en bougeant sans arrêt pour rester en équilibre"
             }
           },
           {
             "score": 3,
             "label": {
-              "fr": "Squat complet, talons au sol, tenu 30 secondes"
+              "fr": "Je tiens 30 secondes sans support, stable et détendu"
             }
           }
         ]
       },
       "instructions": {
         "fr": [
-          "Pieds écartés largeur d'épaules, pointes légèrement ouvertes (10-20°). Si vous savez que vos hanches pincent devant : partez d'emblée plus large, pointes ouvertes à 20-30°.",
-          "Descendez aussi bas que possible, comme pour vous asseoir sur vos talons, un support à portée de main par sécurité.",
-          "Observez : les talons décollent-ils ? Tombez-vous en arrière ? Le dos s'arrondit-il fortement ? Ça pince-t-il dans le pli de l'aine ?",
-          "Choisissez le palier correspondant. En cas de pincement d'aine, refaites un essai pieds plus larges et notez si ça change."
+          "Pieds écartés largeur d'épaules, pointes légèrement ouvertes (10-20°), un support solide à portée de main. Si vous savez que vos hanches pincent devant : partez d'emblée plus large, pointes ouvertes à 20-30°.",
+          "En vous tenant au support, descendez à votre point le plus bas, quel qu'il soit — inutile d'atteindre le sol avec les fesses.",
+          "À ce point le plus bas, lâchez le support et essayez de tenir 30 secondes.",
+          "Choisissez le palier, puis répondez à la question sur votre position. En cas de pincement d'aine, refaites un essai pieds plus larges."
         ]
       },
       "interpretation": {
-        "fr": "Ce test donne le point de départ ; les deux tests suivants (genou-mur et talons surélevés) déterminent si la limite vient des chevilles, des hanches ou de l'équilibre."
+        "fr": "Les paliers mesurent votre équilibre en position basse, à votre propre profondeur : c'est la part du squat qui se travaille par la pratique, indépendamment de la souplesse. La question complémentaire décrit votre point de départ (profondeur, talons) ; les tests suivants (genou-mur, talons surélevés, genou-poitrine) déterminent si la profondeur est limitée par les chevilles ou par les hanches."
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "deep squat assessment what limits your squat"
+      "videoQuery": "deep squat assessment what limits your squat",
+      "followUp": {
+        "prompt": {
+          "fr": "À votre point le plus bas, où en étiez-vous ?"
+        },
+        "options": [
+          {
+            "id": "full-depth",
+            "label": {
+              "fr": "Talons au sol, fesses proches des talons"
+            },
+            "flag": null
+          },
+          {
+            "id": "partial-depth",
+            "label": {
+              "fr": "Talons au sol, mais sans pouvoir descendre jusqu'en bas"
+            },
+            "flag": null
+          },
+          {
+            "id": "heels-up",
+            "label": {
+              "fr": "Je dois décoller les talons pour descendre"
+            },
+            "flag": null
+          }
+        ]
+      }
     },
     {
       "id": "knee-to-wall",
@@ -584,7 +692,7 @@
       ],
       "perSide": false,
       "equipment": {
-        "fr": "Un livre épais ou une planche (2-4 cm)"
+        "fr": "Un livre épais ou une planche (2-4 cm) et un support solide à portée de main"
       },
       "measure": {
         "kind": "level",
@@ -592,43 +700,71 @@
           {
             "score": 0,
             "label": {
-              "fr": "Toujours impossible, même talons surélevés"
+              "fr": "Je ne descends pas plus bas que les cuisses à l'horizontale, comme assis sur une chaise basse"
             }
           },
           {
             "score": 1,
             "label": {
-              "fr": "Possible mais instable ou inconfortable"
+              "fr": "Je descends sous l'horizontale, mais mes fesses restent loin des talons"
             }
           },
           {
             "score": 2,
             "label": {
-              "fr": "Nettement plus facile que talons au sol"
+              "fr": "J'arrive en bas, mais avec raideur, inconfort ou pincement dans les hanches"
             }
           },
           {
             "score": 3,
             "label": {
-              "fr": "Confortable, je pourrais y rester une minute"
+              "fr": "J'arrive en bas confortablement, je pourrais y rester une minute"
             }
           }
         ]
       },
       "instructions": {
         "fr": [
-          "Placez vos talons sur un livre épais ou une planche de 2 à 4 cm.",
-          "Refaites le même squat profond que dans le test précédent.",
-          "Comparez honnêtement la sensation avec le squat talons au sol.",
-          "Choisissez le palier correspondant."
+          "Placez vos talons sur un livre épais ou une planche de 2 à 4 cm, pieds largeur d'épaules.",
+          "Tenez-vous légèrement à un support : il sert uniquement à l'équilibre, pas à vous tirer vers le bas.",
+          "Descendez aussi bas que possible. « En bas » signifie fesses proches des talons, cuisses contre les mollets.",
+          "Choisissez le palier correspondant, puis comparez avec le squat talons au sol du test précédent."
         ]
       },
       "interpretation": {
-        "fr": "Lecture croisée : si le squat devient nettement plus facile talons surélevés, la limite est bien dans les chevilles. S'il reste aussi difficile, cherchez du côté des hanches et du contrôle — c'est ce que vérifie le test suivant."
+        "fr": "Talons surélevés et en vous tenant, la cheville et l'équilibre ne limitent presque plus : ce qui reste, c'est la flexion de hanche. Le palier la note donc de façon reproductible d'un re-test à l'autre. La comparaison avec le squat talons au sol sert à la lecture croisée : nettement plus facile ici, la limite principale est dans les chevilles (confirmez avec le test genou-mur) ; aussi difficile, cherchez du côté des hanches — c'est ce que vérifie le test suivant."
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "heel elevated squat ankle mobility test"
+      "videoQuery": "heel elevated squat ankle mobility test",
+      "followUp": {
+        "prompt": {
+          "fr": "Par rapport au squat talons au sol, c'était…"
+        },
+        "options": [
+          {
+            "id": "much-easier",
+            "label": {
+              "fr": "Nettement plus facile"
+            },
+            "flag": null
+          },
+          {
+            "id": "bit-easier",
+            "label": {
+              "fr": "Un peu plus facile"
+            },
+            "flag": null
+          },
+          {
+            "id": "same",
+            "label": {
+              "fr": "Pareil"
+            },
+            "flag": null
+          }
+        ]
+      }
     },
     {
       "id": "knee-hug-supine-test",
@@ -647,32 +783,32 @@
           {
             "score": 0,
             "label": {
-              "fr": "Le genou s'arrête loin de la poitrine (angle cuisse-buste de 45° ou plus)"
+              "fr": "La cuisse ne dépasse pas la verticale : le genou reste au-dessus de la hanche"
             }
           },
           {
             "score": 1,
             "label": {
-              "fr": "Le genou approche la poitrine, avec une gêne ou un blocage net"
+              "fr": "La cuisse dépasse la verticale, mais le genou reste nettement loin de la poitrine"
             }
           },
           {
             "score": 2,
             "label": {
-              "fr": "Le genou touche presque la poitrine, l'autre jambe reste au sol"
+              "fr": "Le genou arrive près de la poitrine, avec une tension nette en fin de mouvement"
             }
           },
           {
             "score": 3,
             "label": {
-              "fr": "Genou contre la poitrine sans effort, jambe opposée à plat"
+              "fr": "Le genou vient contre la poitrine sans effort"
             }
           }
         ]
       },
       "instructions": {
         "fr": [
-          "Allongé sur le dos, jambes tendues.",
+          "Allongé sur le dos, jambes tendues, la jambe qui ne travaille pas reste allongée et détendue au sol.",
           "Ramenez un genou vers la poitrine avec les mains (attrapez l'arrière de la cuisse, pas le tibia), l'autre jambe restant au sol.",
           "Identifiez OÙ ça bloque : un étirement derrière (fesse, arrière de la hanche) ou un pincement devant, dans le pli de l'aine ?",
           "Si ça pince devant : refaites l'essai en dirigeant le genou vers l'épaule du même côté, légèrement ouvert vers l'extérieur. Notez si l'amplitude s'améliore. Testez les deux côtés."
@@ -755,18 +891,683 @@
       },
       "instructions": {
         "fr": [
-          "Debout de profil devant un miroir, mains sur les crêtes du bassin, genoux souples (ni verrouillés ni fléchis).",
+          "Debout de profil devant un miroir, détendu comme d'habitude : observez d'abord votre position spontanée (elle servira à la question finale). Puis mains sur les crêtes du bassin, genoux souples.",
           "Bascule avant : cambrez le bas du dos en pointant le coccyx vers l'arrière, comme pour sortir les fesses.",
           "Bascule arrière : rentrez le coccyx en serrant fessiers et bas du ventre, le bas du dos s'aplatit.",
           "Alternez 5-6 fois lentement, buste et épaules immobiles : seul le bassin roule. Terminez en cherchant la position intermédiaire, neutre."
         ]
       },
       "interpretation": {
-        "fr": "Tenir debout longtemps sans douleur suppose de savoir sortir de la position cambrée par défaut (celle qu'impose un psoas court) pour revenir au neutre — impossible si la bascule n'est pas un geste conscient et disponible. Un score bas ne signale pas une faiblesse musculaire mais un manque de contrôle moteur : le chat-vache, le dead bug et le pont fessier (qui commencent tous par une bascule) l'apprennent rapidement. C'est souvent le score qui progresse le plus vite de toute la batterie."
+        "fr": "Tenir debout longtemps sans douleur suppose de savoir sortir de la position cambrée pour revenir au neutre — impossible si la bascule n'est pas un geste conscient et disponible. Un score bas ne signale pas une faiblesse musculaire mais un manque de contrôle moteur : le chat-vache, le dead bug et le pont fessier l'apprennent rapidement. La question complémentaire porte sur autre chose : ce que fait votre bassin quand vous n'y pensez pas. On peut très bien savoir basculer et rester cambré par défaut ; dans ce cas, le programme ajoute des exercices pour sortir de la cambrure debout. Un bassin poussé vers l'avant avec les genoux verrouillés ressemble à une cambrure mais n'en est pas une : ce sont surtout les transferts de poids et le déverrouillage des genoux qui l'aident."
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "standing pelvic tilt anterior posterior control drill"
+      "videoQuery": "standing pelvic tilt anterior posterior control drill",
+      "followUp": {
+        "prompt": {
+          "fr": "Debout, sans y penser, votre position habituelle (observée au début) est plutôt…"
+        },
+        "options": [
+          {
+            "id": "habit-arched",
+            "label": {
+              "fr": "Cambrée : bas du dos creusé, fesses « sorties »"
+            },
+            "flag": "habitual-lumbar-extension"
+          },
+          {
+            "id": "habit-neutral",
+            "label": {
+              "fr": "Neutre : ni cambrée, ni bassin poussé vers l'avant"
+            },
+            "flag": null
+          },
+          {
+            "id": "habit-sway",
+            "label": {
+              "fr": "Bassin poussé vers l'avant, haut du corps en arrière, genoux verrouillés"
+            },
+            "flag": null
+          },
+          {
+            "id": "habit-unknown",
+            "label": {
+              "fr": "Je ne sais pas"
+            },
+            "flag": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "side-lying-hip-abduction-test",
+      "name": {
+        "fr": "Abduction couché sur le côté (stabilité latérale)"
+      },
+      "factor": "lateral-hip-stability",
+      "secondaryFactors": [
+        "glute-strength"
+      ],
+      "perSide": true,
+      "equipment": {
+        "fr": "Un mur et un tapis"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Je ne tiens pas 10 secondes, même en laissant la jambe partir vers l'avant ou le bassin rouler"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Je tiens 10 secondes, mais seulement en laissant le talon quitter le mur ou le bassin rouler"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Je tiens 10 secondes sans compenser, mais avec un effort marqué ou des tremblements"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Je tiens 10 secondes sans compenser et sans effort notable"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté, dos et fesses contre un mur, jambes tendues l'une sur l'autre, talons contre le mur, tête posée sur le bras du dessous.",
+          "Levez la jambe du dessus d'environ une longueur d'avant-bras en faisant glisser le talon contre le mur, pointe du pied dirigée vers l'avant (pas vers le plafond).",
+          "Tenez 10 secondes en observant : le talon quitte-t-il le mur (la jambe part vers l'avant) ? Le bassin roule-t-il en avant ou en arrière ?",
+          "Choisissez le palier, puis changez de côté."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test évalue le moyen fessier, le muscle du côté de la hanche qui garde le bassin horizontal quand vous êtes debout. Un talon qui quitte le mur signale que les fléchisseurs de hanche prennent le relais. Chez les personnes qui ont mal en restant debout immobiles, ce stabilisateur fatigue ou se crispe souvent alors que la planche et le pont fessier sont bons : c'est pourquoi on le teste à part. Le programme le travaillera avec l'abduction couchée, l'élévation du bassin sur une marche et la planche latérale. Comparez les deux côtés."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "active hip abduction test side lying"
+    },
+    {
+      "id": "standing-tolerance",
+      "name": {
+        "fr": "Tolérance debout statique"
+      },
+      "factor": "standing-endurance",
+      "secondaryFactors": [
+        "pelvic-control"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Une gêne nette apparaît en moins de 20 minutes"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Entre 20 et 45 minutes"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Entre 45 minutes et 1 h 30"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Plus d'1 h 30 sans gêne notable"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Pensez à vos dernières stations debout presque immobiles : file d'attente, concert, cuisine, transports. La marche ne compte pas.",
+          "Estimez au bout de combien de temps une gêne nette apparaît dans le bas du dos (pas la simple fatigue des jambes).",
+          "Si vous ne savez pas, faites l'essai : restez debout à une tâche statique (vaisselle, repassage) en notant l'heure, et arrêtez dès la première gêne nette.",
+          "Choisissez le palier. Au re-test, refaites l'estimation dans des conditions comparables."
+        ]
+      },
+      "interpretation": {
+        "fr": "C'est la mesure directe de votre objectif, celle qui doit progresser. Un score bas alors que les autres tests sont bons est un profil fréquent : ce n'est pas la force ou la souplesse qui manque, mais la capacité à ne pas rester figé — souvent dans une cambrure par défaut. Le programme ajoute alors des stratégies debout (pied sur un rebord, reset, transferts de poids), à pratiquer en séance et en situation réelle. Si la gêne descend dans une jambe, s'accompagne de fourmillements ou apparaît aussi au repos : consultez."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "prolonged standing low back pain causes strategies"
+    },
+    {
+      "id": "knee-load-tolerance-test",
+      "name": {
+        "fr": "Tolérance du genou à l'effort (course, descentes)"
+      },
+      "factor": "knee-load-tolerance",
+      "secondaryFactors": [
+        "quadriceps-strength"
+      ],
+      "perSide": true,
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Ce genou fait mal au quotidien : dans les escaliers, ou dès les premières minutes d'effort"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Douleur en moins de 20 minutes de course, ou dès les premières descentes en randonnée"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Douleur seulement après 20 minutes de course, ou sur les longues descentes"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Pas de douleur à l'effort, même longtemps"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Pensez à vos dernières sorties : footing, randonnée, escaliers. Si vous ne courez pas, répondez pour la marche en descente.",
+          "Pour chaque genou, repérez au bout de combien de temps, ou dans quelle situation, la douleur apparaît.",
+          "Une douleur qui apparaît pendant l'effort compte, même si elle disparaît ensuite ; une simple fatigue des cuisses ne compte pas.",
+          "Choisissez le palier, répondez à la question sur l'endroit de la douleur, puis passez à l'autre genou."
+        ]
+      },
+      "interpretation": {
+        "fr": "C'est la mesure directe de votre objectif, genou par genou. L'endroit compte : une douleur sous ou autour de la rotule, surtout en descente, évoque un syndrome rotulien (la rotule surchargée) ; une douleur sur l'extérieur, qui arrive à un moment régulier en course, évoque une bandelette ilio-tibiale surmenée. Les deux se travaillent de la même façon — quadriceps qui freinent, hanche qui contrôle le genou, charge augmentée progressivement — avec des accents différents que le programme ajuste. Une douleur sur l'intérieur du genou à l'effort sort de ce cadre : faites-la examiner par un kiné ou un médecin du sport. Dans tous les cas, gonflement, blocage, genou qui lâche, choc récent ou douleur la nuit : consultez avant de commencer."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "patellofemoral pain vs IT band syndrome runners knee location",
+      "followUp": {
+        "prompt": {
+          "fr": "Où se situe la douleur de ce genou à l'effort ?"
+        },
+        "options": [
+          {
+            "id": "pain-none",
+            "label": {
+              "fr": "Pas de douleur"
+            },
+            "flag": null
+          },
+          {
+            "id": "pain-front",
+            "label": {
+              "fr": "Devant : sous ou autour de la rotule"
+            },
+            "flag": "patellofemoral-pain"
+          },
+          {
+            "id": "pain-outside",
+            "label": {
+              "fr": "Sur l'extérieur du genou"
+            },
+            "flag": "lateral-knee-pain"
+          },
+          {
+            "id": "pain-inside",
+            "label": {
+              "fr": "Sur l'intérieur, ou ailleurs"
+            },
+            "flag": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "step-down-test",
+      "name": {
+        "fr": "Descente de marche sur une jambe (contrôle du genou)"
+      },
+      "factor": "knee-control",
+      "secondaryFactors": [
+        "lateral-hip-stability",
+        "quadriceps-strength"
+      ],
+      "perSide": true,
+      "equipment": {
+        "fr": "Une marche d'escalier (15-20 cm), le téléphone posé en face pour filmer"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Je ne peux pas faire 5 descentes contrôlées sans me tenir"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "J'y arrive, mais le genou rentre nettement vers l'intérieur (il passe à l'intérieur du gros orteil)"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Le genou reste à peu près dans l'axe, mais le bassin tombe du côté libre ou le buste penche"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Genou dans l'axe du 2e orteil, bassin horizontal et buste droit sur les 5 descentes"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Debout sur le bord d'une marche, sur une jambe, l'autre jambe tendue dans le vide sur le côté de la marche. Téléphone posé en face de vous, à hauteur de genou, en train de filmer.",
+          "Mains sur les hanches, pliez lentement la jambe d'appui jusqu'à effleurer le sol avec le talon libre, puis remontez. Faites 5 descentes.",
+          "Regardez la vidéo : le genou d'appui reste-t-il dans l'axe du 2e orteil ou rentre-t-il vers l'intérieur ? Le bassin tombe-t-il du côté libre ? Le buste penche-t-il ?",
+          "Choisissez le palier, répondez à la question sur la douleur, puis testez l'autre jambe."
+        ]
+      },
+      "interpretation": {
+        "fr": "Chaque pas en descente est une petite flexion sur une jambe : ce test en est la version au ralenti. Un genou qui rentre vers l'intérieur fait frotter la rotule de travers ; il est le plus souvent piloté par la hanche (moyen fessier) plutôt que par le genou lui-même, d'où l'abduction couchée et l'élévation du bassin au programme. Un bassin qui tombe ou un buste qui penche signale la même faiblesse de hanche, compensée autrement. Comparez les deux côtés."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "lateral step down test knee valgus assessment",
+      "followUp": {
+        "prompt": {
+          "fr": "Pendant les descentes, avez-vous eu mal au genou ?"
+        },
+        "options": [
+          {
+            "id": "stepdown-no-pain",
+            "label": {
+              "fr": "Non"
+            },
+            "flag": null
+          },
+          {
+            "id": "stepdown-mild",
+            "label": {
+              "fr": "Une gêne légère sous la rotule (3/10 au plus)"
+            },
+            "flag": "patellofemoral-pain"
+          },
+          {
+            "id": "stepdown-pain",
+            "label": {
+              "fr": "Une douleur nette (plus de 3/10)"
+            },
+            "flag": "patellofemoral-pain",
+            "factorScoreOverride": {
+              "factor": "knee-load-tolerance",
+              "score": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "wall-sit-test",
+      "name": {
+        "fr": "Chaise au mur (endurance des quadriceps)"
+      },
+      "factor": "quadriceps-strength",
+      "secondaryFactors": [
+        "glute-strength"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "measure": {
+        "kind": "seconds",
+        "prompt": {
+          "fr": "Temps tenu cuisses presque horizontales (secondes)"
+        }
+      },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 30,
+          "score": 0
+        },
+        {
+          "min": 30,
+          "max": 60,
+          "score": 1
+        },
+        {
+          "min": 60,
+          "max": 120,
+          "score": 2
+        },
+        {
+          "min": 120,
+          "score": 3
+        }
+      ],
+      "instructions": {
+        "fr": [
+          "Dos plaqué contre un mur, descendez jusqu'à ce que les cuisses soient presque horizontales, genoux au-dessus des chevilles.",
+          "Croisez les bras sur la poitrine, lancez le chrono et respirez normalement.",
+          "Arrêtez quand vous ne pouvez plus tenir la position, OU dès qu'une douleur au genou dépasse 3/10. Si la position fait mal dès le départ, notez 0.",
+          "Notez le temps, puis répondez à la question sur ce qui vous a arrêté."
+        ]
+      },
+      "interpretation": {
+        "fr": "On mesure l'endurance des quadriceps, les muscles qui freinent chaque pas de descente. Sous une minute, ils fatiguent vite en randonnée et laissent le genou encaisser seul : le programme les renforcera en priorité, d'abord par des tenues (qui calment souvent la douleur), puis par des descentes lentes. Si c'est le genou et non la cuisse qui vous arrête, le score de force est sous-estimé : refaites le test au re-test, la différence sera parlante."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall sit test quadriceps endurance",
+      "followUp": {
+        "prompt": {
+          "fr": "Qu'est-ce qui vous a arrêté ?"
+        },
+        "options": [
+          {
+            "id": "stopped-thighs",
+            "label": {
+              "fr": "La brûlure ou la fatigue des cuisses"
+            },
+            "flag": null
+          },
+          {
+            "id": "stopped-knee",
+            "label": {
+              "fr": "Une douleur au genou"
+            },
+            "flag": "patellofemoral-pain"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wall-posture-test",
+      "name": {
+        "fr": "Dos au mur : la tête touche-t-elle ?"
+      },
+      "factor": "thoracic-mobility",
+      "secondaryFactors": [
+        "neck-endurance"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Impossible de poser l'arrière de la tête au mur, même en levant le menton"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "La tête ne touche qu'en levant nettement le menton"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "La tête touche menton à l'horizontale, mais avec un effort ou une tension dans le cou"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "La tête touche naturellement, menton horizontal, sans effort"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Debout dos au mur, talons à 5 cm du mur, fesses et omoplates au contact, bras le long du corps.",
+          "Sans cambrer le bas du dos, essayez de poser l'arrière de la tête contre le mur.",
+          "Observez le menton (un miroir à côté, ou le téléphone de profil) : reste-t-il à l'horizontale, ou devez-vous le lever pour que la tête touche ?",
+          "Choisissez le palier."
+        ]
+      },
+      "interpretation": {
+        "fr": "Si la tête ne touche qu'en levant le menton, le haut du dos est figé en position voûtée : pour ramener la tête, on « casse » la nuque vers l'arrière au lieu de redresser le buste. C'est le signe d'un haut du dos qui manque de mobilité en extension, très fréquent après des années d'écran. Ce n'est pas dangereux, mais c'est ce qui rend la position droite fatigante : le programme y consacre de la mobilité. Ce test se compare bien d'un re-test à l'autre."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall test posture head touch wall thoracic kyphosis"
+    },
+    {
+      "id": "wall-angel-test",
+      "name": {
+        "fr": "Wall angel (épaules et haut du dos)"
+      },
+      "factor": "shoulder-mobility",
+      "secondaryFactors": [
+        "thoracic-mobility"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un mur (et une serviette pliée si la tête ne touche pas le mur)"
+      },
+      "measure": {
+        "kind": "level",
+        "levels": [
+          {
+            "score": 0,
+            "label": {
+              "fr": "Bras en W, je ne peux pas poser les mains et les coudes au mur sans cambrer ou avancer la tête"
+            }
+          },
+          {
+            "score": 1,
+            "label": {
+              "fr": "Je pose mains et coudes en W, mais ils décollent dès que je commence à glisser vers le haut"
+            }
+          },
+          {
+            "score": 2,
+            "label": {
+              "fr": "Je glisse jusqu'à mi-chemin du Y, puis les mains décollent ou le bas du dos se cambre"
+            }
+          },
+          {
+            "score": 3,
+            "label": {
+              "fr": "Je glisse jusqu'en Y complet, mains et coudes au mur, bas du dos et tête restent en place"
+            }
+          }
+        ]
+      },
+      "instructions": {
+        "fr": [
+          "Dos au mur, pieds à 15 cm du mur, genoux souples, bas du dos rapproché du mur, tête au mur (ou sur une serviette pliée si elle ne touche pas).",
+          "Placez les bras en W contre le mur : coudes pliés à hauteur d'épaules, dos des mains et coudes au contact.",
+          "Glissez lentement les mains vers le haut, en Y, sans laisser décoller mains, coudes, bas du dos ou tête.",
+          "Arrêtez au premier décollement et choisissez le palier."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test combine les épaules et le haut du dos : des pectoraux raccourcis empêchent les bras de rester au mur, un haut du dos figé fait cambrer pour compenser. Si vous cambrez au lieu de décoller les mains, notez quand même le moment où la position se perd. Le programme ajoute l'étirement des pectoraux, les anges au sol puis au mur, et les tenues bras en Y."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall angel test shoulder mobility assessment"
+    },
+    {
+      "id": "prone-y-hold-test",
+      "name": {
+        "fr": "Tenue bras en Y à plat ventre (haut du dos)"
+      },
+      "factor": "upper-back-strength",
+      "secondaryFactors": [
+        "shoulder-mobility"
+      ],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "measure": {
+        "kind": "seconds",
+        "prompt": {
+          "fr": "Temps tenu bras décollés, position correcte (secondes)"
+        }
+      },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 15,
+          "score": 0
+        },
+        {
+          "min": 15,
+          "max": 30,
+          "score": 1
+        },
+        {
+          "min": 30,
+          "max": 60,
+          "score": 2
+        },
+        {
+          "min": 60,
+          "score": 3
+        }
+      ],
+      "instructions": {
+        "fr": [
+          "Allongé à plat ventre, front posé sur une serviette pliée, bras tendus devant vous en Y, pouces vers le plafond.",
+          "Rapprochez les omoplates vers le bas et décollez les deux bras de quelques centimètres, sans lever la tête. Lancez le chrono.",
+          "Arrêtez dès que les bras touchent le sol, que la tête se lève ou que vous haussez les épaules vers les oreilles.",
+          "Notez le temps, puis répondez à la question sur l'effort ressenti."
+        ]
+      },
+      "interpretation": {
+        "fr": "On mesure l'endurance des muscles qui tiennent le buste redressé : ceux qui travaillent entre et sous les omoplates. Sous 30 secondes, ils lâchent vite en position assise et le dos s'arrondit, même avec une bonne souplesse. Si l'effort est surtout ressenti dans le cou et le haut des épaules, ce sont les trapèzes supérieurs qui compensent : le score en tient compte."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "prone Y raise hold lower trapezius endurance",
+      "followUp": {
+        "prompt": {
+          "fr": "Où avez-vous senti l'effort principal ?"
+        },
+        "options": [
+          {
+            "id": "effort-between-blades",
+            "label": {
+              "fr": "Entre et sous les omoplates"
+            },
+            "flag": null
+          },
+          {
+            "id": "effort-neck-shoulders",
+            "label": {
+              "fr": "Dans le cou et le haut des épaules"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "upper-back-strength",
+              "score": 1
+            }
+          },
+          {
+            "id": "effort-low-back",
+            "label": {
+              "fr": "Dans le bas du dos"
+            },
+            "flag": null,
+            "factorScoreOverride": {
+              "factor": "upper-back-strength",
+              "score": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "neck-flexor-test",
+      "name": {
+        "fr": "Menton rentré, tête décollée (endurance du cou)"
+      },
+      "factor": "neck-endurance",
+      "secondaryFactors": [],
+      "perSide": false,
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "measure": {
+        "kind": "seconds",
+        "prompt": {
+          "fr": "Temps tenu menton rentré, tête décollée (secondes)"
+        }
+      },
+      "scoring": [
+        {
+          "min": 0,
+          "max": 10,
+          "score": 0
+        },
+        {
+          "min": 10,
+          "max": 20,
+          "score": 1
+        },
+        {
+          "min": 20,
+          "max": 35,
+          "score": 2
+        },
+        {
+          "min": 35,
+          "score": 3
+        }
+      ],
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, pieds au sol, sans oreiller.",
+          "Rentrez le menton comme pour faire un double menton, sans lever la tête.",
+          "Gardez le menton rentré et décollez la tête d'à peine 2 cm du sol. Lancez le chrono.",
+          "Arrêtez dès que le menton s'avance vers le plafond ou que la tête retombe : notez le temps."
+        ]
+      },
+      "interpretation": {
+        "fr": "Ce test évalue les petits muscles profonds de l'avant du cou, ceux qui tiennent la tête dans l'axe des épaules. Une tenue courte, ou un menton qui part très vite vers le plafond (ce sont alors les gros muscles du cou qui prennent le relais), est très fréquente chez les personnes qui travaillent sur écran. Les rétractions de menton et leur version allongée les renforcent en quelques semaines."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "deep neck flexor endurance test supine chin tuck"
     }
   ]
 }

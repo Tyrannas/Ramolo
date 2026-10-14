@@ -10,7 +10,8 @@
         "ankle-dorsiflexion"
       ],
       "goals": [
-        "deep-squat"
+        "deep-squat",
+        "resilient-knees"
       ],
       "type": "mobility-drill",
       "level": 0,
@@ -51,6 +52,112 @@
       "videoQuery": "knee to wall ankle dorsiflexion mobilization drill"
     },
     {
+      "id": "tibialis-raises",
+      "name": {
+        "fr": "Relevés de pointes de pieds dos au mur",
+        "en": "Wall tibialis raises"
+      },
+      "targets": [
+        "ankle-dorsiflexion"
+      ],
+      "goals": [
+        "deep-squat",
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 15,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Dos et fesses contre un mur, pieds à une trentaine de centimètres devant vous, jambes tendues.",
+          "Relevez l'avant des pieds vers les tibias le plus haut possible, talons au sol.",
+          "Redescendez lentement sans laisser les pointes taper le sol.",
+          "Plus les pieds sont loin du mur, plus c'est difficile."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Plier les genoux ou décoller les fesses du mur pour aider.",
+          "Remonter à moitié : cherchez l'amplitude complète, c'est elle qui sert au squat."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Brûlure sur l'avant du tibia : normale et recherchée. Une douleur le long de l'os, en revanche, impose l'arrêt."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Brûlure franche sur l'avant des tibias : les muscles qui tirent activement la cheville dans l'amplitude du squat."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall tibialis raises beginner tib raise"
+    },
+    {
+      "id": "knees-over-toes-split-squat",
+      "name": {
+        "fr": "Fente genou au-delà des orteils",
+        "en": "Knees-over-toes split squat"
+      },
+      "targets": [
+        "ankle-dorsiflexion",
+        "balance-control",
+        "quadriceps-strength"
+      ],
+      "goals": [
+        "deep-squat",
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "ankle-rocks",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise ou un mur à côté pour l'équilibre"
+      },
+      "instructions": {
+        "fr": [
+          "En fente, pied avant à plat, pied arrière sur la pointe, une main sur un support à côté de vous.",
+          "Descendez lentement en laissant le genou avant avancer au-delà des orteils, talon avant ancré au sol.",
+          "Allez aussi bas que le talon le permet, puis remontez en poussant dans tout le pied avant.",
+          "Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le talon avant décoller : c'est lui qui fait travailler la cheville.",
+          "Laisser le genou avant partir vers l'intérieur au lieu de suivre l'axe du pied."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Le genou qui dépasse les orteils n'est pas dangereux en soi, à condition de progresser en amplitude. Douleur à l'avant du genou : descendez moins bas et gardez plus d'appui sur le support.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort dans la cuisse avant et étirement chargé du mollet et du tendon d'Achille avant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "knees over toes split squat beginner ankle mobility",
+      "painMonitoring": true
+    },
+    {
       "id": "calf-stretch-wall",
       "name": {
         "fr": "Étirement du mollet au mur (jambe tendue)",
@@ -60,7 +167,8 @@
         "ankle-dorsiflexion"
       ],
       "goals": [
-        "deep-squat"
+        "deep-squat",
+        "resilient-knees"
       ],
       "type": "stretch",
       "level": 0,
@@ -119,7 +227,8 @@
         "ankle-dorsiflexion"
       ],
       "goals": [
-        "deep-squat"
+        "deep-squat",
+        "resilient-knees"
       ],
       "type": "stretch",
       "level": 0,
@@ -221,6 +330,83 @@
       "images": [],
       "videoUrl": null,
       "videoQuery": "assisted deep squat hold door frame beginner",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      }
+    },
+    {
+      "id": "slow-eccentric-squat",
+      "name": {
+        "fr": "Descente lente vers une chaise basse (squat contrôlé)",
+        "en": "Slow eccentric box squat"
+      },
+      "targets": [
+        "balance-control",
+        "hip-flexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "assisted-squat-hold",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Descendez lentement, bras devant en contrepoids"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Effleurez l'assise sans vous asseoir"
+              },
+              "seconds": 2
+            },
+            {
+              "label": {
+                "fr": "Remontez en poussant le sol"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une chaise basse, un pouf ou une pile de coussins derrière vous"
+      },
+      "instructions": {
+        "fr": [
+          "Debout dos à une chaise basse, pieds largeur d'épaules, pointes légèrement ouvertes, bras tendus devant vous.",
+          "Descendez très lentement, comme si l'assise était plus loin qu'elle ne l'est, talons ancrés.",
+          "Effleurez l'assise sans vous laisser tomber dessus, puis remontez en poussant le sol.",
+          "Au fil des semaines, abaissez l'assise (coussins en moins) : c'est votre curseur de progression vers le squat complet."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Se laisser tomber sur l'assise : tout le bénéfice est dans la lenteur de la descente.",
+          "Laisser les talons décoller ou les genoux rentrer vers l'intérieur."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Vérifiez que la chaise ne peut pas glisser.",
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Cuisses et fessiers qui travaillent, équilibre sollicité surtout en bas : on apprend à habiter la position basse."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "slow eccentric box squat beginner tempo",
       "impingementFriendlySetup": {
         "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
       }
@@ -340,6 +526,147 @@
       }
     },
     {
+      "id": "squat-ankle-rocks",
+      "name": {
+        "fr": "Squat profond : bascules de genou vers l'avant",
+        "en": "Deep squat ankle rocks"
+      },
+      "targets": [
+        "ankle-dorsiflexion",
+        "balance-control"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "free-squat-hold",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Poussez le genou gauche au-dessus des orteils, talon ancré"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Poussez le genou droit au-dessus des orteils, talon ancré"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "Installez-vous en squat profond libre, talons au sol, bras devant ou coudes à l'intérieur des genoux.",
+          "Transférez le poids sur un pied et poussez ce genou vers l'avant, au-dessus des orteils, sans décoller le talon.",
+          "Tenez au signal, puis passez de l'autre côté.",
+          "Restez bas tout l'exercice : c'est la cheville chargée, en position de squat, qui travaille."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Talon qui décolle quand le genou avance.",
+          "Remonter les fesses à chaque transfert."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Fourmillements dans les jambes : relevez-vous, secouez, reprenez plus tard.",
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement intense et localisé du bas du mollet, côté chargé ; cuisses qui travaillent pour garder l'équilibre."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "deep squat ankle rocks weight shift mobility",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      }
+    },
+    {
+      "id": "deep-squat-reaches",
+      "name": {
+        "fr": "Squat profond : bras tendus vers le haut en alternance",
+        "en": "Deep squat overhead reaches"
+      },
+      "targets": [
+        "balance-control",
+        "hip-flexion"
+      ],
+      "goals": [
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "free-squat-hold",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Bras gauche tendu vers le haut, buste redressé"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Bras droit tendu vers le haut, buste redressé"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "En squat profond libre, talons au sol, mains jointes devant la poitrine.",
+          "Tendez un bras vers le plafond en redressant le buste, sans laisser les talons décoller.",
+          "Tenez, ramenez la main, puis tendez l'autre bras au signal.",
+          "Le bras levé retire votre contrepoids : c'est le test d'équilibre ultime du squat de repos."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Basculer en arrière en levant le bras : avancez légèrement le poids vers l'avant des pieds.",
+          "Cambrer le bas du dos pour monter le bras plus haut."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Pincement à l'avant de la hanche (pli de l'aine) : élargissez l'écartement des pieds et ouvrez davantage les pointes (20-30°). Le pincement est une butée, pas un objectif : travaillez toujours juste en dessous, jamais en poussant dedans."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Équilibre exigeant, cuisses et tronc qui ajustent en permanence ; ouverture du haut du dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "deep squat overhead reach balance mobility",
+      "impingementFriendlySetup": {
+        "fr": "Stance large, pointes ouvertes 20-30°, les cuisses passent de part et d'autre du buste plutôt que droit devant."
+      }
+    },
+    {
       "id": "goblet-squat-pause",
       "name": {
         "fr": "Squat goblet avec pause (contrepoids)",
@@ -358,11 +685,30 @@
       "regressionOf": null,
       "progressionOf": "free-squat-hold",
       "dosage": {
-        "reps": 8,
         "sets": 3,
         "perSide": false,
-        "note": {
-          "fr": "Pause de 3 secondes en bas de chaque répétition."
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Descendez lentement"
+              },
+              "seconds": 3
+            },
+            {
+              "label": {
+                "fr": "Pause en bas, talons ancrés"
+              },
+              "seconds": 3
+            },
+            {
+              "label": {
+                "fr": "Remontez en poussant le sol"
+              },
+              "seconds": 2
+            }
+          ]
         }
       },
       "equipment": {
@@ -417,8 +763,7 @@
         "hip-flexion"
       ],
       "goals": [
-        "deep-squat",
-        "cross-legged"
+        "deep-squat"
       ],
       "type": "stretch",
       "level": 0,
@@ -560,7 +905,8 @@
       },
       "safetyNotes": {
         "fr": [
-          "Douleur au genou de la jambe croisée : rapprochez la cheville du genou opposé et réduisez la traction."
+          "Douleur au genou de la jambe croisée : rapprochez la cheville du genou opposé et réduisez la traction.",
+          "Douleur à l'intérieur du genou croisé : passez aux rotations de hanche assis sur une chaise."
         ]
       },
       "expectedFeeling": {
@@ -578,6 +924,140 @@
         "url": "https://github.com/yuhonas/free-exercise-db",
         "license": "Unlicense (domaine public)"
       }
+    },
+    {
+      "id": "figure-4-contract-relax",
+      "name": {
+        "fr": "Figure 4 en contracté-relâché",
+        "en": "Figure-4 contract-relax"
+      },
+      "targets": [
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "figure-4-supine",
+      "dosage": {
+        "sets": 1,
+        "perSide": true,
+        "cycles": {
+          "count": 4,
+          "phases": [
+            {
+              "label": {
+                "fr": "Poussez la cheville croisée contre la cuisse, sans bouger, à 30 %"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez tout et gagnez doucement en amplitude"
+              },
+              "seconds": 20
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, cheville droite posée sur le genou gauche (jambes en 4), mains derrière la cuisse gauche ramenée vers vous jusqu'à l'étirement dans la fesse droite.",
+          "Phase de contraction (5 s) : appuyez doucement la cheville droite contre la cuisse gauche, comme pour l'en écarter, pendant que les mains maintiennent la position — rien ne bouge.",
+          "Phase de relâchement (20 s) : relâchez la fesse, expirez, et ramenez la cuisse gauche un peu plus près.",
+          "Le minuteur enchaîne 4 cycles. Changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Contracter fort ou bloquer la respiration.",
+          "Laisser le genou croisé se refermer vers vous pendant le relâchement : il reste ouvert vers l'extérieur."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Contraction légère, autour de 30 % de votre force : le but est de rassurer le muscle, pas de lutter. Jamais de douleur, ni pendant la contraction ni pendant le relâchement.",
+          "Douleur au genou de la jambe croisée : rapprochez la cheville du genou opposé et réduisez la traction."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement profond dans la fesse de la jambe croisée, qui se détend nettement après chaque contraction."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "figure 4 stretch contract relax PNF piriformis"
+    },
+    {
+      "id": "seated-chair-hip-rotations",
+      "name": {
+        "fr": "Rotations de hanche assis sur une chaise",
+        "en": "Seated chair hip rotations"
+      },
+      "targets": [
+        "hip-external-rotation",
+        "hip-internal-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": true,
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Pied vers l'intérieur, cuisse immobile (rotation externe)"
+              },
+              "seconds": 3
+            },
+            {
+              "label": {
+                "fr": "Pied vers l'extérieur, cuisse immobile (rotation interne)"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord d'une chaise, dos droit, une main posée sur le genou qui travaille pour le garder immobile.",
+          "Sans bouger la cuisse, faites pivoter la jambe pour amener le pied vers l'intérieur, sous la chaise de l'autre jambe : la hanche tourne vers l'extérieur.",
+          "Puis amenez le pied vers l'extérieur, toujours cuisse immobile : la hanche tourne vers l'intérieur.",
+          "C'est la hanche qui pivote, le genou reste plié sans être tordu. Changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser la cuisse glisser ou le genou bouger : on perd la rotation de hanche.",
+          "Pencher le buste pour aller plus loin."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Version de la rotation de hanche qui ne tord pas le genou : à privilégier si le genou fait mal en tailleur. Douleur dans le genou malgré tout : réduisez l'amplitude."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Mobilisation douce au fond de la hanche, aucune contrainte dans le genou."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "seated hip internal external rotation chair mobility"
     },
     {
       "id": "butterfly-wall",
@@ -624,8 +1104,8 @@
         "fr": [
           "Assis dos contre un mur, plantes de pieds jointes, talons à distance confortable (30-40 cm du bassin).",
           "Le mur maintient votre dos droit : c'est tout son intérêt pour un débutant.",
-          "Phase passive : laissez les genoux descendre sous l'effet de la pesanteur, sans les pousser avec les mains, en expirant lentement.",
-          "Phase active (le vrai moteur de progression) : contractez pour ouvrir les genoux vers le sol pendant 5 secondes, puis relâchez tout — les genoux redescendent souvent un cran plus bas. Répétez ce cycle 4-5 fois.",
+          "Phase active (5 s, le vrai moteur de progression) : contractez les muscles des hanches pour ouvrir les genoux vers le sol, sans les mains.",
+          "Phase de relâchement (20 s) : relâchez tout et laissez la pesanteur faire descendre les genoux en expirant lentement — ils descendent souvent un cran plus bas. Le minuteur enchaîne les 5 cycles.",
           "Si la position reste intense, glissez un coussin sous chaque genou : soutenus, les adducteurs se relâchent mieux."
         ]
       },
@@ -638,6 +1118,7 @@
       },
       "safetyNotes": {
         "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
           "Douleur à l'intérieur du genou : éloignez les talons du bassin."
         ]
       },
@@ -646,7 +1127,257 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "butterfly stretch against wall cushions beginner"
+      "videoQuery": "butterfly stretch against wall cushions beginner",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
+    },
+    {
+      "id": "butterfly-contract-relax",
+      "name": {
+        "fr": "Papillon en contracté-relâché (contre les mains)",
+        "en": "Butterfly contract-relax"
+      },
+      "targets": [
+        "adductors"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "butterfly-wall",
+      "dosage": {
+        "sets": 1,
+        "perSide": false,
+        "cycles": {
+          "count": 4,
+          "phases": [
+            {
+              "label": {
+                "fr": "Poussez les genoux vers le haut contre vos mains, à 30 %"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez tout et gagnez doucement en amplitude"
+              },
+              "seconds": 20
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un mur, éventuellement des coussins sous les genoux"
+      },
+      "instructions": {
+        "fr": [
+          "Assis dos au mur, plantes de pieds jointes, talons à 30-40 cm du bassin, mains posées sur l'intérieur des genoux.",
+          "Phase de contraction (5 s) : poussez doucement les genoux vers le haut contre vos mains, qui résistent — rien ne bouge. Ce sont les adducteurs, à l'intérieur des cuisses, qui travaillent.",
+          "Phase de relâchement (20 s) : relâchez tout, retirez la pression des mains et laissez la pesanteur descendre les genoux en expirant.",
+          "Le minuteur enchaîne 4 cycles : les genoux descendent souvent un cran après chaque contraction."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Appuyer avec les mains vers le bas pendant le relâchement : on réveille le réflexe de protection.",
+          "Confondre avec le papillon au mur : ici on contracte les muscles étirés (les adducteurs), là-bas les muscles opposés (ceux qui ouvrent). Les deux méthodes se complètent."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
+          "Contraction légère, autour de 30 % de votre force : le but est de rassurer le muscle, pas de lutter. Jamais de douleur, ni pendant la contraction ni pendant le relâchement.",
+          "Douleur à l'intérieur du genou : éloignez les talons du bassin."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement doux de l'intérieur des cuisses, avec une descente des genoux souvent visible après quelques cycles."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "butterfly stretch PNF contract relax adductors",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
+    },
+    {
+      "id": "adductor-rockbacks",
+      "name": {
+        "fr": "Bascules arrière, jambe sur le côté (adducteurs)",
+        "en": "Adductor rock-backs"
+      },
+      "targets": [
+        "adductors"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis, un coussin sous le genou d'appui"
+      },
+      "instructions": {
+        "fr": [
+          "À quatre pattes, puis tendez une jambe sur le côté, pied à plat au sol, orteils vers l'avant.",
+          "Gardez le dos long et reculez lentement les fesses vers le talon de la jambe pliée.",
+          "Arrêtez-vous à la première tension nette à l'intérieur de la cuisse tendue, puis revenez.",
+          "À chaque répétition, cherchez un tout petit peu plus loin. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Arrondir le dos en reculant : la tension part dans les lombaires au lieu des adducteurs.",
+          "Laisser le pied de la jambe tendue se soulever sur la tranche."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
+          "Douleur à l'intérieur du genou tendu : pliez-le légèrement, la tension remonte vers l'aine."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement dynamique de l'intérieur de la cuisse tendue, qui diminue au fil des répétitions."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "adductor rock back mobility drill quadruped",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
+    },
+    {
+      "id": "adductor-squeeze",
+      "name": {
+        "fr": "Serrage de coussin entre les genoux (adducteurs)",
+        "en": "Adductor squeeze"
+      },
+      "targets": [
+        "adductors"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 10,
+          "phases": [
+            {
+              "label": {
+                "fr": "Serrez le coussin"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un coussin ferme ou un ballon"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, pieds au sol, un coussin plié entre les genoux.",
+          "Serrez le coussin avec l'intérieur des cuisses, de façon franche mais sans douleur, en respirant.",
+          "Relâchez complètement au signal, sans laisser tomber le coussin.",
+          "Des adducteurs plus forts tolèrent mieux l'étirement : c'est le socle du travail en force du tailleur."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Bloquer la respiration pendant le serrage.",
+          "Décoller le bassin ou cambrer pour serrer plus fort."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur dans l'aine pendant le serrage : diminuez l'intensité de moitié."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort net à l'intérieur des cuisses, sans douleur dans l'aine."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "adductor squeeze isometric pillow between knees"
+    },
+    {
+      "id": "copenhagen-knees",
+      "name": {
+        "fr": "Planche latérale adducteurs, genou sur une chaise (Copenhague court)",
+        "en": "Short-lever Copenhagen plank"
+      },
+      "targets": [
+        "adductors",
+        "core-endurance"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "adductor-squeeze",
+      "dosage": {
+        "holdSeconds": 15,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise, un canapé ou un banc stable"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté à côté d'une chaise, appui sur l'avant-bras, posez l'intérieur du genou du dessus sur l'assise. La jambe du dessous reste pliée au sol.",
+          "Poussez le genou du dessus dans l'assise pour décoller le bassin : le corps s'aligne de l'épaule au genou.",
+          "Si c'est trop dur, aidez-vous avec la jambe du dessous, pied posé au sol.",
+          "Tenez en respirant, redescendez lentement, changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le bassin s'affaisser ou partir en arrière.",
+          "Poser la cheville au lieu du genou : levier trop long, réservé aux avancés."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
+          "Douleur dans l'aine (et non un effort musculaire) : arrêtez et revenez au serrage de coussin.",
+          "Vérifiez que la chaise ne peut pas glisser."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort intense à l'intérieur de la cuisse du dessus et sur le flanc."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "short lever copenhagen plank knee on bench beginner",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
     },
     {
       "id": "butterfly-lean",
@@ -689,6 +1420,7 @@
       },
       "safetyNotes": {
         "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
           "Progression lente : les adducteurs n'aiment pas être brusqués."
         ]
       },
@@ -697,7 +1429,10 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "butterfly stretch forward lean flat back hip hinge"
+      "videoQuery": "butterfly stretch forward lean flat back hip hinge",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
     },
     {
       "id": "seated-90-90-transitions",
@@ -707,12 +1442,10 @@
       },
       "targets": [
         "hip-external-rotation",
-        "hip-internal-rotation",
-        "balance-control"
+        "hip-internal-rotation"
       ],
       "goals": [
-        "cross-legged",
-        "deep-squat"
+        "cross-legged"
       ],
       "type": "mobility-drill",
       "level": 1,
@@ -745,6 +1478,7 @@
       },
       "safetyNotes": {
         "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
           "Pincement dans la hanche pendant la rotation : réduisez l'amplitude, gardez les mains au sol."
         ]
       },
@@ -753,7 +1487,81 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "90 90 hip switches mobility drill beginner"
+      "videoQuery": "90 90 hip switches mobility drill beginner",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
+    },
+    {
+      "id": "90-90-lift-offs",
+      "name": {
+        "fr": "90/90 : lever le tibia avant (rotateurs en force)",
+        "en": "90/90 front shin lift-offs"
+      },
+      "targets": [
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "seated-90-90-transitions",
+      "dosage": {
+        "sets": 2,
+        "perSide": true,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Soulevez le tibia avant de quelques centimètres, tenez"
+              },
+              "seconds": 3
+            },
+            {
+              "label": {
+                "fr": "Reposez, relâchez"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Assis en 90/90, buste droit, mains posées au sol de part et d'autre pour vous stabiliser.",
+          "Sans pencher le buste, soulevez le tibia avant du sol de quelques centimètres, genou ET pied ensemble, en gardant la jambe tournée vers l'extérieur.",
+          "Tenez au signal, puis reposez lentement et relâchez.",
+          "Si c'est impossible au début, soulevez seulement le pied : le genou suivra au fil des semaines."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pencher le buste en arrière pour soulever la jambe : la hanche ne travaille plus.",
+          "Soulever seulement le pied en laissant le genou au sol, en pensant faire l'exercice complet."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
+          "Crampe à l'arrière de la hanche : fréquente au début, sortez de la position et reprenez.",
+          "Pincement dans la hanche : réduisez la hauteur, gardez les mains au sol."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort profond et inhabituel dans la fesse et l'arrière de la hanche avant : de la force là où le tailleur demande de l'amplitude."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "90 90 hip lift offs external rotation strength",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
     },
     {
       "id": "90-90-lean",
@@ -795,6 +1603,7 @@
       },
       "safetyNotes": {
         "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
           "Douleur au genou avant : glissez un coussin sous ce genou ou revenez au figure 4 allongé."
         ]
       },
@@ -803,7 +1612,10 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "90 90 stretch forward lean glute hip external rotation"
+      "videoQuery": "90 90 stretch forward lean glute hip external rotation",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
     },
     {
       "id": "hamstring-towel-stretch",
@@ -866,17 +1678,193 @@
       }
     },
     {
+      "id": "hamstring-contract-relax",
+      "name": {
+        "fr": "Ischio-jambiers en contracté-relâché (serviette)",
+        "en": "Hamstring contract-relax with towel"
+      },
+      "targets": [
+        "hamstrings"
+      ],
+      "goals": [
+        "cross-legged",
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "hamstring-towel-stretch",
+      "dosage": {
+        "sets": 1,
+        "perSide": true,
+        "cycles": {
+          "count": 4,
+          "phases": [
+            {
+              "label": {
+                "fr": "Poussez le talon contre la serviette, sans bouger, à 30 %"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez tout et gagnez doucement en amplitude"
+              },
+              "seconds": 20
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une serviette ou une ceinture"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, serviette sous la plante d'un pied, jambe tendue vers le plafond jusqu'à la première tension nette derrière la cuisse.",
+          "Phase de contraction (5 s) : poussez doucement le talon contre la serviette, comme pour ramener la jambe vers le sol, pendant que les mains tiennent la serviette — la jambe ne bouge pas.",
+          "Phase de relâchement (20 s) : relâchez complètement, expirez, et rapprochez doucement la jambe de vous de quelques centimètres.",
+          "Le minuteur enchaîne 4 cycles ; vous gagnez souvent un peu d'amplitude à chaque relâchement. Changez de jambe."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pousser fort : une contraction intense déclenche le réflexe de protection qu'on cherche justement à calmer.",
+          "Profiter du relâchement pour tirer brusquement : le gain doit venir tout seul, en douceur.",
+          "Plier le genou pour gagner de l'amplitude : l'étirement disparaît."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Contraction légère, autour de 30 % de votre force : le but est de rassurer le muscle, pas de lutter. Jamais de douleur, ni pendant la contraction ni pendant le relâchement.",
+          "Sensation électrique derrière la jambe (nerf) : réduisez immédiatement l'amplitude et pliez légèrement le genou."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement franc derrière la cuisse, qui « lâche » un peu à chaque relâchement. Jamais dans le creux du genou."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "hamstring contract relax PNF stretch supine strap"
+    },
+    {
+      "id": "elevated-hamstring-hinge",
+      "name": {
+        "fr": "Ischio-jambiers talon surélevé, dos long",
+        "en": "Elevated heel hamstring hinge"
+      },
+      "targets": [
+        "hamstrings",
+        "pelvic-control"
+      ],
+      "goals": [
+        "cross-legged",
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "hamstring-contract-relax",
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise, une marche ou un banc bas"
+      },
+      "instructions": {
+        "fr": [
+          "Debout face à une chaise, posez un talon sur l'assise, jambe tendue, pointe du pied vers le plafond. La jambe d'appui reste légèrement fléchie.",
+          "Mains sur les hanches, grandissez-vous : le dos reste long du bassin à la tête.",
+          "Basculez le bassin vers l'avant, comme pour pointer le nombril vers le pied posé : le buste s'incline en bloc, sans s'enrouler.",
+          "Arrêtez-vous à la première tension nette, tenez en respirant, puis changez de jambe."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Arrondir le dos pour descendre les mains vers le pied : on étire le dos, plus les ischio-jambiers. C'est la bascule du bassin qui compte — exactement celle dont le tailleur a besoin.",
+          "Support trop haut : commencez bas (une marche), la hauteur viendra."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Sensation électrique derrière la jambe : redressez-vous et pliez légèrement le genou posé.",
+          "Équilibre précaire : faites-le à côté d'un mur pour vous tenir."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement net derrière la cuisse surélevée, bas du dos neutre et confortable."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "elevated heel hamstring stretch hip hinge flat back"
+    },
+    {
+      "id": "seated-forward-fold-tilt",
+      "name": {
+        "fr": "Pince assise, bassin basculé (jambes tendues)",
+        "en": "Seated forward fold with pelvic tilt"
+      },
+      "targets": [
+        "hamstrings",
+        "pelvic-control"
+      ],
+      "goals": [
+        "cross-legged",
+        "deep-squat"
+      ],
+      "type": "stretch",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "elevated-hamstring-hinge",
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Aucun (éventuellement un coussin fin sous les fesses)"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au sol jambes tendues et serrées, pointes de pieds vers le plafond.",
+          "Asseyez-vous bien sur l'avant des ischions : roulez le bassin vers l'avant jusqu'à redresser le dos.",
+          "Inclinez-vous vers l'avant en continuant de basculer le bassin, dos long, mains qui glissent le long des jambes.",
+          "Arrêtez-vous dès que le dos commence à s'arrondir. Tenez en respirant."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "S'enrouler pour attraper les pieds : on étire le dos, plus les ischio-jambiers.",
+          "Plier les genoux sans s'en rendre compte."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Sensation électrique derrière les jambes : redressez-vous et pliez légèrement les genoux."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement profond derrière les cuisses, dos long : la bascule du bassin dont le tailleur a besoin, en version avancée."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "seated forward fold flat back anterior pelvic tilt hamstrings"
+    },
+    {
       "id": "cat-cow",
       "name": {
         "fr": "Chat-vache (bascules du bassin à quatre pattes)",
         "en": "Cat-cow"
       },
       "targets": [
-        "pelvic-control"
+        "pelvic-control",
+        "thoracic-mobility"
       ],
       "goals": [
         "cross-legged",
-        "long-standing"
+        "long-standing",
+        "posture"
       ],
       "type": "mobility-drill",
       "level": 0,
@@ -932,8 +1920,7 @@
         "en": "Seated pelvic tilts (elevated cross-legged)"
       },
       "targets": [
-        "pelvic-control",
-        "hip-external-rotation"
+        "pelvic-control"
       ],
       "goals": [
         "cross-legged"
@@ -966,6 +1953,7 @@
       },
       "safetyNotes": {
         "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
           "Fourmillements dans les jambes : décroisez, secouez, recommencez plus tard."
         ]
       },
@@ -974,7 +1962,124 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "seated pelvic tilt cross legged cushion posture"
+      "videoQuery": "seated pelvic tilt cross legged cushion posture",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
+    },
+    {
+      "id": "floor-cross-legged-tilts",
+      "name": {
+        "fr": "Bascules du bassin en tailleur au sol",
+        "en": "Floor cross-legged pelvic tilts"
+      },
+      "targets": [
+        "pelvic-control",
+        "hip-external-rotation"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "mobility-drill",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "seated-pelvic-tilts",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Aucun (ou un livre fin sous les fesses)"
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous en tailleur directement au sol, ou sur un livre fin, mains sur les genoux.",
+          "Arrondissez le bas du dos (bascule arrière), puis basculez le bassin vers l'avant jusqu'à redresser le dos.",
+          "Alternez lentement, en allant à chaque fois un peu plus loin vers l'avant sans forcer.",
+          "Terminez en vous arrêtant dos droit et tenez 30 secondes en respirant."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Redresser le dos en tirant les épaules en arrière : c'est le bassin qui doit rouler, pas le haut du corps.",
+          "Passer à cette version avant que la version sur coussin soit facile."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
+          "Fourmillements dans les jambes : décroisez, secouez, recommencez plus tard."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort postural net dans le bas du dos et l'arrière des cuisses au moment de redresser : la vraie position du tailleur."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "cross legged pelvic tilt floor sit up straight",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
+    },
+    {
+      "id": "cross-legged-forward-fold",
+      "name": {
+        "fr": "Tailleur au sol, inclinaison avant",
+        "en": "Cross-legged forward fold"
+      },
+      "targets": [
+        "hip-external-rotation",
+        "adductors",
+        "pelvic-control"
+      ],
+      "goals": [
+        "cross-legged"
+      ],
+      "type": "stretch",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "floor-cross-legged-tilts",
+      "dosage": {
+        "holdSeconds": 45,
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Changez le croisement des jambes à chaque série."
+        }
+      },
+      "equipment": {
+        "fr": "Aucun"
+      },
+      "instructions": {
+        "fr": [
+          "Asseyez-vous en tailleur au sol, dos droit.",
+          "Basculez le bassin vers l'avant et inclinez le buste en bloc, mains qui avancent au sol devant vous.",
+          "Avancez tant que le dos reste long, puis tenez en respirant.",
+          "Remontez lentement et changez le croisement des jambes pour la série suivante."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "S'enrouler dos rond pour aller plus loin : les hanches ne travaillent plus.",
+          "Toujours croiser la même jambe devant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
+          "Douleur au genou : revenez à la version sans inclinaison, ou glissez des coussins sous les genoux."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement profond des fesses et de l'intérieur des cuisses : le tailleur devient une position de repos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "cross legged forward fold hip opener flat back",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
     },
     {
       "id": "cross-legged-practice",
@@ -1021,6 +2126,7 @@
       },
       "safetyNotes": {
         "fr": [
+          "Douleur DANS le genou (surtout à l'intérieur), et non une tension dans la hanche ou l'aine : arrêtez. C'est le genou qui encaisse la rotation que la hanche ne donne pas encore ; ce n'est pas une sensation à dépasser.",
           "Genoux douloureux : coussins sous les genoux, ou revenez au papillon au mur quelque temps."
         ]
       },
@@ -1029,7 +2135,10 @@
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "how to sit cross legged comfortably cushion height progression"
+      "videoQuery": "how to sit cross legged comfortably cushion height progression",
+      "avoidWithFlags": [
+        "knee-pain-in-rotation"
+      ]
     },
     {
       "id": "toe-touch-progression",
@@ -1081,6 +2190,59 @@
       "images": [],
       "videoUrl": null,
       "videoQuery": "bent knee toe touch hamstring progression drill"
+    },
+    {
+      "id": "hip-hinge-dowel",
+      "name": {
+        "fr": "Charnière de hanche au bâton",
+        "en": "Dowel hip hinge"
+      },
+      "targets": [
+        "pelvic-control",
+        "hamstrings"
+      ],
+      "goals": [
+        "cross-legged",
+        "long-standing",
+        "deep-squat"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un manche à balai ou un bâton droit"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, pieds largeur de hanches, tenez un manche à balai dans le dos : il touche l'arrière de la tête, le haut du dos et le bas du dos (sacrum).",
+          "Genoux légèrement fléchis, poussez les fesses vers l'arrière en inclinant le buste, sans perdre aucun des trois contacts avec le bâton.",
+          "Descendez jusqu'à la première tension derrière les cuisses, puis remontez en serrant les fessiers.",
+          "Lentement : c'est la bascule du bassin, pas le dos, qui fait le mouvement."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Perdre le contact du bâton avec le bas du dos : le dos s'arrondit et la charnière disparaît.",
+          "Plier fortement les genoux pour descendre, ce qui transforme le mouvement en squat."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur lombaire pendant le mouvement : réduisez l'amplitude ; le bas du dos doit rester confortable."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Tension derrière les cuisses, dos neutre et immobile : la sensation de basculer le bassin sans plier le dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "dowel hip hinge drill three points of contact"
     },
     {
       "id": "kneeling-hip-flexor-stretch",
@@ -1143,6 +2305,73 @@
       }
     },
     {
+      "id": "hip-flexor-contract-relax",
+      "name": {
+        "fr": "Psoas en contracté-relâché (fente basse)",
+        "en": "Kneeling hip flexor contract-relax"
+      },
+      "targets": [
+        "hip-flexors"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "stretch",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "kneeling-hip-flexor-stretch",
+      "dosage": {
+        "sets": 1,
+        "perSide": true,
+        "cycles": {
+          "count": 4,
+          "phases": [
+            {
+              "label": {
+                "fr": "Tirez le genou arrière vers l'avant dans le sol, sans bouger, à 30 %"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez tout et gagnez doucement en amplitude"
+              },
+              "seconds": 20
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis ou un coussin sous le genou"
+      },
+      "instructions": {
+        "fr": [
+          "En fente basse, genou arrière sur un coussin, fesse arrière serrée et bassin basculé en arrière (coccyx rentré) : l'étirement apparaît à l'avant de la hanche arrière.",
+          "Phase de contraction (5 s) : tirez doucement le genou arrière vers l'avant, comme pour le faire glisser vers le pied avant — il ne bouge pas, c'est le sol qui résiste.",
+          "Phase de relâchement (20 s) : relâchez, gardez la fesse serrée et la bascule, et avancez légèrement le bassin.",
+          "Le minuteur enchaîne 4 cycles. Changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Perdre la bascule du bassin pendant le relâchement : on cambre et l'étirement part dans les lombaires.",
+          "Contracter fort : 30 % suffit."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Contraction légère, autour de 30 % de votre force : le but est de rassurer le muscle, pas de lutter. Jamais de douleur, ni pendant la contraction ni pendant le relâchement.",
+          "Douleur au genou posé : plus de rembourrage."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement net à l'avant de la hanche arrière, qui se relâche après chaque contraction."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "hip flexor contract relax PNF kneeling lunge"
+    },
+    {
       "id": "couch-stretch",
       "name": {
         "fr": "Étirement du psoas au canapé (couch stretch)",
@@ -1157,7 +2386,7 @@
       "type": "stretch",
       "level": 2,
       "regressionOf": null,
-      "progressionOf": "kneeling-hip-flexor-stretch",
+      "progressionOf": "hip-flexor-contract-relax",
       "dosage": {
         "holdSeconds": 60,
         "sets": 2,
@@ -1200,7 +2429,8 @@
         "en": "Standing hip flexor stretch"
       },
       "targets": [
-        "hip-flexors"
+        "hip-flexors",
+        "standing-endurance"
       ],
       "goals": [
         "long-standing"
@@ -1266,18 +2496,32 @@
         "pelvic-control"
       ],
       "goals": [
-        "long-standing"
+        "long-standing",
+        "resilient-knees"
       ],
       "type": "strength",
       "level": 0,
       "regressionOf": null,
       "progressionOf": null,
       "dosage": {
-        "reps": 12,
         "sets": 3,
         "perSide": false,
-        "note": {
-          "fr": "2 secondes de pause serrée en haut de chaque répétition."
+        "cycles": {
+          "count": 12,
+          "phases": [
+            {
+              "label": {
+                "fr": "Montez et tenez en haut, fesses serrées"
+              },
+              "seconds": 4
+            },
+            {
+              "label": {
+                "fr": "Redescendez lentement"
+              },
+              "seconds": 2
+            }
+          ]
         }
       },
       "equipment": {
@@ -1319,6 +2563,77 @@
       }
     },
     {
+      "id": "bridge-two-up-one-down",
+      "name": {
+        "fr": "Pont : montée à deux jambes, descente sur une",
+        "en": "Two-up one-down glute bridge"
+      },
+      "targets": [
+        "glute-strength",
+        "lateral-hip-stability"
+      ],
+      "goals": [
+        "long-standing",
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "glute-bridge",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Alternez la jambe de descente à chaque cycle."
+        },
+        "cycles": {
+          "count": 10,
+          "phases": [
+            {
+              "label": {
+                "fr": "Montez sur deux jambes, fesses serrées"
+              },
+              "seconds": 2
+            },
+            {
+              "label": {
+                "fr": "Levez un pied, redescendez lentement sur l'autre jambe"
+              },
+              "seconds": 4
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Position de pont fessier : allongé sur le dos, genoux pliés, pieds au sol proches des fesses.",
+          "Montez le bassin sur deux jambes en serrant les fessiers.",
+          "En haut, décollez un pied et redescendez lentement sur une seule jambe, bassin horizontal.",
+          "Changez de jambe de descente à chaque cycle : c'est la marche intermédiaire avant le pont complet à une jambe."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le bassin pencher du côté du pied levé pendant la descente.",
+          "Descendre vite : la descente lente est tout l'exercice."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Crampe derrière la cuisse : rapprochez les pieds des fesses."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort net dans la fesse de la jambe d'appui pendant la descente."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "glute bridge two up one down eccentric single leg"
+    },
+    {
       "id": "single-leg-glute-bridge",
       "name": {
         "fr": "Pont fessier à une jambe",
@@ -1329,12 +2644,13 @@
         "core-endurance"
       ],
       "goals": [
-        "long-standing"
+        "long-standing",
+        "resilient-knees"
       ],
       "type": "strength",
       "level": 2,
       "regressionOf": null,
-      "progressionOf": "glute-bridge",
+      "progressionOf": "bridge-two-up-one-down",
       "dosage": {
         "reps": 8,
         "sets": 3,
@@ -1386,11 +2702,13 @@
       },
       "targets": [
         "glute-strength",
-        "hip-external-rotation"
+        "hip-external-rotation",
+        "lateral-hip-stability"
       ],
       "goals": [
         "long-standing",
-        "cross-legged"
+        "cross-legged",
+        "resilient-knees"
       ],
       "type": "strength",
       "level": 0,
@@ -1540,6 +2858,57 @@
       }
     },
     {
+      "id": "plank-shoulder-taps",
+      "name": {
+        "fr": "Planche haute : toucher d'épaules",
+        "en": "Plank shoulder taps"
+      },
+      "targets": [
+        "core-endurance",
+        "pelvic-control"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "strength",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "plank",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "En planche haute, mains sous les épaules, bras tendus, pieds un peu plus écartés que les hanches.",
+          "Décollez lentement une main pour toucher l'épaule opposée, sans que le bassin bouge.",
+          "Reposez la main, puis l'autre. Écartez davantage les pieds si le bassin tangue.",
+          "Rapprocher les pieds rend l'exercice plus difficile."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le bassin tourner ou se balancer à chaque touche : c'est précisément ce qu'on entraîne à empêcher.",
+          "Aller vite pour compenser l'instabilité."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur au poignet : faites l'exercice sur les poings fermés ou revenez à la planche sur les avant-bras."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Gainage intense en rotation, fessiers et abdominaux qui verrouillent le bassin."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "plank shoulder taps no hip rotation form"
+    },
+    {
       "id": "side-plank-knees",
       "name": {
         "fr": "Planche latérale sur les genoux",
@@ -1547,10 +2916,12 @@
       },
       "targets": [
         "core-endurance",
-        "glute-strength"
+        "glute-strength",
+        "lateral-hip-stability"
       ],
       "goals": [
-        "long-standing"
+        "long-standing",
+        "resilient-knees"
       ],
       "type": "strength",
       "level": 1,
@@ -1609,11 +2980,27 @@
       "regressionOf": null,
       "progressionOf": null,
       "dosage": {
-        "reps": 8,
         "sets": 2,
-        "perSide": true,
+        "perSide": false,
         "note": {
-          "fr": "Tenue de 3 secondes bras et jambe tendus."
+          "fr": "Alternez les diagonales à chaque cycle : 8 par côté."
+        },
+        "cycles": {
+          "count": 16,
+          "phases": [
+            {
+              "label": {
+                "fr": "Tendez bras et jambe opposés, tenez"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Revenez à quatre pattes"
+              },
+              "seconds": 3
+            }
+          ]
         }
       },
       "equipment": {
@@ -1656,7 +3043,8 @@
         "pelvic-control"
       ],
       "goals": [
-        "long-standing"
+        "long-standing",
+        "posture"
       ],
       "type": "strength",
       "level": 1,
@@ -1713,10 +3101,11 @@
       },
       "targets": [
         "glute-strength",
-        "core-endurance"
+        "quadriceps-strength"
       ],
       "goals": [
-        "long-standing"
+        "long-standing",
+        "resilient-knees"
       ],
       "type": "strength",
       "level": 1,
@@ -1746,15 +3135,604 @@
       },
       "safetyNotes": {
         "fr": [
-          "Douleur derrière la rotule : descendez moins bas, cuisses au-dessus de l'horizontale."
+          "Douleur derrière la rotule : descendez moins bas, cuisses au-dessus de l'horizontale.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
         ]
       },
       "expectedFeeling": {
-        "fr": "Brûlure progressive des cuisses et des fessiers — de l'endurance directement utile pour les journées debout."
+        "fr": "Brûlure progressive surtout dans les cuisses, fessiers en soutien — de l'endurance des jambes directement utile pour les journées debout."
       },
       "images": [],
       "videoUrl": null,
-      "videoQuery": "wall sit correct form heels quads endurance"
+      "videoQuery": "wall sit correct form heels quads endurance",
+      "painMonitoring": true
+    },
+    {
+      "id": "side-lying-hip-abduction",
+      "name": {
+        "fr": "Abduction de hanche couché sur le côté (dos au mur)",
+        "en": "Side-lying hip abduction"
+      },
+      "targets": [
+        "lateral-hip-stability",
+        "glute-strength"
+      ],
+      "goals": [
+        "long-standing",
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 12,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un mur et un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté, dos et fesses contre un mur, jambes tendues l'une sur l'autre, tête posée sur le bras du dessous.",
+          "Pointe du pied du dessus dirigée vers l'avant (pas vers le plafond) : c'est ce qui fait travailler le côté de la fesse.",
+          "Levez la jambe d'environ une longueur d'avant-bras en faisant glisser le talon contre le mur, puis redescendez lentement sans la poser complètement.",
+          "Le bassin reste immobile, ni roulé en avant ni en arrière. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le talon quitter le mur : la jambe part vers l'avant et ce sont les fléchisseurs de hanche qui prennent le relais, pas le moyen fessier.",
+          "Tourner la pointe du pied vers le plafond, ce qui transfère l'effort vers l'avant de la cuisse.",
+          "Monter le plus haut possible : au-delà d'une trentaine de centimètres, le bassin bascule pour compenser."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Pincement sur le côté de la hanche : réduisez l'amplitude, ou glissez un coussin sous la hanche du dessous.",
+          "Brûlure ou crampe sur le côté de la fesse : normal au début, faites une pause et reprenez."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Brûlure localisée sur le côté de la fesse, juste sous la crête du bassin : c'est le muscle qui garde votre bassin horizontal quand vous restez debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "side lying hip abduction against wall glute medius"
+    },
+    {
+      "id": "standing-hip-hike",
+      "name": {
+        "fr": "Élévation du bassin sur une marche (hip hike)",
+        "en": "Standing hip hike"
+      },
+      "targets": [
+        "lateral-hip-stability"
+      ],
+      "goals": [
+        "long-standing",
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "side-lying-hip-abduction",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une marche d'escalier et une rampe ou un mur pour l'équilibre"
+      },
+      "instructions": {
+        "fr": [
+          "Debout de profil sur une marche, une main sur la rampe ou le mur, le pied d'appui sur la marche, l'autre jambe tendue dans le vide à côté.",
+          "Sans plier les genoux, laissez descendre le bassin du côté de la jambe libre : le pied libre passe sous le niveau de la marche.",
+          "Remontez ce côté du bassin grâce à la hanche d'appui, jusqu'à ce que le pied libre passe un peu au-dessus de la marche.",
+          "Mouvement lent et court, quelques centimètres seulement. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Plier le genou d'appui pour descendre : c'est la hanche, pas le genou, qui fait le mouvement.",
+          "Pencher le buste sur le côté au lieu de faire bouger le bassin."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Tenez-vous toujours à un appui solide : l'exercice se fait au bord du vide.",
+          "Douleur sur le côté de la hanche d'appui : réduisez l'amplitude ou revenez à l'abduction couchée."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort sur le côté de la fesse de la jambe d'appui : exactement le travail de stabilisation demandé quand on piétine ou qu'on transfère son poids debout."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "standing hip hike step glute medius exercise"
+    },
+    {
+      "id": "side-plank",
+      "name": {
+        "fr": "Planche latérale",
+        "en": "Side plank"
+      },
+      "targets": [
+        "core-endurance",
+        "lateral-hip-stability"
+      ],
+      "goals": [
+        "long-standing",
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "side-plank-knees",
+      "dosage": {
+        "holdSeconds": 20,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté, appui sur l'avant-bras (coude sous l'épaule), jambes tendues, pieds posés l'un devant l'autre.",
+          "Décollez le bassin pour aligner tête, épaules, bassin et chevilles.",
+          "Poussez le sol avec l'avant-bras et gardez le bassin haut, sans le laisser plonger ni partir en arrière.",
+          "Tenez, redescendez lentement, changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Bassin qui s'affaisse vers le sol : c'est précisément le côté de la hanche du dessous qui doit l'en empêcher.",
+          "Fesses qui partent en arrière, corps cassé en deux."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Épaule douloureuse : revenez à la planche latérale sur les genoux."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort sur tout le flanc et le côté de la fesse du dessous, épaule stable."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "side plank beginner form hips aligned"
+    },
+    {
+      "id": "wall-posterior-tilt-hold",
+      "name": {
+        "fr": "Bascule du bassin dos au mur (sortir de la cambrure)",
+        "en": "Standing wall posterior pelvic tilt"
+      },
+      "targets": [
+        "pelvic-control",
+        "standing-endurance"
+      ],
+      "goals": [
+        "long-standing",
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Réduisez la cambrure contre le mur et tenez"
+              },
+              "seconds": 10
+            },
+            {
+              "label": {
+                "fr": "Relâchez à mi-chemin, sans vous recambrer à fond"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Debout dos au mur, talons à une quinzaine de centimètres du mur, genoux légèrement fléchis, fesses et omoplates au contact.",
+          "Glissez une main dans le creux du bas du dos : c'est l'espace que vous allez réduire.",
+          "Expirez, laissez les côtes descendre, et rentrez légèrement le coccyx en serrant doucement le bas du ventre et les fessiers : le bas du dos se rapproche du mur et appuie sur la main.",
+          "Tenez en respirant calmement, puis relâchez à mi-chemin au signal. Le but : découvrir que la position non cambrée est disponible et confortable."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Plier fortement les genoux ou se laisser glisser le long du mur : c'est le bassin qui bascule, pas les jambes qui travaillent.",
+          "Retenir sa respiration : la bascule doit tenir pendant que vous respirez, sinon elle ne tiendra jamais en concert.",
+          "Décoller les épaules du mur pour aplatir le bas du dos."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice doux et sûr. Inutile de plaquer complètement le bas du dos : réduire l'espace suffit. S'il devient douloureux pendant la tenue, réduisez l'amplitude."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Travail léger du bas du ventre et des fessiers, et souvent un soulagement immédiat des lombaires : la preuve que la cambrure n'était pas obligatoire."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "standing posterior pelvic tilt against wall exercise"
+    },
+    {
+      "id": "overhead-reach-no-arch",
+      "name": {
+        "fr": "Bras au-dessus de la tête sans cambrer",
+        "en": "Overhead reach without arching"
+      },
+      "targets": [
+        "pelvic-control",
+        "standing-endurance",
+        "core-endurance",
+        "shoulder-mobility"
+      ],
+      "goals": [
+        "long-standing",
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "wall-posterior-tilt-hold",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Bras tendus au-dessus de la tête, côtes basses, sans cambrer"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Bras le long du corps, gardez la position du bassin"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un mur (au début)"
+      },
+      "instructions": {
+        "fr": [
+          "Debout dos au mur comme pour la bascule au mur : talons à 15 cm, genoux souples, cambrure réduite.",
+          "Levez lentement les deux bras tendus au-dessus de la tête, en gardant les côtes basses et le bas du dos proche du mur.",
+          "Montez seulement tant que la cambrure ne revient pas : c'est votre amplitude du jour.",
+          "Quand c'est facile, faites-le sans mur, de profil devant un miroir."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le bas du dos se creuser pour monter les bras plus haut : c'est exactement la compensation qu'on désapprend.",
+          "Hausser les épaules vers les oreilles."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Gêne à l'épaule : montez moins haut, ou pliez les coudes."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Ventre qui travaille pour empêcher la cambrure de revenir : le neutre devient tenable même en bougeant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "overhead reach wall posterior pelvic tilt ribs down"
+    },
+    {
+      "id": "standing-reset",
+      "name": {
+        "fr": "Reset debout (sortir de la cambrure sans y penser)",
+        "en": "Standing posture reset"
+      },
+      "targets": [
+        "standing-endurance",
+        "pelvic-control"
+      ],
+      "goals": [
+        "long-standing",
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 1,
+        "perSide": false,
+        "note": {
+          "fr": "À refaire toutes les 10 à 15 minutes quand vous restez debout."
+        },
+        "cycles": {
+          "count": 5,
+          "phases": [
+            {
+              "label": {
+                "fr": "Expirez à fond, côtes basses, genoux déverrouillés, fessiers légers"
+              },
+              "seconds": 6
+            },
+            {
+              "label": {
+                "fr": "Respirez normalement en gardant la position"
+              },
+              "seconds": 14
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Aucun — faisable partout, discrètement"
+      },
+      "instructions": {
+        "fr": [
+          "Debout comme d'habitude, pieds largeur de hanches. Remarquez votre position de départ : bas du dos cambré, genoux verrouillés ?",
+          "Expirez longuement, comme pour souffler une bougie : laissez les côtes descendre vers le bassin.",
+          "Déverrouillez légèrement les genoux et serrez à peine les fessiers : le bassin se replace de lui-même, la cambrure diminue.",
+          "Gardez cette position en respirant normalement, sans crisper. Le minuteur enchaîne 5 resets."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Rentrer le ventre en apnée : la position doit tenir en respirant.",
+          "Serrer les fessiers à fond : une contraction légère suffit, elle doit pouvoir durer.",
+          "Attendre d'avoir mal pour le faire : c'est un réflexe à installer régulièrement, avant la gêne."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Aucune précaution particulière : c'est une micro-pause active."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Relâchement des lombaires, sensation d'être posé sur ses deux pieds plutôt que suspendu à son bas du dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "rib down exhale posture reset standing anterior pelvic tilt"
+    },
+    {
+      "id": "guided-standing-exposure",
+      "name": {
+        "fr": "Station debout guidée (exposition progressive)",
+        "en": "Guided static standing practice"
+      },
+      "targets": [
+        "standing-endurance",
+        "lateral-hip-stability"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "mobility-drill",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "standing-reset",
+      "dosage": {
+        "sets": 1,
+        "perSide": false,
+        "note": {
+          "fr": "À faire pendant une activité debout : cuisine, téléphone, lecture."
+        },
+        "cycles": {
+          "count": 3,
+          "phases": [
+            {
+              "label": {
+                "fr": "Debout immobile, position neutre, en respirant"
+              },
+              "seconds": 60
+            },
+            {
+              "label": {
+                "fr": "Reset : expirez, côtes basses, genoux déverrouillés"
+              },
+              "seconds": 10
+            },
+            {
+              "label": {
+                "fr": "Transférez le poids d'une jambe à l'autre, lentement"
+              },
+              "seconds": 30
+            },
+            {
+              "label": {
+                "fr": "Un pied sur un rebord, puis l'autre"
+              },
+              "seconds": 40
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un rebord de 15 à 30 cm"
+      },
+      "instructions": {
+        "fr": [
+          "Restez debout pendant une activité calme (cuisine, téléphone, lecture), un rebord à portée de pied.",
+          "Le minuteur alterne immobilité neutre, reset, transferts de poids et pied sur le rebord : suivez les signaux sans y penser.",
+          "Au fil des semaines, l'objectif est que ces changements deviennent automatiques en concert ou en file d'attente.",
+          "Notez si la gêne apparaît plus tard qu'avant : c'est votre vrai indicateur de progrès."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Rester figé pendant les phases de changement : c'est le mouvement qui soulage.",
+          "Le faire seulement quand le dos fait déjà mal : c'est un entraînement, pas un traitement d'urgence."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Gêne qui augmente malgré les changements : arrêtez, marchez quelques minutes, et raccourcissez la phase immobile la prochaine fois."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Une station debout longue mais vivante, sans montée de la gêne lombaire."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "prolonged standing low back pain strategies weight shifting"
+    },
+    {
+      "id": "foot-on-step-standing",
+      "name": {
+        "fr": "Un pied sur un rebord (stratégie concert)",
+        "en": "Staggered stance with one foot on a ledge"
+      },
+      "targets": [
+        "standing-endurance"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 1,
+        "perSide": false,
+        "note": {
+          "fr": "En concert ou en file d'attente : changez de pied toutes les 1 à 3 minutes."
+        },
+        "cycles": {
+          "count": 3,
+          "phases": [
+            {
+              "label": {
+                "fr": "Pied gauche sur le rebord"
+              },
+              "seconds": 45
+            },
+            {
+              "label": {
+                "fr": "Pied droit sur le rebord"
+              },
+              "seconds": 45
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un rebord de 15 à 30 cm : marche, barre au pied d'un comptoir, sac posé au sol, caisse"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, posez un pied à plat sur un rebord de 15 à 30 cm devant vous, l'autre pied au sol.",
+          "Laissez le poids se répartir entre les deux pieds : la hanche fléchie fait basculer le bassin et réduit naturellement la cambrure.",
+          "Restez détendu, respirez, et changez de pied à chaque signal.",
+          "En situation réelle, alternez toutes les une à trois minutes : c'est le changement qui soulage, pas la position elle-même."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Toujours poser le même pied : on crée une asymétrie et on retrouve une position figée.",
+          "Choisir un rebord trop haut, qui oblige à se pencher en avant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Vérifiez que le support est stable avant d'y mettre du poids."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Soulagement rapide des lombaires dès que le pied monte. Retenez la sensation : c'est votre outil numéro un en station debout prolongée."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "prolonged standing low back pain foot rest"
+    },
+    {
+      "id": "standing-weight-shifts",
+      "name": {
+        "fr": "Transferts de poids debout (bassin horizontal)",
+        "en": "Standing weight shifts"
+      },
+      "targets": [
+        "standing-endurance",
+        "lateral-hip-stability"
+      ],
+      "goals": [
+        "long-standing"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Poids sur la jambe gauche, bassin horizontal"
+              },
+              "seconds": 10
+            },
+            {
+              "label": {
+                "fr": "Poids sur la jambe droite, bassin horizontal"
+              },
+              "seconds": 10
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Aucun (un miroir de face au début)"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, pieds largeur de hanches, genoux déverrouillés, face à un miroir si possible.",
+          "Transférez lentement presque tout votre poids sur une jambe, sans laisser la hanche « sortir » sur le côté ni le bassin pencher : les deux crêtes du bassin restent à la même hauteur.",
+          "Tenez en respirant, puis transférez vers l'autre jambe au signal.",
+          "C'est l'inverse de « pendre sur une hanche » : vous apprenez à vous reposer sur une jambe en restant tenu."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser la hanche d'appui partir sur le côté et le bassin tomber du côté libre : c'est la posture affaissée qu'on cherche à remplacer.",
+          "Verrouiller le genou d'appui en arrière."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice très sûr ; tenez-vous à un meuble si l'équilibre est précaire."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort discret sur le côté de la fesse de la jambe d'appui, et une alternative concrète aux positions figées."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "standing weight shift pelvis level glute medius control"
     },
     {
       "id": "seated-active-hip-flexion",
@@ -1774,11 +3752,24 @@
       "regressionOf": null,
       "progressionOf": null,
       "dosage": {
-        "reps": 8,
         "sets": 2,
         "perSide": true,
-        "note": {
-          "fr": "Tenue de 5 secondes en haut de chaque répétition."
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Levez le genou et tenez, buste droit"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Reposez le pied, relâchez"
+              },
+              "seconds": 3
+            }
+          ]
         }
       },
       "equipment": {
@@ -1864,6 +3855,1355 @@
       "images": [],
       "videoUrl": null,
       "videoQuery": "supine windshield wipers hip rotation mobility feet on floor"
+    },
+    {
+      "id": "straight-leg-raise",
+      "name": {
+        "fr": "Lever de jambe tendue (quadriceps)",
+        "en": "Straight leg raise"
+      },
+      "targets": [
+        "quadriceps-strength"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": true,
+        "cycles": {
+          "count": 10,
+          "phases": [
+            {
+              "label": {
+                "fr": "Cuisse serrée, levez la jambe tendue et tenez"
+              },
+              "seconds": 4
+            },
+            {
+              "label": {
+                "fr": "Redescendez lentement"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, une jambe pliée pied au sol, l'autre tendue.",
+          "Contractez la cuisse de la jambe tendue (la rotule remonte légèrement), pointe du pied vers vous.",
+          "Gardez cette contraction et levez la jambe tendue jusqu'à la hauteur du genou plié. Tenez au signal.",
+          "Redescendez lentement sans relâcher la cuisse. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le genou se plier pendant la montée : la contraction de la cuisse est tout l'exercice.",
+          "Cambrer le bas du dos pour lever plus haut."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort net sur l'avant de la cuisse, genou indolore : c'est la version qui renforce sans charger la rotule."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "straight leg raise quad set knee pain beginner",
+      "painMonitoring": true
+    },
+    {
+      "id": "stair-descent-technique",
+      "name": {
+        "fr": "Descente d'escalier technique",
+        "en": "Stair descent technique"
+      },
+      "targets": [
+        "knee-load-tolerance",
+        "knee-control"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 20,
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Une répétition = une marche."
+        }
+      },
+      "equipment": {
+        "fr": "Un escalier avec rampe"
+      },
+      "instructions": {
+        "fr": [
+          "En haut d'un escalier, une main sur la rampe, regard vers les marches suivantes.",
+          "Descendez lentement : posez l'avant du pied d'abord, genou souple, atterrissage silencieux.",
+          "Gardez le genou dans l'axe du pied à chaque marche, sans le laisser rentrer vers l'intérieur.",
+          "En randonnée, mêmes principes : petits pas, genoux souples, bâtons si possible, zigzag dans les pentes raides, et ralentir avant que la douleur arrive."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Descendre jambe raide en « tombant » sur chaque marche : le choc passe directement dans la rotule.",
+          "Accélérer pour en finir : c'est la lenteur qui fait travailler les cuisses à la place du genou."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Toujours une main sur la rampe.",
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Cuisses qui travaillent en freinant, genou qui reste calme : la descente devient un exercice plutôt qu'une épreuve."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "how to walk downstairs knee pain technique hiking downhill",
+      "painMonitoring": true
+    },
+    {
+      "id": "single-leg-mini-squats",
+      "name": {
+        "fr": "Mini-flexions sur une jambe, genou dans l'axe",
+        "en": "Single-leg mini squats"
+      },
+      "targets": [
+        "knee-control",
+        "lateral-hip-stability"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "stair-descent-technique",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un miroir en face, un mur ou une chaise à côté pour l'équilibre"
+      },
+      "instructions": {
+        "fr": [
+          "Debout face à un miroir, sur une jambe, l'autre pied légèrement décollé, un doigt posé sur un mur pour l'équilibre.",
+          "Pliez la jambe d'appui d'un quart seulement, en poussant les fesses légèrement en arrière.",
+          "Dans le miroir, le genou reste dans l'axe du 2e orteil et le bassin reste horizontal.",
+          "Remontez lentement. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le genou rentrer vers l'intérieur en descendant : c'est exactement ce que l'exercice désapprend.",
+          "Descendre trop bas trop vite : un quart de flexion parfaitement contrôlé vaut mieux qu'une flexion profonde qui s'effondre."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort dans la cuisse et sur le côté de la fesse d'appui, genou stable."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "single leg mini squat knee alignment mirror",
+      "painMonitoring": true
+    },
+    {
+      "id": "step-ups",
+      "name": {
+        "fr": "Montées sur une marche",
+        "en": "Step-ups"
+      },
+      "targets": [
+        "quadriceps-strength",
+        "knee-control",
+        "glute-strength"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "straight-leg-raise",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une marche d'escalier ou un step stable (15-20 cm)"
+      },
+      "instructions": {
+        "fr": [
+          "Face à une marche, posez tout un pied dessus.",
+          "Montez en poussant dans ce pied, sans vous aider de la jambe restée en bas, genou dans l'axe du pied.",
+          "Redescendez lentement la jambe libre, toujours contrôlé par la jambe posée sur la marche.",
+          "Toutes les répétitions d'une jambe, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Prendre son élan avec la jambe du bas : c'est la jambe posée sur la marche qui doit tout faire.",
+          "Laisser le genou rentrer vers l'intérieur pendant la montée."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Marche stable, rampe ou mur à portée de main.",
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort dans la cuisse et la fesse de la jambe posée sur la marche."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "step ups proper form knee alignment beginner",
+      "painMonitoring": true
+    },
+    {
+      "id": "backward-stair-climb",
+      "name": {
+        "fr": "Montée d'escalier à reculons",
+        "en": "Backward stair climb"
+      },
+      "targets": [
+        "quadriceps-strength",
+        "knee-load-tolerance"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 12,
+        "sets": 2,
+        "perSide": false,
+        "note": {
+          "fr": "Une répétition = une marche."
+        }
+      },
+      "equipment": {
+        "fr": "Un escalier avec rampe"
+      },
+      "instructions": {
+        "fr": [
+          "Dos à l'escalier, une main sur la rampe.",
+          "Montez à reculons, marche après marche, en posant d'abord l'avant du pied et en poussant avec la jambe qui monte.",
+          "Le genou avance au-dessus des orteils : c'est voulu, c'est ce qui fait travailler le quadriceps sans heurter la rotule.",
+          "Redescendez normalement, lentement."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Monter vite sans regarder : une marche à la fois, une main toujours sur la rampe.",
+          "Se pencher en avant pour soulager les cuisses."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Uniquement avec une rampe solide.",
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Brûlure franche dans les quadriceps, genou étonnamment confortable : souvent bien toléré même quand la descente fait mal."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "backward stair climbing knee pain quad strengthening",
+      "painMonitoring": true
+    },
+    {
+      "id": "slow-step-downs",
+      "name": {
+        "fr": "Descentes de marche lentes (excentrique)",
+        "en": "Slow eccentric step-downs"
+      },
+      "targets": [
+        "quadriceps-strength",
+        "knee-control"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "step-ups",
+      "dosage": {
+        "sets": 2,
+        "perSide": true,
+        "cycles": {
+          "count": 8,
+          "phases": [
+            {
+              "label": {
+                "fr": "Descendez lentement, talon libre vers le sol"
+              },
+              "seconds": 4
+            },
+            {
+              "label": {
+                "fr": "Effleurez le sol et remontez"
+              },
+              "seconds": 2
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une marche d'escalier (commencez par 10-15 cm)"
+      },
+      "instructions": {
+        "fr": [
+          "Debout sur une marche, sur une jambe, l'autre pied dans le vide devant la marche, une main sur la rampe.",
+          "Pliez lentement la jambe d'appui pour faire descendre le talon libre vers la marche du dessous.",
+          "Effleurez sans poser le poids, puis remontez en tendant la jambe d'appui.",
+          "C'est la descente de randonnée au ralenti : genou dans l'axe du pied, bassin horizontal."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser le genou rentrer vers l'intérieur en bas du mouvement.",
+          "Se laisser tomber sur la fin de la descente : les 4 secondes doivent être régulières."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Commencez sur une marche basse ; montez en hauteur seulement si la gêne reste sous 3/10.",
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Cuisse qui freine et brûle, genou contrôlé : l'exercice le plus spécifique de la descente."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "eccentric step down exercise patellofemoral pain",
+      "painMonitoring": true
+    },
+    {
+      "id": "reverse-lunge",
+      "name": {
+        "fr": "Fente arrière",
+        "en": "Reverse lunge"
+      },
+      "targets": [
+        "quadriceps-strength",
+        "knee-control",
+        "glute-strength"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "step-ups",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise ou un mur à côté pour l'équilibre"
+      },
+      "instructions": {
+        "fr": [
+          "Debout, une main sur un support à côté de vous.",
+          "Reculez une jambe d'un grand pas et descendez le genou arrière vers le sol.",
+          "Le genou avant reste dans l'axe du pied, poids sur le talon avant.",
+          "Remontez en poussant dans le pied avant. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Pas trop court : le genou avant part loin devant et la rotule est surchargée.",
+          "Genou avant qui rentre vers l'intérieur."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "La fente arrière charge moins la rotule que la fente avant : c'est pour cela qu'on la préfère ici.",
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort dans la cuisse et la fesse de la jambe avant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "reverse lunge form knee friendly beginner",
+      "painMonitoring": true
+    },
+    {
+      "id": "single-leg-box-squat",
+      "name": {
+        "fr": "Assis-debout sur une jambe (chaise haute)",
+        "en": "Single-leg box squat"
+      },
+      "targets": [
+        "quadriceps-strength",
+        "knee-control"
+      ],
+      "goals": [
+        "resilient-knees"
+      ],
+      "type": "strength",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "slow-step-downs",
+      "dosage": {
+        "reps": 6,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Une chaise haute ou un lit (assise à hauteur de genou ou plus)"
+      },
+      "instructions": {
+        "fr": [
+          "Debout devant une chaise haute, sur une jambe, l'autre jambe tendue devant vous.",
+          "Descendez lentement jusqu'à vous asseoir, genou d'appui dans l'axe du pied.",
+          "Relevez-vous sur la même jambe, bras tendus devant en contrepoids.",
+          "Assise trop basse ? Ajoutez un coussin : la hauteur est votre curseur de progression."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Se laisser tomber sur l'assise au lieu de descendre lentement.",
+          "Pousser avec l'autre pied pour se relever."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Chaise stable et calée contre un mur.",
+          "Genou qui gonfle, se bloque, lâche, ou douleur la nuit : arrêtez et consultez.",
+          "Gêne au genou jusqu'à 3/10, stable pendant l'exercice et calmée le lendemain matin : acceptable. Au-delà, si elle augmente, ou si le genou gonfle : allégez (moins profond, plus lent, ou version plus facile)."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort intense dans la cuisse et la fesse : une jambe qui sait freiner et relancer seule."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "single leg box squat progression knee control",
+      "painMonitoring": true
+    },
+    {
+      "id": "chair-thoracic-extension",
+      "name": {
+        "fr": "Extension du haut du dos sur le dossier d'une chaise",
+        "en": "Chair thoracic extension"
+      },
+      "targets": [
+        "thoracic-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Une chaise à dossier bas (le haut du dossier sous les omoplates)"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au fond d'une chaise, le haut du dossier sous les omoplates, mains croisées derrière la tête, coudes vers l'avant.",
+          "Expirez et laissez le haut du dos s'enrouler par-dessus le dossier en ouvrant les coudes, regard vers le plafond.",
+          "Le bas du dos reste calé contre la chaise : c'est le haut du dos seul qui bascule en arrière.",
+          "Revenez lentement. Descendez ou montez légèrement sur la chaise pour varier le point d'appui."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Cambrer le bas du dos au lieu d'ouvrir le haut : gardez les côtes basses.",
+          "Tirer sur la nuque avec les mains : elles soutiennent la tête, elles ne la tirent pas."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Dossier stable et chaise qui ne bascule pas. Douleur pointue dans le dos : réduisez l'amplitude."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Ouverture agréable entre les omoplates, sensation de « déplier » le haut du dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "chair thoracic extension mobility desk"
+    },
+    {
+      "id": "towel-roll-thoracic-extension",
+      "name": {
+        "fr": "Allongé sur une serviette roulée (haut du dos)",
+        "en": "Towel roll thoracic extension"
+      },
+      "targets": [
+        "thoracic-mobility",
+        "shoulder-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "chair-thoracic-extension",
+      "dosage": {
+        "sets": 1,
+        "perSide": false,
+        "note": {
+          "fr": "Déplacez la serviette de quelques centimètres entre deux séries de cycles."
+        },
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Bras au-dessus de la tête, expirez et relâchez sur la serviette"
+              },
+              "seconds": 10
+            },
+            {
+              "label": {
+                "fr": "Bras le long du corps, respirez"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une serviette de bain roulée serrée (ou un rouleau de massage)"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, la serviette roulée en travers du dos, juste sous les omoplates. Tête soutenue par les mains ou un coussin.",
+          "Expirez et laissez le haut du dos s'enrouler par-dessus la serviette, en tendant les bras au-dessus de la tête si c'est confortable.",
+          "Gardez les fesses au sol et les côtes basses : seul le haut du dos s'ouvre.",
+          "Suivez les signaux du minuteur, puis déplacez la serviette un peu plus haut pour une deuxième série."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Placer la serviette sous le bas du dos : elle doit rester sous les omoplates.",
+          "Décoller les fesses ou cambrer pour accentuer l'ouverture."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Ne placez jamais la serviette sous la nuque ni sous le bas du dos.",
+          "Fourmillements dans les bras : ramenez-les le long du corps."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement doux de l'avant de la poitrine et ouverture du haut du dos : la position inverse de celle de l'écran."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "towel roll thoracic extension lying beginner"
+    },
+    {
+      "id": "chair-thoracic-prayer",
+      "name": {
+        "fr": "Prière à genoux, coudes sur une chaise",
+        "en": "Kneeling bench thoracic stretch"
+      },
+      "targets": [
+        "thoracic-mobility",
+        "shoulder-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "stretch",
+      "level": 2,
+      "regressionOf": null,
+      "progressionOf": "towel-roll-thoracic-extension",
+      "dosage": {
+        "holdSeconds": 40,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Une chaise ou un canapé, un coussin sous les genoux, un bâton ou une serviette (facultatif)"
+      },
+      "instructions": {
+        "fr": [
+          "À genoux face à une chaise, coudes posés sur l'assise, mains jointes au-dessus de la tête (ou tenant un bâton).",
+          "Reculez les fesses vers les talons et laissez la poitrine descendre vers le sol, tête entre les bras.",
+          "Gardez le bas du dos neutre : ne laissez pas le ventre s'affaisser.",
+          "Tenez en respirant ; à chaque expiration, la poitrine descend un peu plus."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Cambrer le bas du dos au lieu d'ouvrir le haut : reculez davantage les fesses.",
+          "Laisser les coudes s'écarter largement."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Pincement à l'avant ou sur le dessus de l'épaule : rapprochez les coudes et réduisez l'amplitude."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement net sous les aisselles et sur les côtés du dos, ouverture du haut du dos."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "kneeling bench thoracic extension stretch elbows on bench"
+    },
+    {
+      "id": "open-book",
+      "name": {
+        "fr": "Livre ouvert (rotation du haut du dos)",
+        "en": "Side-lying open book"
+      },
+      "targets": [
+        "thoracic-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis, un coussin sous la tête"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le côté, genoux pliés à 90° et serrés l'un contre l'autre, bras tendus devant vous, paumes jointes.",
+          "Ouvrez le bras du dessus vers le plafond puis vers l'arrière, en suivant la main du regard, comme un livre qui s'ouvre.",
+          "Les genoux restent collés au sol : c'est le haut du dos qui tourne, pas le bassin.",
+          "Revenez lentement. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser les genoux se décoller pour aller plus loin.",
+          "Forcer le bras vers le sol : l'amplitude vient de la rotation du dos, pas de l'épaule."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Gêne à l'épaule : pliez le coude du bras qui s'ouvre."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Rotation douce du haut du dos et étirement de l'avant de la poitrine du côté qui s'ouvre."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "side lying open book thoracic rotation beginner"
+    },
+    {
+      "id": "thread-the-needle",
+      "name": {
+        "fr": "Enfiler l'aiguille à quatre pattes",
+        "en": "Thread the needle"
+      },
+      "targets": [
+        "thoracic-mobility",
+        "shoulder-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "open-book",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "À quatre pattes, mains sous les épaules, genoux sous les hanches.",
+          "Ouvrez un bras vers le plafond en tournant le buste, regard qui suit la main.",
+          "Puis glissez ce même bras sous l'autre, paume vers le haut, jusqu'à poser l'épaule et la tempe au sol si possible.",
+          "Alternez lentement ouverture et passage dessous. Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser les hanches partir sur le côté : elles restent au-dessus des genoux.",
+          "Aller vite : la rotation se gagne en douceur, sur l'expiration."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur au genou en appui : coussin sous les genoux."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Rotation ample du haut du dos dans les deux sens, étirement de l'arrière de l'épaule en bas."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "thread the needle thoracic rotation quadruped"
+    },
+    {
+      "id": "doorway-pec-stretch",
+      "name": {
+        "fr": "Étirement des pectoraux dans l'encadrement d'une porte",
+        "en": "Doorway pec stretch"
+      },
+      "targets": [
+        "shoulder-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "stretch",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "holdSeconds": 30,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "L'encadrement d'une porte"
+      },
+      "instructions": {
+        "fr": [
+          "Debout dans l'encadrement d'une porte, avant-bras posé contre le montant, coude à hauteur d'épaule.",
+          "Avancez d'un petit pas avec la jambe du même côté et tournez légèrement le buste vers l'extérieur.",
+          "Gardez l'épaule basse, loin de l'oreille, et le ventre légèrement serré.",
+          "Tenez en respirant, puis changez de côté."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Avancer en cambrant le bas du dos au lieu d'ouvrir la poitrine.",
+          "Laisser l'épaule remonter vers l'oreille."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Fourmillements dans la main ou douleur à l'avant de l'épaule : abaissez le coude et réduisez l'avancée."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement sur l'avant de la poitrine et de l'épaule : les muscles qui enroulent les épaules vers l'avant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "doorway pec stretch proper form"
+    },
+    {
+      "id": "floor-angels",
+      "name": {
+        "fr": "Anges au sol",
+        "en": "Floor angels"
+      },
+      "targets": [
+        "shoulder-mobility",
+        "thoracic-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, pieds au sol, bas du dos détendu.",
+          "Posez les bras en W au sol : coudes pliés à hauteur d'épaules, dos des mains au sol.",
+          "Glissez lentement les bras vers le haut en Y, en gardant mains et coudes au contact du sol autant que possible.",
+          "Redescendez en W. Le sol guide le mouvement : c'est la version facile du wall angel."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Cambrer le bas du dos pour garder les mains au sol : laissez plutôt les mains décoller un peu.",
+          "Hausser les épaules en montant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Pincement dans l'épaule : arrêtez la montée juste avant."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Étirement de l'avant des épaules, travail léger entre les omoplates."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "floor angels shoulder mobility supine"
+    },
+    {
+      "id": "wall-slides",
+      "name": {
+        "fr": "Anges au mur (wall slides)",
+        "en": "Wall angels"
+      },
+      "targets": [
+        "shoulder-mobility",
+        "upper-back-strength"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "floor-angels",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Un mur"
+      },
+      "instructions": {
+        "fr": [
+          "Dos au mur, pieds à 15 cm, genoux souples, bas du dos rapproché du mur, tête au mur (ou sur une serviette pliée).",
+          "Bras en W contre le mur, dos des mains et coudes au contact.",
+          "Glissez lentement vers le haut en Y, aussi loin que possible sans rien décoller, puis redescendez en tirant les coudes vers les poches.",
+          "C'est la descente qui renforce le haut du dos : serrez légèrement les omoplates vers le bas."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Cambrer pour garder les mains au mur.",
+          "Monter vite et redescendre passivement : la descente est la partie utile."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Pincement dans l'épaule : arrêtez la montée juste avant."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort entre les omoplates en redescendant, étirement de l'avant des épaules en montant."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "wall slides wall angels proper form"
+    },
+    {
+      "id": "seated-scapular-squeeze",
+      "name": {
+        "fr": "Serrage des omoplates assis (pause bureau)",
+        "en": "Seated scapular squeeze"
+      },
+      "targets": [
+        "upper-back-strength"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 10,
+          "phases": [
+            {
+              "label": {
+                "fr": "Omoplates vers l'arrière et vers le bas, tenez"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord d'une chaise, dos redressé, bras le long du corps, coudes pliés à 90°.",
+          "Tirez les omoplates vers l'arrière et vers le bas, comme pour les glisser dans les poches arrière d'un pantalon.",
+          "Tenez sans hausser les épaules ni avancer la tête, puis relâchez au signal.",
+          "Faisable au bureau, plusieurs fois par jour."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Hausser les épaules vers les oreilles : le mouvement va vers le bas et l'arrière.",
+          "Cambrer le bas du dos pour sortir la poitrine."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Exercice très sûr ; une crampe entre les omoplates au début est normale."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort localisé entre les omoplates, buste qui se redresse tout seul."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "seated scapular retraction squeeze desk exercise"
+    },
+    {
+      "id": "prone-y-t-raises",
+      "name": {
+        "fr": "Bras en Y et en T à plat ventre",
+        "en": "Prone Y-T raises"
+      },
+      "targets": [
+        "upper-back-strength",
+        "shoulder-mobility"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "seated-scapular-squeeze",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Bras en Y, pouces vers le haut, décollez et tenez"
+              },
+              "seconds": 4
+            },
+            {
+              "label": {
+                "fr": "Reposez"
+              },
+              "seconds": 2
+            },
+            {
+              "label": {
+                "fr": "Bras en T, pouces vers le haut, décollez et tenez"
+              },
+              "seconds": 4
+            },
+            {
+              "label": {
+                "fr": "Reposez"
+              },
+              "seconds": 2
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis, une serviette pliée sous le front"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé à plat ventre, front sur une serviette pliée, regard vers le sol.",
+          "Position Y : bras tendus devant en diagonale, pouces vers le plafond ; omoplates vers le bas, décollez les bras de quelques centimètres.",
+          "Position T : bras tendus sur les côtés, même consigne.",
+          "Suivez les signaux du minuteur ; la tête reste posée tout du long."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Lever la tête ou cambrer le bas du dos pour monter les bras plus haut : quelques centimètres suffisent.",
+          "Hausser les épaules vers les oreilles."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Gêne à l'épaule en Y : faites seulement les T quelque temps."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Brûlure sous et entre les omoplates : les muscles qui tiennent le buste redressé."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "prone Y T raises lower trap exercise beginner"
+    },
+    {
+      "id": "backpack-row",
+      "name": {
+        "fr": "Rowing penché avec un sac à dos",
+        "en": "Single-arm backpack row"
+      },
+      "targets": [
+        "upper-back-strength"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "seated-scapular-squeeze",
+      "dosage": {
+        "reps": 10,
+        "sets": 2,
+        "perSide": true
+      },
+      "equipment": {
+        "fr": "Un sac à dos lesté (livres, bouteilles, 3 à 8 kg) et une chaise ou une table pour l'appui"
+      },
+      "instructions": {
+        "fr": [
+          "Une main et un genou en appui sur une chaise, dos plat, l'autre main tenant le sac à dos bras tendu.",
+          "Tirez le sac vers la hanche en ramenant d'abord l'omoplate vers la colonne, coude près du corps.",
+          "Marquez un temps en haut, puis redescendez lentement jusqu'à bras tendu.",
+          "Toutes les répétitions d'un côté, puis changez."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Tirer avec le bras seulement : c'est l'omoplate qui démarre le mouvement.",
+          "Tourner le buste pour monter le sac plus haut."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Dos douloureux : rapprochez l'appui pour vous redresser davantage, ou allégez le sac."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort dans le haut du dos et derrière l'épaule, plus que dans le bras."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "single arm row backpack at home form"
+    },
+    {
+      "id": "table-inverted-row",
+      "name": {
+        "fr": "Tirage sous une table (rowing inversé)",
+        "en": "Table inverted row"
+      },
+      "targets": [
+        "upper-back-strength",
+        "core-endurance"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "strength",
+      "level": 3,
+      "regressionOf": null,
+      "progressionOf": "backpack-row",
+      "dosage": {
+        "reps": 8,
+        "sets": 2,
+        "perSide": false
+      },
+      "equipment": {
+        "fr": "Une table très solide et lourde, qui ne peut pas basculer"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos sous une table solide, attrapez le bord à deux mains, bras tendus, genoux pliés pieds au sol.",
+          "Tirez la poitrine vers le bord de la table en serrant les omoplates, corps gainé des genoux aux épaules.",
+          "Redescendez lentement jusqu'à bras tendus.",
+          "Plus les pieds sont loin (jambes tendues), plus c'est difficile."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Laisser les fesses tomber : le corps reste aligné.",
+          "Tirer avec la nuque, menton en avant."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Testez d'abord la stabilité de la table avec votre poids ; jamais avec une table légère ou sur tréteaux."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort intense dans tout le haut du dos et les bras."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "table inverted row at home bodyweight"
+    },
+    {
+      "id": "chin-tucks",
+      "name": {
+        "fr": "Rétractions du menton (double menton)",
+        "en": "Chin tucks"
+      },
+      "targets": [
+        "neck-endurance"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "strength",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 10,
+          "phases": [
+            {
+              "label": {
+                "fr": "Rentrez le menton, tête qui recule, tenez"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez"
+              },
+              "seconds": 3
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Aucun (au début, dos et tête contre un mur)"
+      },
+      "instructions": {
+        "fr": [
+          "Assis ou debout, dos droit, regard à l'horizontale (au début, l'arrière de la tête contre un mur).",
+          "Reculez la tête en ligne droite, comme pour faire un double menton, sans la pencher ni vers le haut ni vers le bas.",
+          "Tenez au signal en respirant, puis relâchez.",
+          "Faisable n'importe où, notamment devant l'écran."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Baisser la tête vers la poitrine au lieu de la reculer.",
+          "Serrer les dents ou crisper le visage."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur dans la nuque qui irradie dans un bras, fourmillements dans les mains, vertiges : arrêtez et consultez."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Légère tension à l'avant du cou et étirement à la base du crâne."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "chin tuck exercise forward head posture correct form"
+    },
+    {
+      "id": "supine-chin-tuck-lift",
+      "name": {
+        "fr": "Menton rentré, tête décollée (allongé)",
+        "en": "Supine chin tuck head lift"
+      },
+      "targets": [
+        "neck-endurance"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "strength",
+      "level": 1,
+      "regressionOf": null,
+      "progressionOf": "chin-tucks",
+      "dosage": {
+        "sets": 2,
+        "perSide": false,
+        "cycles": {
+          "count": 6,
+          "phases": [
+            {
+              "label": {
+                "fr": "Menton rentré, décollez la tête de 2 cm, tenez"
+              },
+              "seconds": 8
+            },
+            {
+              "label": {
+                "fr": "Reposez la tête, relâchez"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Un tapis"
+      },
+      "instructions": {
+        "fr": [
+          "Allongé sur le dos, genoux pliés, sans oreiller.",
+          "Rentrez le menton (double menton), puis décollez la tête d'à peine 2 cm, menton toujours rentré.",
+          "Tenez au signal, puis reposez la tête et relâchez.",
+          "Si le menton part vers le plafond, la série est finie : c'est le signe que les gros muscles du cou ont pris le relais."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Lever la tête haut : 2 cm suffisent.",
+          "Laisser le menton s'avancer pendant la tenue."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Douleur dans la nuque qui irradie dans un bras, fourmillements dans les mains, vertiges : arrêtez et consultez."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Effort profond à l'avant du cou, sans douleur dans la nuque."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "deep neck flexor exercise supine chin tuck head lift"
+    },
+    {
+      "id": "seated-posture-reset",
+      "name": {
+        "fr": "Reset assis (pause écran)",
+        "en": "Seated posture reset"
+      },
+      "targets": [
+        "thoracic-mobility",
+        "neck-endurance",
+        "upper-back-strength"
+      ],
+      "goals": [
+        "posture"
+      ],
+      "type": "mobility-drill",
+      "level": 0,
+      "regressionOf": null,
+      "progressionOf": null,
+      "dosage": {
+        "sets": 1,
+        "perSide": false,
+        "note": {
+          "fr": "Une fois toutes les 30 à 45 minutes devant l'écran."
+        },
+        "cycles": {
+          "count": 5,
+          "phases": [
+            {
+              "label": {
+                "fr": "Expirez, redressez le haut du dos, sternum vers l'avant"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Omoplates vers le bas, menton légèrement rentré"
+              },
+              "seconds": 5
+            },
+            {
+              "label": {
+                "fr": "Relâchez complètement"
+              },
+              "seconds": 5
+            }
+          ]
+        }
+      },
+      "equipment": {
+        "fr": "Une chaise"
+      },
+      "instructions": {
+        "fr": [
+          "Assis au bord de votre chaise, pieds à plat.",
+          "Redressez le haut du dos en avançant légèrement le sternum, sans cambrer le bas du dos.",
+          "Glissez les omoplates vers le bas et rentrez légèrement le menton : la tête revient au-dessus des épaules.",
+          "Relâchez complètement au signal : le but n'est pas de rester figé droit, mais de savoir y revenir facilement."
+        ]
+      },
+      "commonMistakes": {
+        "fr": [
+          "Cambrer le bas du dos pour « se tenir droit » : c'est le haut du dos qui se redresse.",
+          "Rester crispé dans la position droite toute la journée : changer de position est aussi important."
+        ]
+      },
+      "safetyNotes": {
+        "fr": [
+          "Aucune précaution particulière : c'est une micro-pause active."
+        ]
+      },
+      "expectedFeeling": {
+        "fr": "Haut du dos qui se déplie, nuque qui se détend, respiration plus ample."
+      },
+      "images": [],
+      "videoUrl": null,
+      "videoQuery": "seated posture reset desk break exercise"
     }
   ]
 }

@@ -91,12 +91,93 @@
       }
     },
     {
+      "id": "lateral-hip-stability",
+      "name": {
+        "fr": "Stabilité latérale du bassin"
+      },
+      "description": {
+        "fr": "Capacité des muscles du côté de la hanche (moyen fessier) à garder le bassin horizontal en appui. Chez beaucoup de personnes qui ont mal en restant debout immobiles, c'est ce stabilisateur qui fatigue ou se crispe, même quand le reste est bon."
+      }
+    },
+    {
+      "id": "standing-endurance",
+      "name": {
+        "fr": "Tolérance à la station debout statique"
+      },
+      "description": {
+        "fr": "Temps pendant lequel vous restez debout presque immobile sans gêne. Elle dépend moins de la souplesse que de votre position par défaut (cambrée ou non) et de votre capacité à changer régulièrement d'appui : la marche, qui alterne en permanence, est souvent indolore."
+      }
+    },
+    {
       "id": "balance-control",
       "name": {
         "fr": "Équilibre et contrôle moteur"
       },
       "description": {
         "fr": "Capacité à rester stable dans les positions basses. Se travaille par la pratique, indépendamment de la souplesse."
+      }
+    },
+    {
+      "id": "quadriceps-strength",
+      "name": {
+        "fr": "Force et endurance des quadriceps"
+      },
+      "description": {
+        "fr": "Les muscles de l'avant de la cuisse freinent chaque pas en descente et amortissent chaque foulée. Quand ils fatiguent, la charge se reporte sur l'articulation sous la rotule : c'est le premier levier contre les douleurs du genou à l'effort."
+      }
+    },
+    {
+      "id": "knee-control",
+      "name": {
+        "fr": "Contrôle du genou sur une jambe"
+      },
+      "description": {
+        "fr": "Capacité à garder le genou dans l'axe du pied quand on plie la jambe en appui sur une seule jambe, comme à chaque pas de descente. Un genou qui rentre vers l'intérieur charge la rotule de travers."
+      }
+    },
+    {
+      "id": "knee-load-tolerance",
+      "name": {
+        "fr": "Tolérance du genou à l'effort"
+      },
+      "description": {
+        "fr": "Durée de course ou de descente supportée avant que le genou fasse mal. Elle progresse quand la charge augmente graduellement et que les muscles qui protègent le genou se renforcent."
+      }
+    },
+    {
+      "id": "thoracic-mobility",
+      "name": {
+        "fr": "Mobilité du haut du dos"
+      },
+      "description": {
+        "fr": "Capacité du haut du dos à se redresser et à tourner. Après des années penché sur un écran, il se fige en position voûtée : se tenir droit demande alors un effort permanent."
+      }
+    },
+    {
+      "id": "shoulder-mobility",
+      "name": {
+        "fr": "Mobilité des épaules"
+      },
+      "description": {
+        "fr": "Capacité à lever les bras au-dessus de la tête sans cambrer ni hausser les épaules. Des pectoraux raccourcis tirent les épaules vers l'avant."
+      }
+    },
+    {
+      "id": "upper-back-strength",
+      "name": {
+        "fr": "Force et endurance du haut du dos"
+      },
+      "description": {
+        "fr": "Les muscles entre et sous les omoplates tiennent le buste redressé dans la durée. Faibles, ils lâchent au bout de quelques minutes et le dos s'arrondit, même quand la souplesse est là."
+      }
+    },
+    {
+      "id": "neck-endurance",
+      "name": {
+        "fr": "Endurance des muscles profonds du cou"
+      },
+      "description": {
+        "fr": "Petits muscles à l'avant du cou qui tiennent la tête dans l'axe. Quand ils fatiguent, la tête avance devant les épaules et la nuque compense."
       }
     }
   ]

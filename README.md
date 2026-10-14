@@ -1,7 +1,7 @@
 # Mobilité & Souplesse — PWA pour vrais débutants
 
 Application web installable (PWA) qui aide les personnes sédentaires à atteindre des **objectifs de
-mouvement concrets** — s'asseoir en tailleur, tenir un squat profond, tenir debout sans mal de dos —
+mouvement concrets** — s'asseoir en tailleur, tenir un squat profond, tenir debout sans mal de dos, courir et descendre sans mal aux genoux, se tenir droit sans effort —
 plutôt que de proposer des séances d'étirement génériques.
 
 Le différenciateur : un **module de diagnostic** qui identifie *quel* facteur limite chaque objectif
@@ -37,11 +37,11 @@ La CI (`.github/workflows/ci.yml`) exécute toutes les suites, puis déploie sur
 
 ```
 public/data/            Contenu statique — SOURCE DE VÉRITÉ du contenu
-  factors.json          11 facteurs limitants (taxonomie commune)
-  goals.json            3 objectifs, pondération des facteurs, jalons
-  tests.json            12 tests d'auto-évaluation, paliers, scoring 0-3
+  factors.json          20 facteurs limitants (taxonomie commune)
+  goals.json            5 objectifs, pondération des facteurs, jalons
+  tests.json            21 tests d'auto-évaluation, paliers, scoring 0-3
                         et questions `followUp` qualitatives
-  exercises.json        33 fiches exercices en français
+  exercises.json        86 fiches exercices en français
 
 src/
   types.ts              Modèle de domaine (miroir des JSON)
@@ -90,9 +90,15 @@ sous-évalué de 3×.
 
 **Générateur déterministe, pas d'IA.** Chaque facteur reçoit un volume proportionnel à
 `poids_objectif × (3 − score)` : les plus faibles passent en premier. La sélection respecte le budget
-temps, impose au moins un exercice de renforcement (piège du « que du stretching ») et tourne
-légèrement d'une séance à l'autre via `rotation = nombre de séances faites` — ce qui rend la séance
-du jour reproductible entre l'écran d'accueil et le player sans état partagé.
+temps et impose au moins un exercice de renforcement (piège du « que du stretching »). Jamais plus
+d'un niveau au-dessus du score du facteur *le plus faible* que l'exercice sollicite : un exercice
+choisi pour un facteur fort ne doit pas surcharger un facteur bloqué qu'il étire aussi. La variété
+vient de `rotation = nombre de séances terminées` : chaque facteur tourne dans son propre groupe
+d'exercices quasi équivalents (à un niveau près du meilleur choix), décalé selon son rang, et le
+renfo imposé comme le complément de fin tournent aussi — les combinaisons se répètent donc bien moins
+vite que si tous les facteurs tournaient au même pas. La séance du jour reste reproductible entre
+l'écran d'accueil et le player sans état partagé ; une séance abandonnée ne fait pas avancer la
+rotation.
 
 **Vidéos : recherches YouTube, pas d'embeds.** Les fiches portent un champ `videoQuery` plutôt qu'une
 URL inventée ; l'app ouvre une recherche ciblée. Aucun lien mort, aucune question de droits. Passer à
@@ -133,8 +139,8 @@ Trois détails rendent le sous-chemin `/Ramolo/` fonctionnel, et chacun est vér
 
 Phases 0 à 4 implémentées et vérifiées. Reste la phase 5 (contenu) :
 
-- passer de 33 à 60-80 exercices, et de 3 à 6 objectifs (`toe-touch`, `pancake`, `posture` — la
-  taxonomie de facteurs devra alors gagner `thoracic-extension` et `shoulder-mobility`) ;
+- passer de 5 à 7 objectifs (`toe-touch` puis `pancake`, qui réutilisent surtout les facteurs
+  existants : ischio-jambiers, adducteurs, bassin) ;
 - curation des vidéos (`videoQuery` → `videoUrl`) ; télécharger les `remoteImages` dans
   `/public/images/` au build, pour que les 13 illustrations existantes marchent hors-ligne ;
 - audit Lighthouse PWA et vérification hors-ligne sur appareil réel ;

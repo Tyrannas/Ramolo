@@ -154,6 +154,14 @@ export const FLAG_NOTES: Record<TestFlag, string> = {
     "Tu ressens un pincement à l'avant de la hanche. On travaille sous la butée, jamais dedans : les squats passent en stance large, pointes ouvertes.",
   'seek-professional-advice':
     "Tu as signalé une douleur franche à l'avant de la hanche. Fais le point avec un professionnel de santé avant de travailler le squat en amplitude.",
+  'habitual-lumbar-extension':
+    "Debout, ta position par défaut est cambrée : ton bas du dos reste en extension tant que tu ne bouges pas. Ton programme inclut le « reset » debout et les bascules au mur, et en concert : un pied sur un rebord, en alternant.",
+  'knee-pain-in-rotation':
+    "Tu as signalé une douleur dans le genou en position assise jambes croisées. Quand la hanche ne tourne pas assez, c'est le genou qui encaisse la torsion : les positions au sol qui tordent le genou (tailleur, papillon, 90/90) sont retirées de ton programme, la hanche se travaille autrement. Si la douleur dure plus de 2-3 semaines, ou si le genou gonfle, se bloque ou lâche, consulte un kiné ou un médecin du sport.",
+  'patellofemoral-pain':
+    "Tu as une douleur sous ou autour de la rotule à l'effort. Une gêne jusqu'à 3/10 pendant les exercices du genou est acceptable si elle reste stable et s'est calmée le lendemain matin : le player te demandera son intensité. Ton programme commence par des tenues isométriques, qui calment souvent la douleur. En course : raccourcis un peu tes pas (cadence +5 à 10 %) et reste sous ton seuil de douleur en allongeant les sorties progressivement.",
+  'lateral-knee-pain':
+    "Tu as une douleur sur l'extérieur du genou en course, typique d'une bandelette ilio-tibiale surmenée. Le levier principal est la hanche : ton programme inclut l'abduction couchée et l'élévation du bassin sur une marche. En course : cadence un peu plus élevée, et des sorties allongées progressivement, en t'arrêtant avant l'apparition de la douleur.",
 };
 
 export interface GoalReadiness {
@@ -227,14 +235,14 @@ function buildSynthesis(
   const asym = factorScores.get(weakest.factor)?.asymmetric;
   const asymSuffix = asym ? ' On note aussi une différence nette entre tes deux côtés.' : '';
 
+  // Factor names carry no article ("mobilité de cheville"), so the sentences are
+  // built around "côté …" / a colon rather than "ta …", which would not agree.
   if (weakest.score <= 1) {
-    const contrast = strongName
-      ? ` — pas par ${strongName}, qui suit.`
-      : '.';
-    return `Pour « ${goalName} », ton facteur limitant est nettement ${factorName}${contrast}${asymSuffix}`;
+    const contrast = strongName ? ` Côté ${strongName}, en revanche, ça va.` : '';
+    return `Pour « ${goalName} », ton facteur limitant est nettement : ${factorName}.${contrast}${asymSuffix}`;
   }
   if (weakest.score < 2.3) {
-    return `Pour « ${goalName} », c'est surtout ${factorName} qui te freine encore, mais tu n'es pas loin.${asymSuffix}`;
+    return `Pour « ${goalName} », c'est surtout côté ${factorName} que ça freine encore, mais tu n'es pas loin.${asymSuffix}`;
   }
   return `Pour « ${goalName} », tous tes facteurs sont fonctionnels : place à la pratique de la position elle-même.${asymSuffix}`;
 }
