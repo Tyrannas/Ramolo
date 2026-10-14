@@ -202,6 +202,31 @@ for (const goal of content.goals) {
   check(`${goal.id} : le renforcement varie d'une séance à l'autre`, strengths.size >= 2, `(${[...strengths].join(', ')})`);
 }
 
+// Every goal active at once: no factor may be starved, and the weakest factor
+// must still be worked every single session.
+{
+  const weakAnkles = computeFactorScores([mk('knee-to-wall', 'left', 2), mk('knee-to-wall', 'right', 2)], content);
+  const allGoals = Array.from({ length: 12 }, (_, r) =>
+    generateSession(
+      { goals: content.goals, factorScores: weakAnkles, targetMinutes: 20, hiddenExerciseIds: new Set(), rotation: r },
+      content,
+    ),
+  );
+  const weighted = [...new Set(content.goals.flatMap((g) => Object.keys(g.factors)))] as FactorId[];
+  const starved = weighted.filter(
+    (f) => allGoals.filter((s) => s.exercises.some((e) => e.targets.includes(f))).length < 2,
+  );
+  check('tous les objectifs actifs : chaque facteur revient au moins 2 fois sur 12 séances', starved.length === 0, `(${starved.join(', ')})`);
+  check(
+    'tous les objectifs actifs : le facteur le plus faible est travaillé à chaque séance',
+    allGoals.every((s) => s.exercises.some((e) => e.targets.includes('ankle-dorsiflexion'))),
+  );
+  check(
+    'tous les objectifs actifs : budget respecté',
+    allGoals.every((s) => s.estimatedSeconds <= 20 * 60),
+  );
+}
+
 // Level cap: a blocked factor must never receive advanced work, even through an
 // exercise selected for a strong factor that also loads the weak one.
 const adductorBlocked = computeFactorScores(

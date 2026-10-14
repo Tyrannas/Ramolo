@@ -54,11 +54,7 @@ export default function Settings() {
 
   const toggleGoal = async (id: string) => {
     const active = plan.activeGoalIds.includes(id);
-    const next = active
-      ? plan.activeGoalIds.filter((g) => g !== id)
-      : plan.activeGoalIds.length < 3
-        ? [...plan.activeGoalIds, id]
-        : plan.activeGoalIds;
+    const next = active ? plan.activeGoalIds.filter((g) => g !== id) : [...plan.activeGoalIds, id];
     await savePlan({ activeGoalIds: next });
   };
 
@@ -103,8 +99,16 @@ export default function Settings() {
             Mes objectifs
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5 }}>
-            1 à 3 objectifs actifs. Ils déterminent le contenu de tes séances.
+            Ils déterminent le contenu de tes séances. Active-en autant que tu veux : tes facteurs
+            les plus faibles sont travaillés à chaque séance, les autres à tour de rôle.
           </Typography>
+          {plan.activeGoalIds.length > 3 && plan.targetMinutes < 30 && (
+            <Alert severity="info" sx={{ mb: 1.5 }}>
+              Avec {plan.activeGoalIds.length} objectifs, une séance de {plan.targetMinutes} min ne
+              peut travailler qu’une partie de tes facteurs à la fois : chacun revient toutes les
+              quelques séances. Passe à 30 min pour qu’ils reviennent plus souvent.
+            </Alert>
+          )}
           <Stack spacing={1}>
             {content.goals.map((g) => {
               const active = plan.activeGoalIds.includes(g.id);

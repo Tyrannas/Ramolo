@@ -53,7 +53,7 @@ export default function Today() {
               Choisis tes objectifs
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Sélectionne 1 à 3 objectifs pour générer ton programme.
+              Sélectionne un ou plusieurs objectifs pour générer ton programme.
             </Typography>
             <Button variant="contained" onClick={() => navigate('/settings')}>
               Choisir mes objectifs

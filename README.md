@@ -96,7 +96,11 @@ choisi pour un facteur fort ne doit pas surcharger un facteur bloqué qu'il éti
 vient de `rotation = nombre de séances terminées` : chaque facteur tourne dans son propre groupe
 d'exercices quasi équivalents (à un niveau près du meilleur choix), décalé selon son rang, et le
 renfo imposé comme le complément de fin tournent aussi — les combinaisons se répètent donc bien moins
-vite que si tous les facteurs tournaient au même pas. La séance du jour reste reproductible entre
+vite que si tous les facteurs tournaient au même pas. Le nombre d'objectifs actifs n'est pas limité :
+quand il y a plus de facteurs que de places dans la séance (`factorTurnOrder`), la moitié des places
+va toujours aux facteurs les plus faibles et l'autre moitié passe les facteurs restants à tour de
+rôle — aucun n'est oublié, et un exercice qui ne rentre plus dans le temps restant est remplacé par
+le plus court de son groupe. La séance du jour reste reproductible entre
 l'écran d'accueil et le player sans état partagé ; une séance abandonnée ne fait pas avancer la
 rotation.
 

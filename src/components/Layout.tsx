@@ -33,8 +33,9 @@ export default function Layout() {
           width: '100%',
           maxWidth: 640,
           mx: 'auto',
-          px: 2,
-          pt: 'max(16px, env(safe-area-inset-top))',
+          px: { xs: 2.5, sm: 4 },
+          pt: 'max(24px, env(safe-area-inset-top))',
+          pb: 2,
         }}
       >
         <Outlet />

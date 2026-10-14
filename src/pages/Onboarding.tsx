@@ -27,7 +27,7 @@ export default function Onboarding() {
   const [goals, setGoals] = useState<string[]>([]);
 
   const toggleGoal = (id: string) =>
-    setGoals((prev) => (prev.includes(id) ? prev.filter((g) => g !== id) : prev.length < 3 ? [...prev, id] : prev));
+    setGoals((prev) => (prev.includes(id) ? prev.filter((g) => g !== id) : [...prev, id]));
 
   const finish = async () => {
     const now = new Date().toISOString();
@@ -36,7 +36,20 @@ export default function Onboarding() {
   };
 
   return (
-    <Box sx={{ minHeight: '80dvh', display: 'flex', flexDirection: 'column', justifyContent: 'center', py: 3 }}>
+    <Box
+      sx={{
+        minHeight: '80dvh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        // Rendered outside the app layout: give it the same centred column, a bit narrower.
+        width: '100%',
+        maxWidth: 520,
+        mx: 'auto',
+        px: { xs: 3, sm: 4 },
+        py: 4,
+      }}
+    >
       {step === 0 && (
         <Stack spacing={2}>
           <Typography variant="h1">Des objectifs de mouvement concrets.</Typography>
@@ -88,7 +101,9 @@ export default function Onboarding() {
           <Box>
             <Typography variant="h1">Que veux-tu débloquer ?</Typography>
             <Typography color="text.secondary" variant="body2" sx={{ mt: 0.5 }}>
-              Choisis 1 à 3 objectifs (modifiable à tout moment).
+              Choisis autant d’objectifs que tu veux (modifiable à tout moment). Beaucoup partagent
+              les mêmes facteurs : tes points faibles sont travaillés à chaque séance, le reste à
+              tour de rôle.
             </Typography>
           </Box>
           <Stack spacing={1.5}>

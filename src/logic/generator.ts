@@ -90,6 +90,25 @@ const MAX_LEVELS_ABOVE_SCORE = 1;
 /** How many near-equivalent candidates a factor rotates through. */
 const ROTATION_POOL_SIZE = 4;
 
+/** Typical cost of one exercise, to estimate how many fit in a session. */
+const TYPICAL_EXERCISE_SECONDS = 180;
+
+/**
+ * Order in which factors get their exercise. With few goals every factor fits,
+ * and the order is simply weakest first. With many goals there are more factors
+ * than slots: the weakest half of the slots still goes to the most-demanded
+ * factors every session, and the other half cycles through the remaining
+ * factors, so none of them is starved session after session.
+ */
+export function factorTurnOrder(sortedFactors: FactorId[], budgetSeconds: number, rotation: number): FactorId[] {
+  const slots = Math.max(2, Math.round(budgetSeconds / TYPICAL_EXERCISE_SECONDS));
+  if (sortedFactors.length <= slots) return sortedFactors;
+  const prioritySlots = Math.ceil(slots / 2);
+  const priority = sortedFactors.slice(0, prioritySlots);
+  const rest = sortedFactors.slice(prioritySlots);
+  return [...priority, ...rotate(rest, rotation * (slots - prioritySlots))];
+}
+
 /**
  * Rank candidate exercises for a factor: closest level to the user's score,
  * belonging to an active goal, deprioritising already-picked ones.
@@ -200,13 +219,20 @@ export function generateSession(opts: GenerateOptions, content: Content): Genera
       levelCap,
     ).filter((ex) => !chosenIds.has(ex.id));
 
-  // Pass 1: one exercise per demanded factor, weakest first. Each factor rotates
-  // through its own pool, offset by its rank: factors do not all turn in step,
-  // so the combinations repeat far less often than the pools themselves.
-  sortedFactors.forEach((factor, rank) => {
+  // Pass 1: one exercise per factor, weakest first (then the others in turn when
+  // many goals compete for the slots). Each factor rotates through its own pool,
+  // offset by its rank: factors do not all turn in step, so the combinations
+  // repeat far less often than the pools themselves.
+  factorTurnOrder(sortedFactors, budget, rotation).forEach((factor, rank) => {
     if (seconds >= budget) return;
     const pool = rotationPool(rankedFor(factor), targetLevelOf(factor), flags);
-    if (pool.length > 0) tryAdd(pool[(rotation + rank) % pool.length]);
+    if (pool.length === 0) return;
+    // The rotation's pick first; if it no longer fits, the shortest of the pool,
+    // so a factor whose turn has come is not skipped for lack of time.
+    if (!tryAdd(pool[(rotation + rank) % pool.length])) {
+      const shortest = [...pool].sort((a, b) => estimateExerciseSeconds(a) - estimateExerciseSeconds(b))[0];
+      tryAdd(shortest);
+    }
   });
 
   // Guarantee at least one strength exercise (avoid the "all stretching" trap),
